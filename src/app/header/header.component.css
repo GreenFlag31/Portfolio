@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  /* display: flex;
+  justify-content: space-around; */
+  /* gap: 2em; */
+  z-index: 2;
+  align-items: center;
+  width: 100%;
+  color: var(--primary-color-1);
+  background: #18276ff5;
+  box-shadow: 0px 2px 3px 0px rgb(39 32 140 / 81%);
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+.left-side,
+.right-side,
+.projects,
+.blog {
+  display: flex;
+  align-items: center;
+}
+.projects,
+.blog {
+  min-height: 68px;
+}
+.home,
+.projects,
+.blog {
+  padding: 0.625em;
+}
+.projects select {
+  background: inherit;
+  border: none;
+  outline: none;
+  color: var(--primary-color-1);
+  font-size: 1em;
+}
+.myself {
+  color: var(--primary-color-3);
+  font-weight: 600;
+}

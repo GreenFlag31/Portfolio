@@ -1,0 +1,44 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 200px;
+  background: var(--primary-color-5);
+  color: var(--primary-color-1);
+}
+.own-design p {
+  font-size: 0.9em;
+}
+.own-design,
+footer .current-date p {
+  padding: 16px;
+}
+.contact-footer {
+  text-align: center;
+}
+
+.contact-footer i {
+  cursor: pointer;
+  font-size: 1.4em;
+  margin-right: 0.8em;
+  color: gold;
+}
+.contact-footer i:hover {
+  animation: goingUp 0.4s forwards;
+}
+@keyframes goingUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.contact-footer .fa-envelope {
+  margin-right: 0;
+}
+footer .current-date {
+  margin-left: auto;
+  font-size: 0.8em;
+}

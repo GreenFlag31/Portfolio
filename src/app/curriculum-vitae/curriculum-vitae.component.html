@@ -1,0 +1,261 @@
+<header>
+  <div class="presentation">
+    <div class="introduction">
+      <img src="../../assets/self.png" alt="Manu Claeys" />
+      <p>Front-End Developer</p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#18276f"
+        fill-opacity="1"
+        d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#18276f"
+        fill-opacity="1"
+        d="M0,288L1440,224L1440,320L0,320Z"
+      ></path>
+    </svg> -->
+  </div>
+</header>
+<main>
+  <div class="me-cv-container">
+    <section class="about-me">
+      <div class="about-me-container">
+        <img src="../../assets/developer.jpg" alt="Desktop of programmer" />
+        <p>
+          I'm <span class="emphasize blue">Manu Claeys</span>, a passionnated
+          Front-End Developer from Belgium. I love crafting nice user interface,
+          putting the user at the center of the light. I produce a clean,
+          optimised code, with the permanent care of improving myself.
+        </p>
+      </div>
+    </section>
+    <section class="curriculum accordion">
+      <div class="tabs">
+        <div class="tab">
+          <input type="checkbox" name="" id="item-1" />
+          <label for="item-1">
+            <div class="label-titel">Curriculum-Vitae</div>
+          </label>
+          <div class="tab-content">
+            <div class="professionnal-experience container">
+              <p class="title">Professionnal experience</p>
+              <div class="date">2019 - {{ currentYear }}</div>
+              <div class="content">
+                <p>
+                  Leasing credit analyst at Belfius. <br />
+                  Carrier switch in programming : Internship in a company as
+                  Front-End Developer, training in Web development, IT projects
+                  applied in my work and personal projects.
+                </p>
+              </div>
+              <div class="download">
+                <a
+                  href="../../assets/Curriculum Vitae ENG.pdf"
+                  download="Curriculum-Vitae"
+                  ><i class="fa-regular fa-circle-down"></i>Internship
+                  Certificate</a
+                >
+              </div>
+            </div>
+
+            <div class="education">
+              <p class="title">Education</p>
+              <div class="date">2017 - 2019</div>
+              <div class="content">
+                <p>
+                  Master's degree in Management Sciences (Economics) with honors
+                  from the University of Namur.
+                </p>
+              </div>
+              <div class="date">2014 - 2017</div>
+              <div class="content">
+                <p>
+                  International Business Studies at EPHEC. Erasmus in Bamberg at
+                  Otto Friedrich Universität (Bavaria, Germany) in economics.
+                </p>
+              </div>
+              <div class="date">2008 - 2014</div>
+              <div class="content">
+                <p>
+                  Studies at music conservatories (Ghent, Brussels, Cologne),
+                  obtaining a higher education diploma at the Hochschule für
+                  Musik und Tanz (Cologne).
+                </p>
+              </div>
+              <div class="download">
+                <a
+                  href="../../assets/Curriculum Vitae ENG.pdf"
+                  download="Curriculum-Vitae"
+                  ><i class="fa-regular fa-circle-down"></i>Curriculum-Vitae</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="carousel">
+    <div class="section-title">Projects</div>
+    <div class="previous" (click)="onPreviousProject(projects)">
+      <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+    <div class="projects-container" #projects>
+      <div class="project">
+        <header>
+          <div class="picture">
+            <img
+              src="../../assets/developer.jpg"
+              alt="picture of a personal project"
+            />
+            <div class="tech-stack">
+              <img src="../../assets/Angular.png" alt="Angular" />
+              <img src="../../assets/Typescript.png" alt="Typescript" />
+              <img src="../../assets/HTML5.png" alt="HTML5" />
+              <img src="../../assets/CSS3.png" alt="CSS3" />
+            </div>
+          </div>
+        </header>
+        <div class="description">
+          <p class="title">Food-App</p>
+          <div class="content">
+            <div class="date"><p>March 2023</p></div>
+            <p class="text">
+              This app lets you manage your food products. Never waste food
+              again !
+            </p>
+            <p class="see-more">See more</p>
+          </div>
+          <div class="actions">
+            <a href="#"> <i class="fa-solid fa-tower-broadcast"></i>Live</a>
+            <a href="#"> <i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <header>
+          <div class="picture">
+            <img
+              src="../../assets/developer.jpg"
+              alt="picture of a personal project"
+            />
+            <div class="tech-stack">
+              <img src="../../assets/Angular.png" alt="Angular" />
+              <img src="../../assets/Typescript.png" alt="Typescript" />
+              <img src="../../assets/HTML5.png" alt="HTML5" />
+              <img src="../../assets/CSS3.png" alt="CSS3" />
+            </div>
+          </div>
+        </header>
+        <div class="description">
+          <p class="title">Food-App</p>
+          <div class="content">
+            <div class="date"><p>March 2023</p></div>
+            <p class="text">
+              This app lets you manage your food products. Never waste food
+              again !
+            </p>
+            <p class="see-more">See more</p>
+          </div>
+          <div class="actions">
+            <a href="#"> <i class="fa-solid fa-tower-broadcast"></i>Live</a>
+            <a href="#"> <i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <header>
+          <div class="picture">
+            <img
+              src="../../assets/developer.jpg"
+              alt="picture of a personal project"
+            />
+            <div class="tech-stack">
+              <img src="../../assets/Angular.png" alt="Angular" />
+              <img src="../../assets/Typescript.png" alt="Typescript" />
+              <img src="../../assets/HTML5.png" alt="HTML5" />
+              <img src="../../assets/CSS3.png" alt="CSS3" />
+            </div>
+          </div>
+        </header>
+        <div class="description">
+          <p class="title">Food-App</p>
+          <div class="content">
+            <div class="date"><p>March 2023</p></div>
+            <p class="text">
+              This app lets you manage your food products. Never waste food
+              again !
+            </p>
+            <p class="see-more">See more</p>
+          </div>
+          <div class="actions">
+            <a href="#"> <i class="fa-solid fa-tower-broadcast"></i>Live</a>
+            <a href="#"> <i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next" (click)="onNextProject(projects)">
+      <i class="fa-solid fa-arrow-right-long"></i>
+    </div>
+  </section>
+</main>
+<section class="contact">
+  <div class="engagement">
+    <p>I'm committed to <span class="gold">excellence.</span></p>
+    <p class="contact-me">
+      Contact : <i class="fa-brands fa-linkedin"></i
+      ><i class="fa-solid fa-envelope"></i>
+    </p>
+  </div>
+</section>
+<section class="values">
+  <h2 class="section-title">Values</h2>
+  <div class="values-container">
+    <div class="value">
+      <p class="single-value-title">Build with humility.</p>
+      <p class="value-text">
+        Programming is an opened world, there is always a better solution. I
+        strive for a permanent improvement.
+      </p>
+    </div>
+    <div class="value">
+      <p class="single-value-title">Sharing kwowledge.</p>
+      <p class="value-text">
+        Individualist without beeing egoist, I like to share and help others.
+      </p>
+    </div>
+    <div class="value">
+      <p class="single-value-title">Never giving up.</p>
+      <p class="value-text">
+        Every problem has a solution. Unconventional and creative approach
+        matters.
+      </p>
+    </div>
+    <div class="value">
+      <p class="single-value-title">Striving for harmony.</p>
+      <p class="value-text">
+        Vegetarian, Human and Animal rights are important to me. I like an
+        universal, holistic approach. My favorite color is green.
+      </p>
+    </div>
+    <div class="value">
+      <p class="single-value-title">Work hard.</p>
+      <p class="value-text">
+        Commitment to a high quality standard while beeing open to criticism.
+      </p>
+    </div>
+    <div class="value">
+      <p class="single-value-title">Curious.</p>
+      <p class="value-text">
+        I like to be aware of new technologies, following best pratices, and see
+        what others realise.
+      </p>
+    </div>
+  </div>
+</section>
