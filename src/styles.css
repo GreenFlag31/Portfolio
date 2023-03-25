@@ -33,8 +33,10 @@
   --primary-color-5: #101924;
   --primary-color-6: #b90202;
 }
+
+/* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {

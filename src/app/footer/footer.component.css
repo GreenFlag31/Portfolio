@@ -15,10 +15,11 @@ footer .current-date p {
   padding: 16px;
 }
 .contact-footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-footer i {
+.icons i {
   cursor: pointer;
   font-size: 1.4em;
   margin-right: 0.8em;
@@ -41,4 +42,8 @@ footer .current-date p {
 footer .current-date {
   margin-left: auto;
   font-size: 0.8em;
+}
+.emphasize.blue {
+  font-weight: 600;
+  color: var(--primary-color-3);
 }

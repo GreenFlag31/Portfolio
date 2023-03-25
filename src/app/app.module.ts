@@ -9,6 +9,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ClickOutsideDirective } from './shared/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProjectsComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ClickOutsideDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

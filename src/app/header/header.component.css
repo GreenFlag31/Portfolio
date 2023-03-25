@@ -24,23 +24,62 @@
   display: flex;
   align-items: center;
 }
+.right-side {
+  gap: 0.3em;
+}
 .projects,
 .blog {
-  min-height: 68px;
+  height: 100%;
 }
 .home,
 .projects,
 .blog {
   padding: 0.625em;
 }
-.projects select {
+.menu-container {
   background: inherit;
-  border: none;
-  outline: none;
-  color: var(--primary-color-1);
-  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
 }
+.menu-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.625em;
+}
+.menu-title i {
+  transition: 0.3s;
+  transform: rotate(0);
+}
+.menu-title i.rotate {
+  transform: rotate(90deg);
+}
+.menu {
+  min-width: 150px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: var(--primary-color-1);
+  background: #18276fa1;
+}
+
+.menu a:not(:last-child) {
+  border-bottom: 1px solid #3f3f3f;
+}
+.project {
+  padding: 0.625em;
+  display: block;
+  transition: 0.3s;
+}
+.project:hover {
+  background: var(--primary-color-2);
+}
+
 .myself {
   color: var(--primary-color-3);
   font-weight: 600;
+}
+.job-position {
+  font-size: 0.8em;
 }

@@ -169,7 +169,7 @@ input:checked + label::after {
 }
 .carousel .section-title {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .projects-container {
   display: flex;
