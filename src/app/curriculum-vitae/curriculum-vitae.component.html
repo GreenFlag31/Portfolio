@@ -11,19 +11,13 @@
         d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
     </svg>
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#18276f"
-        fill-opacity="1"
-        d="M0,288L1440,224L1440,320L0,320Z"
-      ></path>
-    </svg> -->
   </div>
 </header>
 <main>
   <div class="me-cv-container">
     <section class="about-me">
       <div class="about-me-container">
+        <h2 class="section-title">About me</h2>
         <img src="../../assets/developer.jpg" alt="Desktop of programmer" />
         <p>
           I'm <span class="emphasize blue">Manu Claeys</span>, a passionnated
@@ -103,7 +97,7 @@
   </div>
 
   <section class="carousel">
-    <div class="section-title">Projects</div>
+    <h2 class="section-title">Projects</h2>
     <div class="previous" (click)="onPreviousProject(projects)">
       <i class="fa-solid fa-arrow-left-long"></i>
     </div>
@@ -131,7 +125,9 @@
               This app lets you manage your food products. Never waste food
               again !
             </p>
-            <p class="see-more">See more</p>
+            <p class="see-more" [routerLink]="['./projects/food-app-project']">
+              See more
+            </p>
           </div>
           <div class="actions">
             <a href="#" tabindex="-1">

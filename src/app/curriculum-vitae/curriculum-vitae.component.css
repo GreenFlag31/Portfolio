@@ -52,7 +52,7 @@
   color: var(--primary-color-3);
 }
 .me-cv-container {
-  padding: 5em 0 3em;
+  padding: 1em 0 3em;
   background: aliceblue;
 }
 .about-me-container {
@@ -166,10 +166,6 @@ input:checked + label::after {
   overflow: hidden;
   padding: 1em 0;
   margin: 7em auto 10em;
-}
-.carousel .section-title {
-  font-weight: 600;
-  font-size: 1.3em;
 }
 .projects-container {
   display: flex;
@@ -340,14 +336,10 @@ span.gold {
   padding: 0.625em;
   margin: 1em auto 10em;
 }
-.section-title {
-  padding: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: goldenrod;
-  font-weight: 600;
-  letter-spacing: 1px;
+.values .section-title {
+  font-size: 1.45em;
 }
+
 .value {
   min-width: 250px;
   padding: 1em;

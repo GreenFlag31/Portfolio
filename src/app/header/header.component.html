@@ -1,31 +1,29 @@
-<nav>
-  <div class="navbar">
-    <div class="navbar-container">
-      <div class="left-side">
-        <div class="home">
-          <p class="myself">Manu Claeys</p>
-          <p class="job-position">Front-End Dev</p>
-        </div>
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="left-side">
+      <div class="home">
+        <p class="myself">Manu Claeys</p>
+        <p class="job-position">Front-End Dev</p>
       </div>
-      <div class="right-side">
-        <div class="projects" clickOutside (clickOutside)="clickedOutside()">
-          <div class="menu-container" (click)="toggleMenu()">
-            <div class="menu-title">
-              <p>Projects</p>
-              <i
-                class="fa-solid fa-angle-right"
-                [ngClass]="{ rotate: isMenuOpened }"
-              ></i>
-            </div>
-            <div class="menu" *ngIf="isMenuOpened">
-              <a class="project">Project 1</a>
-              <a class="project">Project 2</a>
-              <a class="project">Project 3</a>
-            </div>
+    </div>
+    <div class="right-side">
+      <div class="projects" clickOutside (clickOutside)="clickedOutside()">
+        <div class="menu-container" (click)="toggleMenu()">
+          <div class="menu-title">
+            <p>Projects</p>
+            <i
+              class="fa-solid fa-angle-right"
+              [ngClass]="{ rotate: isMenuOpened }"
+            ></i>
+          </div>
+          <div class="menu" *ngIf="isMenuOpened">
+            <a class="project">Project 1</a>
+            <a class="project">Project 2</a>
+            <a class="project">Project 3</a>
           </div>
         </div>
-        <div class="blog">Blog</div>
       </div>
+      <div class="blog">Blog</div>
     </div>
   </div>
 </nav>

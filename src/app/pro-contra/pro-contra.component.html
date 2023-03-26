@@ -1,0 +1,32 @@
+<svg
+  class="wave"
+  preserveAspectRatio="none"
+  viewBox="0 0 1440 80"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 80V18.0975C0 18.0975 294 -22.6218 720 18.0975C1146 58.8167 1440 18.0975 1440 18.0975V80H0Z"
+    fill="aliceblue"
+  ></path>
+</svg>
+<div class="background-wrapper">
+  <div class="pro-contra-container">
+    <div class="pros">
+      <div class="title">
+        <h2>What have I learned&nbsp;?</h2>
+      </div>
+      <div class="arguments" *ngFor="let arg of project.pros | keyvalue">
+        <p><i class="fa-solid fa-check"></i>{{ arg.value }}</p>
+      </div>
+    </div>
+
+    <div class="contras">
+      <div class="title">
+        <h2>What could be improved&nbsp;?</h2>
+      </div>
+      <div class="arguments" *ngFor="let arg of project.cons | keyvalue">
+        <p><i class="fa-solid fa-arrow-trend-up"></i>{{ arg.value }}</p>
+      </div>
+    </div>
+  </div>
+</div>

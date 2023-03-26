@@ -42,3 +42,12 @@
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color-2);
 }
+.section-title {
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: goldenrod;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}

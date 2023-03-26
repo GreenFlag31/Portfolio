@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ClickOutsideDirective } from './shared/click-outside.directive';
+import { FoodAppComponent } from './food-app-project/food-app.component';
+import { ProContraComponent } from './pro-contra/pro-contra.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ClickOutsideDirective } from './shared/click-outside.directive';
     FooterComponent,
     PageNotFoundComponent,
     ClickOutsideDirective,
+    FoodAppComponent,
+    ProContraComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
