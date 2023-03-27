@@ -5,28 +5,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 import { BlogComponent } from './blog/blog.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { FoodAppComponent } from './food-app-project/food-app.component';
 import { ProContraComponent } from './pro-contra/pro-contra.component';
+import { SafeHTMLPipe } from './shared/safe-html.pipe';
+import { EcoActionsComponent } from './eco-actions/eco-actions.component';
+import { MusicSchoolComponent } from './music-school/music-school.component';
+import { DemandComponent } from './demand/demand.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurriculumVitaeComponent,
     BlogComponent,
-    ProjectsComponent,
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
     ClickOutsideDirective,
     FoodAppComponent,
     ProContraComponent,
+    SafeHTMLPipe,
+    EcoActionsComponent,
+    MusicSchoolComponent,
+    DemandComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })

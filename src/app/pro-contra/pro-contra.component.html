@@ -1,32 +1,96 @@
-<svg
-  class="wave"
-  preserveAspectRatio="none"
-  viewBox="0 0 1440 80"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M0 80V18.0975C0 18.0975 294 -22.6218 720 18.0975C1146 58.8167 1440 18.0975 1440 18.0975V80H0Z"
-    fill="aliceblue"
-  ></path>
-</svg>
-<div class="background-wrapper">
-  <div class="pro-contra-container">
-    <div class="pros">
-      <div class="title">
-        <h2>What have I learned&nbsp;?</h2>
+<div class="project-container">
+  <div class="general-description-container">
+    <h2 class="section-title">{{ description.introduction.title }}</h2>
+    <div class="description">
+      <div class="introduction">
+        <img
+          src="{{ description.introduction.img.src }}"
+          alt="{{ description.introduction.img.alt }}"
+        />
+        <div class="date">
+          <p [innerHTML]="description.introduction.date | safeHTML"></p>
+        </div>
+        <div class="language-container">
+          <div
+            class="coding-languages"
+            *ngFor="let language of description.introduction.coding | keyvalue"
+          >
+            <img
+              [src]="language.value['src']"
+              alt="Coding language"
+              [title]="language.value['title']"
+            />
+          </div>
+        </div>
       </div>
-      <div class="arguments" *ngFor="let arg of project.pros | keyvalue">
-        <p><i class="fa-solid fa-check"></i>{{ arg.value }}</p>
+      <div class="text">
+        <p>
+          {{ description.text.description }}
+        </p>
+        <p class="goal" [innerHTML]="description.text.goal | safeHTML"></p>
+        <div class="code-links">
+          <a href="{{ description.code.live }}" tabindex="-1" target="_blank">
+            <i class="fa-solid fa-tower-broadcast"></i>Live</a
+          >
+          <a href="{{ description.code.github }}" tabindex="-1" target="_blank">
+            <i class="fa-brands fa-github"></i>Code</a
+          >
+        </div>
       </div>
     </div>
+  </div>
+  <svg
+    class="wave"
+    preserveAspectRatio="none"
+    viewBox="0 0 1440 80"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 80V18.0975C0 18.0975 294 -22.6218 720 18.0975C1146 58.8167 1440 18.0975 1440 18.0975V80H0Z"
+      fill="aliceblue"
+    ></path>
+  </svg>
+  <div class="background-wrapper">
+    <div class="pro-contra-container">
+      <div class="pros">
+        <div class="title">
+          <h2>What have I learned&nbsp;?</h2>
+        </div>
+        <div class="arguments" *ngFor="let arg of project.pros | keyvalue">
+          <p><i class="fa-solid fa-check"></i>{{ arg.value }}</p>
+        </div>
+      </div>
 
-    <div class="contras">
-      <div class="title">
-        <h2>What could be improved&nbsp;?</h2>
+      <div class="cons">
+        <div class="title">
+          <h2>What could be improved&nbsp;?</h2>
+        </div>
+        <div class="arguments" *ngFor="let arg of project.cons | keyvalue">
+          <p><i class="fa-solid fa-arrow-trend-up"></i>{{ arg.value }}</p>
+        </div>
       </div>
-      <div class="arguments" *ngFor="let arg of project.cons | keyvalue">
-        <p><i class="fa-solid fa-arrow-trend-up"></i>{{ arg.value }}</p>
-      </div>
+    </div>
+  </div>
+</div>
+<div class="navigate" #navigate>
+  <div
+    class="previous"
+    *ngIf="navigation.previous"
+    [routerLink]="navigation.previous.link"
+  >
+    <div class="text-container">
+      <p>
+        <i class="fa-solid fa-arrow-left-long"></i>
+        Previous project: {{ navigation.previous.name }}
+      </p>
+    </div>
+  </div>
+  <div class="next" *ngIf="navigation.next" [routerLink]="navigation.next.link">
+    <div class="text-container">
+      <p>
+        Next project: {{ navigation.next.name }}
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </p>
     </div>
   </div>
 </div>
