@@ -40,7 +40,7 @@ export class FoodAppComponent implements OnInit {
       purpose of this project is to reduce food waste with the help of
       notifications. Data is stored on Firebase.`,
       goal: `The goal of this project was to put into practice what I've learned from
-      an <a href="https://www.udemy.com/certificate/UC-088beaaf-d8f0-4b1d-9b43-3f841191cd9b">Udemy course.`,
+      an <a href="https://www.udemy.com/certificate/UC-088beaaf-d8f0-4b1d-9b43-3f841191cd9b" target=_blank>Udemy course.`,
     },
     code: {
       live: 'https://my-list-a7fb0.web.app/getting-started',

@@ -100,7 +100,7 @@
 .pro-contra-container {
   max-width: 1000px;
   margin: auto;
-  padding: 3em 0.625em 4em;
+  padding: 3em 0.625em 0;
 }
 .pro-contra-container i {
   margin-right: 0.5em;
@@ -125,6 +125,13 @@
 }
 .pros {
   margin-bottom: 1.5em;
+}
+.cons {
+  padding-bottom: 4em;
+}
+.project-rules {
+  padding: 0.625em;
+  font-size: 0.8em;
 }
 .cons .title {
   background: var(--primary-color-5);

@@ -33,15 +33,18 @@
   --primary-color-5: #101924;
   --primary-color-6: #b90202;
 }
+body {
+  overflow-x: hidden;
+}
 
 /* custom scrollbar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color-2);
-}
+} */
 .section-title {
   padding: 16px;
   text-align: center;
@@ -50,4 +53,21 @@
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 1.3em;
+}
+
+@keyframes goingUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes goingUp2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

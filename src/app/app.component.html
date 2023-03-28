@@ -1,4 +1,4 @@
 <app-header></app-header>
-<!-- <app-curriculum-vitae></app-curriculum-vitae> -->
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="routes" [@routeAnimations]="getRouteAnimationData()">
+  <router-outlet></router-outlet>
+</div>

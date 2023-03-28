@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   isMenuOpened = false;
+  @ViewChild('project') project!: ElementRef;
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(public router: Router) {}
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;

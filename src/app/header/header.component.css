@@ -35,14 +35,35 @@
 .home,
 .projects,
 .blog {
-  padding: 0.625em;
+  padding: 0.5em 0.625em;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 3px solid transparent;
 }
-.menu-container {
+.home:hover,
+.projects:hover,
+.blog:hover {
+  background: #152c9ff5;
+}
+.home.active,
+.projects.active,
+.blog.active {
+  border-bottom: 3px solid var(--primary-color-3);
+}
+.home:hover .myself {
+  will-change: transform;
+  animation: goingUp2 0.3s forwards;
+}
+.projects {
+  position: relative;
   background: inherit;
   cursor: pointer;
-  position: relative;
   user-select: none;
 }
+.menu .project.active {
+  border-left: 4px solid goldenrod;
+}
+
 .menu-title {
   display: flex;
   align-items: center;
@@ -60,13 +81,16 @@
   min-width: 150px;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 105%;
   color: var(--primary-color-1);
   background: #18276fa1;
 }
-
+.menu a {
+  color: var(--primary-color-1);
+  text-decoration: none;
+}
 .menu a:not(:last-child) {
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #b0b0b0;
 }
 .project {
   padding: 0.625em;

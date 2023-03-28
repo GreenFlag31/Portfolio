@@ -1,29 +1,67 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="left-side">
-      <div class="home">
+      <div
+        class="home"
+        routerLink="portfolio"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         <p class="myself">Manu Claeys</p>
         <p class="job-position">Front-End Dev</p>
       </div>
     </div>
     <div class="right-side">
-      <div class="projects" clickOutside (clickOutside)="clickedOutside()">
-        <div class="menu-container" (click)="toggleMenu()">
-          <div class="menu-title">
-            <p>Projects</p>
-            <i
-              class="fa-solid fa-angle-right"
-              [ngClass]="{ rotate: isMenuOpened }"
-            ></i>
-          </div>
-          <div class="menu" *ngIf="isMenuOpened">
-            <a class="project">Project 1</a>
-            <a class="project">Project 2</a>
-            <a class="project">Project 3</a>
-          </div>
+      <div
+        class="projects"
+        clickOutside
+        (clickOutside)="clickedOutside()"
+        (click)="toggleMenu()"
+        #project
+      >
+        <div class="menu-title">
+          <p>Projects</p>
+          <i
+            class="fa-solid fa-angle-right"
+            [ngClass]="{ rotate: isMenuOpened }"
+          ></i>
+        </div>
+        <div class="menu" *ngIf="isMenuOpened">
+          <a
+            class="project"
+            routerLinkActive="active"
+            routerLink="portfolio/food-app-project"
+            >Food-App</a
+          >
+          <a
+            class="project"
+            routerLinkActive="active"
+            routerLink="portfolio/EcoActions-project"
+            >EcoActions</a
+          >
+          <a
+            class="project"
+            routerLinkActive="active"
+            routerLink="portfolio/MusicSchool-project"
+            >MusicSchool</a
+          >
+          <a
+            class="project"
+            routerLinkActive="active"
+            routerLink="portfolio/Demand-project"
+            >Demand</a
+          >
+          <a
+            class="project"
+            routerLinkActive="active"
+            routerLink="portfolio/Calculator-project"
+            >Calculator</a
+          >
         </div>
       </div>
-      <div class="blog">Blog</div>
+      <div class="blog" routerLink="portfolio/blog" routerLinkActive="active">
+        Blog
+      </div>
     </div>
   </div>
 </nav>

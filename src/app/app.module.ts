@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
@@ -15,6 +15,8 @@ import { SafeHTMLPipe } from './shared/safe-html.pipe';
 import { EcoActionsComponent } from './eco-actions/eco-actions.component';
 import { MusicSchoolComponent } from './music-school/music-school.component';
 import { DemandComponent } from './demand/demand.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,10 @@ import { DemandComponent } from './demand/demand.component';
     EcoActionsComponent,
     MusicSchoolComponent,
     DemandComponent,
+    CalculatorComponent,
+    GameComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
 
   providers: [],
   bootstrap: [AppComponent],

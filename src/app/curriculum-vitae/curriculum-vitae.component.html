@@ -4,11 +4,16 @@
       <img src="../../assets/self.png" alt="Manu Claeys" />
       <p>Front-End Developer</p>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="wave"
+      preserveAspectRatio="none"
+      viewBox="0 0 1440 320"
+    >
       <path
         fill="#18276f"
         fill-opacity="1"
-        d="M0,224L120,240C240,256,480,288,720,298.7C960,309,1200,299,1320,293.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        d="M0,160L80,176C160,192,320,224,480,197.3C640,171,800,85,960,53.3C1120,21,1280,43,1360,53.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
       ></path>
     </svg>
   </div>
@@ -16,15 +21,22 @@
 <main>
   <div class="me-cv-container">
     <section class="about-me">
+      <h2 class="section-title">About me</h2>
       <div class="about-me-container">
-        <h2 class="section-title">About me</h2>
         <img src="../../assets/developer.jpg" alt="Desktop of programmer" />
-        <p>
-          I'm <span class="emphasize blue">Manu Claeys</span>, a passionnated
-          Front-End Developer from Belgium. I love crafting nice user interface,
-          putting the user at the center of the light. I produce a clean,
-          optimised code, with the permanent care of improving myself.
-        </p>
+        <div class="about-me-text">
+          <p>
+            I'm <span class="emphasize blue">Manu Claeys</span>, a passionnated
+            Front-End Developer from Belgium. I love crafting nice user
+            interface, putting the user at the center of the light. I produce a
+            clean, optimised code, with the permanent care of improving myself.
+          </p>
+          <p>
+            Very driven by optimisation, I've discovered programming in March
+            2020 while searching for a way to automate an Excel file. Since
+            then, I'm passionnated about coding.
+          </p>
+        </div>
       </div>
     </section>
     <section class="curriculum accordion">
@@ -269,3 +281,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

@@ -18,9 +18,10 @@ export class ProContraComponent implements OnInit, AfterViewInit {
   @Input() project!: project;
   @Input() navigation!: navigation;
   @ViewChild('navigate') navigate!: ElementRef;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   ngAfterViewInit() {
     if (!this.navigation.previous) {

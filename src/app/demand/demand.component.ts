@@ -32,7 +32,7 @@ export class DemandComponent implements OnInit {
     },
     text: {
       description: `Demand is a two pages application. This project is about a fictive company in the finance sector managing leasing demands. It includes a login page - without credentials - and a main page. This project allow you to search for any company in Europe.`,
-      goal: `The goal of this project is the usage of asynchronous data with the use of two web API's and the implementation of a drag and drop system.`,
+      goal: `The goal of this project is to handle asynchronous data with the use of two web API's and the implementation of a drag and drop system in Javascript.`,
     },
     code: {
       live: 'https://greenflag31.github.io/demand',
