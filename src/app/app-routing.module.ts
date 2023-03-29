@@ -7,6 +7,7 @@ import { DemandComponent } from './demand/demand.component';
 import { EcoActionsComponent } from './eco-actions/eco-actions.component';
 import { FoodAppComponent } from './food-app-project/food-app.component';
 import { GameComponent } from './game/game.component';
+import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.component';
 import { MusicSchoolComponent } from './music-school/music-school.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -59,6 +60,11 @@ const routes: Routes = [
         path: 'blog',
         component: BlogComponent,
         data: { animation: 'blog' },
+      },
+      {
+        path: 'blog/what-makes-a-good-dev',
+        component: GoodDevArticleComponent,
+        data: { animation: 'goodDev' },
       },
     ],
   },

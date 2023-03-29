@@ -334,7 +334,7 @@ span.gold {
 }
 .contact-me i:hover {
   color: var(--primary-color-3);
-  animation: goingUp 0.4s forwards;
+  animation: scalingUp 0.4s forwards;
   will-change: transform;
 }
 .values {

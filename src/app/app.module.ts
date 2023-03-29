@@ -17,6 +17,7 @@ import { MusicSchoolComponent } from './music-school/music-school.component';
 import { DemandComponent } from './demand/demand.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { GameComponent } from './game/game.component';
+import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { GameComponent } from './game/game.component';
     DemandComponent,
     CalculatorComponent,
     GameComponent,
+    GoodDevArticleComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
 

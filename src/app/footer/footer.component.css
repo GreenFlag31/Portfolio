@@ -33,16 +33,9 @@ footer .current-date p {
   color: gold;
 }
 .contact-footer i:hover {
-  animation: goingUp 0.4s forwards;
+  animation: scalingUp 0.4s forwards;
 }
-@keyframes goingUp {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
+
 .contact-footer .fa-envelope {
   margin-right: 0;
 }

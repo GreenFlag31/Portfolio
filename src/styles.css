@@ -55,7 +55,7 @@ body {
   font-size: 1.3em;
 }
 
-@keyframes goingUp {
+@keyframes scalingUp {
   from {
     transform: scale(1);
   }
@@ -63,7 +63,7 @@ body {
     transform: scale(1.2);
   }
 }
-@keyframes goingUp2 {
+@keyframes scalingUpLess {
   from {
     transform: scale(1);
   }

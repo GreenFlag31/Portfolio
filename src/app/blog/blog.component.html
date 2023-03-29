@@ -1,1 +1,127 @@
-<p>blog works!</p>
+<section class="blog-container">
+  <div class="background-wrapper">
+    <div class="intro-title">
+      <h2 class="section-title">Welcome to my blog!</h2>
+      <p>
+        In this section I will share my toughts about some topics. Hope you find
+        some useful informations!
+      </p>
+    </div>
+  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 204"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient id="header-shape-gradient">
+        <stop offset="0%" stop-color="var(--color-stop)" />
+
+        <stop offset="100%" stop-color="var(--color-bot)" />
+      </linearGradient>
+    </defs>
+    <path
+      class="gradient-bg"
+      fill-opacity="1"
+      d="M0,64L48,58.7C96,53,192,43,288,69.3C384,96,480,160,576,160C672,160,768,96,864,96C960,96,1056,160,1152,186.7C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+    ></path>
+  </svg>
+  <div class="articles">
+    <div class="global-container">
+      <div class="cards-wrapper">
+        <a [routerLink]="['./what-makes-a-good-dev']" class="link-article">
+          <div class="card">
+            <div class="intro">
+              <img src="../../assets/chess.jpg" alt="Picture of chess game" />
+            </div>
+            <div class="text">
+              <div class="title">
+                <h3>What makes a good developer&nbsp;?</h3>
+              </div>
+              <div class="content">
+                <p>
+                  In this article, I will present you my personal view about the
+                  required qualities that make a good developer.
+                </p>
+              </div>
+              <div class="date-time">
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <p>April 2023</p>
+                </div>
+                <div class="lecture-time">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>3 mins.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a [routerLink]="" class="link-article">
+          <div class="card">
+            <div class="intro">
+              <img
+                src="../../assets/universe.jpg"
+                alt="Picture of chess game"
+              />
+            </div>
+            <div class="text">
+              <div class="title">
+                <h3>Clean code</h3>
+              </div>
+              <div class="content">
+                <p>
+                  What is clean code ? How to improve code quality, making it
+                  less error prone, more readable, more maintenable ?
+                </p>
+              </div>
+              <div class="date-time">
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <p>April 2023</p>
+                </div>
+                <div class="lecture-time">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>6 mins.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a [routerLink]="" class="link-article">
+          <div class="card">
+            <div class="intro">
+              <img
+                src="../../assets/angular animations.jpg"
+                alt="Picture of chess game"
+              />
+            </div>
+            <div class="text">
+              <div class="title">
+                <h3>Angular animations tutorial</h3>
+              </div>
+              <div class="content">
+                <p>
+                  Not easy at first sight, Angular animations can be simplified
+                  and made DRY following some good practices.
+                </p>
+              </div>
+              <div class="date-time">
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <p>April 2023</p>
+                </div>
+                <div class="lecture-time">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>5 mins.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="navigation"></section>
+<app-footer></app-footer>
