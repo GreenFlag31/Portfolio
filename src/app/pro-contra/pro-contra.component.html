@@ -78,7 +78,10 @@
     </div>
   </div>
 </div>
-<div class="navigate" #navigate>
+<div
+  class="navigate"
+  [style.justifyContent]="!this.navigation.previous ? 'flex-end' : 'flex-start'"
+>
   <div
     class="previous"
     *ngIf="navigation.previous"

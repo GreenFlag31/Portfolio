@@ -1,5 +1,7 @@
 .project-container {
+  min-height: 1200px;
   margin-top: 10em;
+  /* height: 100%; */
 }
 .introduction > img {
   display: block;
@@ -98,6 +100,7 @@
   background: aliceblue;
 }
 .pro-contra-container {
+  /* min-height: 600px; */
   max-width: 1000px;
   margin: auto;
   padding: 3em 0.625em 0;

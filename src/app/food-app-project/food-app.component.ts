@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
 import { description, navigation, project } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-food-app',
   templateUrl: './food-app.component.html',
   styleUrls: ['./food-app.component.css'],
 })
-export class FoodAppComponent implements OnInit {
+export class FoodAppComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'Food-App',
       img: {
-        src: '../../assets/projects-img/food-app.png',
+        src: '../../assets/projects-img/food-app2.png',
         alt: 'Image of food plate',
       },
       date: 'March 2023',
@@ -68,7 +71,23 @@ export class FoodAppComponent implements OnInit {
     },
   };
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }

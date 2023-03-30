@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-curriculum-vitae',
@@ -10,9 +13,13 @@ export class CurriculumVitaeComponent implements OnInit {
   totalProjectsSlide = 3;
   counter = 0;
 
-  constructor() {}
+  subscription!: Subscription;
+  constructor(private scrollToTop: ScrollToTopService) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    // this.scrollToTop.unSub();
+    this.scrollToTop.scrollToTop();
+  }
 
   onPreviousProject(projects: HTMLDivElement) {
     if (this.counter <= 0) return;

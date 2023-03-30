@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
 import { description, navigation, project } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-eco-actions',
   templateUrl: './eco-actions.component.html',
   styleUrls: ['./eco-actions.component.css'],
 })
-export class EcoActionsComponent implements OnInit {
+export class EcoActionsComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'EcoActions',
@@ -62,8 +65,23 @@ export class EcoActionsComponent implements OnInit {
       link: '../MusicSchool-project',
     },
   };
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }

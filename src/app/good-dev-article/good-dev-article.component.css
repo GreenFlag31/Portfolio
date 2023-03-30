@@ -12,11 +12,11 @@
   position: relative;
   background: aliceblue;
   width: 100%;
-  min-height: 30em;
+  min-height: 180em;
 }
 .article-container {
   position: absolute;
-  top: -30%;
+  top: -5%;
   width: 100%;
 }
 
@@ -39,14 +39,14 @@
   max-height: 320px;
   margin: auto;
 }
-article.content {
+article.general-content {
   padding: 0.625em;
 }
 .section-title {
   padding-bottom: 0;
 }
 hr {
-  max-width: 550px;
+  /* max-width: 550px; */
   margin: auto;
   margin-top: 0.2em;
   background: goldenrod;
@@ -54,8 +54,98 @@ hr {
   height: 2px;
   font-weight: bold;
 }
-.content .text {
+.general-content .content {
   margin-top: 1em;
+}
+.recipe-data {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.param {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.param p {
+  font-weight: 600;
+}
+.param i {
+  /* color: var(--primary-color-3); */
+  color: #7c7c7c;
+}
+span.bullet {
+  display: block;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: black;
+}
+.ingredients-container {
+  margin-top: 3em;
+}
+.title {
+  display: flex;
+  align-items: center;
+  max-width: 750px;
+  color: var(--primary-color-3);
+  gap: 0.3em;
+  margin: 1em auto;
+}
+.title hr {
+  margin: 0;
+  width: 100%;
+  height: 0.01rem;
+  background: #bebebe;
+}
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2.5em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.ingredient {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.ingredient i {
+  font-size: 2em;
+  color: var(--primary-color-3);
+}
+.content .text-container {
+  margin-top: 1em;
+}
+.text-container .limit-warning {
+  font-size: 0.8em;
+  /* margin: 0.5em 0; */
+}
+.text {
+  max-width: 700px;
+  margin: 0 auto 5em;
+}
+.text p {
+  text-align: justify;
+}
+.prior-steps {
+  margin-bottom: 3em;
+}
+.step-title {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 1em;
+  margin: 1em 0;
+}
+.step-title h5 {
+  font-size: 0.95em;
+}
+.step-title i {
+  color: var(--primary-color-3);
+  font-size: 1.2em;
 }
 
 /* @media (min-width: 380px) {

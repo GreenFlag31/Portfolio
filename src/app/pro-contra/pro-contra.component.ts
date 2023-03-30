@@ -1,11 +1,6 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { delay, filter, Subscription } from 'rxjs';
 import { description, navigation, project } from '../shared/data-type';
 
 @Component({
@@ -13,22 +8,26 @@ import { description, navigation, project } from '../shared/data-type';
   templateUrl: './pro-contra.component.html',
   styleUrls: ['./pro-contra.component.css'],
 })
-export class ProContraComponent implements OnInit, AfterViewInit {
+export class ProContraComponent implements OnInit, OnDestroy {
   @Input() description!: description;
   @Input() project!: project;
   @Input() navigation!: navigation;
-  @ViewChild('navigate') navigate!: ElementRef;
+  subscription!: Subscription;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    // this.subscription = this.router.events
+    //   .pipe(
+    //     filter((event) => event instanceof NavigationEnd),
+    //     delay(450)
+    //   )
+    //   .subscribe(() => {
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    //   });
+  }
 
-  ngAfterViewInit() {
-    if (!this.navigation.previous) {
-      this.navigate.nativeElement.style.justifyContent = 'flex-end';
-    }
-    if (!this.navigation.next) {
-      this.navigate.nativeElement.style.justifyContent = 'flex-start';
-    }
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
   }
 }

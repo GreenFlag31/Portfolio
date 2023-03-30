@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-music-school',
   templateUrl: './music-school.component.html',
   styleUrls: ['./music-school.component.css'],
 })
-export class MusicSchoolComponent implements OnInit {
+export class MusicSchoolComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'Music School',
       img: {
-        src: '../../assets/projects-img/MS.png',
+        src: '../../assets/projects-img/MS2.png',
         alt: 'Landing page of a project',
       },
       date: `<span style='color:black'>August 2022</span>`,
@@ -49,6 +52,7 @@ export class MusicSchoolComponent implements OnInit {
     cons: {
       arg1: 'Use of meaningful HTML semantics',
       arg2: 'Mobile first approach',
+      arg3: 'HTML, CSS, JS',
     },
   };
   navigation: navigation = {
@@ -61,7 +65,25 @@ export class MusicSchoolComponent implements OnInit {
       link: '../Demand-project',
     },
   };
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }

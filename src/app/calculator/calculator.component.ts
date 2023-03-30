@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
 })
-export class CalculatorComponent implements OnInit {
+export class CalculatorComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'Calculator',
       img: {
-        src: '../../assets/projects-img/calculator.png',
+        src: '../../assets/projects-img/calculator2.png',
         alt: 'Image of a calculator',
       },
       date: `Dec. 2022`,
@@ -62,7 +65,25 @@ export class CalculatorComponent implements OnInit {
       link: '../Game-project',
     },
   };
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
+
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }

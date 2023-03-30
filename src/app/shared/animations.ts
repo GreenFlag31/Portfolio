@@ -96,27 +96,8 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('EcoActions => food-app', [
-    useAnimation(startStyle),
 
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '-100%',
-        leavingLeft: '100%',
-      },
-    }),
-  ]),
-  transition('MusicSchool => EcoActions', [
-    useAnimation(startStyle),
-
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '-100%',
-        leavingLeft: '100%',
-      },
-    }),
-  ]),
-  transition('Demand => MusicSchool', [
+  transition('Game => Calculator', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -136,7 +117,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Game => Calculator', [
+  transition('Demand => MusicSchool', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -146,6 +127,27 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
+  transition('MusicSchool => EcoActions', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '-100%',
+        leavingLeft: '100%',
+      },
+    }),
+  ]),
+  transition('EcoActions => food-app', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '-100%',
+        leavingLeft: '100%',
+      },
+    }),
+  ]),
+
   transition('* <=> *', [
     useAnimation(startStyle),
 

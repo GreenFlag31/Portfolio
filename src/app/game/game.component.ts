@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, delay } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css'],
 })
-export class GameComponent implements OnInit {
+export class GameComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'Game',
@@ -56,7 +59,24 @@ export class GameComponent implements OnInit {
     //   link: '../Game-project',
     // },
   };
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }

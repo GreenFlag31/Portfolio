@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { delay, filter, Subscription } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-demand',
   templateUrl: './demand.component.html',
   styleUrls: ['./demand.component.css'],
 })
-export class DemandComponent implements OnInit {
+export class DemandComponent implements OnInit, OnDestroy {
   description: description = {
     introduction: {
       title: 'Demand',
@@ -64,7 +67,24 @@ export class DemandComponent implements OnInit {
     },
   };
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private scrollToTop: ScrollToTopService
+  ) {}
+  subscription!: Subscription;
+  ngOnInit(): void {
+    this.scrollToTop.unSub();
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        delay(450)
+      )
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+  }
 
-  ngOnInit(): void {}
+  ngOnDestroy(): void {
+    // this.subscription.unsubscribe();
+  }
 }
