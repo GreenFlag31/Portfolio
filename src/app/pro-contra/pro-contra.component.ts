@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { delay, filter, Subscription } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 import { description, navigation, project } from '../shared/data-type';
 
 @Component({
@@ -8,26 +6,12 @@ import { description, navigation, project } from '../shared/data-type';
   templateUrl: './pro-contra.component.html',
   styleUrls: ['./pro-contra.component.css'],
 })
-export class ProContraComponent implements OnInit, OnDestroy {
+export class ProContraComponent implements OnInit {
   @Input() description!: description;
   @Input() project!: project;
   @Input() navigation!: navigation;
-  subscription!: Subscription;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    // this.subscription = this.router.events
-    //   .pipe(
-    //     filter((event) => event instanceof NavigationEnd),
-    //     delay(450)
-    //   )
-    //   .subscribe(() => {
-    //     window.scrollTo({ top: 0, behavior: 'smooth' });
-    //   });
-  }
-
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
-  }
+  ngOnInit(): void {}
 }

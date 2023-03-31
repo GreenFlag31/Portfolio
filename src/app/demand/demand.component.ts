@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { delay, filter, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
@@ -58,30 +57,21 @@ export class DemandComponent implements OnInit, OnDestroy {
   };
   navigation: navigation = {
     previous: {
-      name: 'MusicSchool',
+      name: 'Previous project: MusicSchool',
       link: '../MusicSchool-project',
     },
     next: {
-      name: 'Calculator',
+      name: 'Next project: Calculator',
       link: '../Calculator-project',
     },
   };
 
-  constructor(
-    private router: Router,
-    private scrollToTop: ScrollToTopService
-  ) {}
+  constructor(private scrollToTop: ScrollToTopService) {}
   subscription!: Subscription;
   ngOnInit(): void {
-    this.scrollToTop.unSub();
-    this.subscription = this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        delay(450)
-      )
-      .subscribe(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    // this.scrollToTop.unSubSubWithDelay();
+
+    this.scrollToTop.scrollToTopProjects();
   }
 
   ngOnDestroy(): void {

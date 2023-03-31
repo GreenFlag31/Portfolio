@@ -147,63 +147,11 @@
 .arguments p:first-child {
   padding-bottom: 0;
 }
-.next,
-.previous {
-  cursor: pointer;
-}
 
 .text p:last-child {
   margin-top: 1em;
 }
-.navigate {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  max-width: 1000px;
-  margin: 3em auto;
-  padding: 0.625em;
-}
-.navigate p {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-.navigate .text-container:hover p {
-  transform: translateX(0%);
-}
-.text-container {
-  display: flex;
-  justify-content: flex-end;
-  font-weight: 600;
-  border: 2px solid var(--primary-color-3);
-  padding: 0.625em;
-  border-radius: 0.3em;
-}
-.previous .text-container {
-  justify-content: flex-start;
-}
-.previous .text-container p {
-  transition: transform 0.3s;
-  transform: translateX(5%);
-}
-.next .text-container p {
-  transition: transform 0.3s;
-  transform: translateX(-5%);
-}
-.text-container p i {
-  color: var(--primary-color-3);
-}
 
-@media (min-width: 600px) {
-  .navigate {
-    flex-direction: row;
-    /* gap: ; */
-  }
-  .previous,
-  .next {
-    width: 50%;
-  }
-}
 @media (min-width: 650px) {
   .description {
     display: grid;

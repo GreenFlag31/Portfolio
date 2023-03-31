@@ -57,11 +57,11 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   };
   navigation: navigation = {
     previous: {
-      name: 'Demand',
+      name: 'Previous project: Demand',
       link: '../Demand-project',
     },
     next: {
-      name: 'Game',
+      name: 'Next project: Game',
       link: '../Game-project',
     },
   };
@@ -72,15 +72,9 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   ) {}
   subscription!: Subscription;
   ngOnInit(): void {
-    this.scrollToTop.unSub();
-    this.subscription = this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        delay(450)
-      )
-      .subscribe(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    this.scrollToTop.unSubSubWithDelay();
+
+    this.scrollToTop.scrollToTopProjects();
   }
 
   ngOnDestroy(): void {

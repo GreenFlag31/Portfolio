@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CleanCodeArticleComponent } from './clean-code-article/clean-code-article.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 import { DemandComponent } from './demand/demand.component';
 import { EcoActionsComponent } from './eco-actions/eco-actions.component';
@@ -66,18 +67,18 @@ const routes: Routes = [
         component: GoodDevArticleComponent,
         data: { animation: 'goodDev' },
       },
+      {
+        path: 'blog/clean-code',
+        component: CleanCodeArticleComponent,
+        data: { animation: 'CleanCode' },
+      },
     ],
   },
   { path: '**', component: PageNotFoundComponent, data: { animation: 'lost' } },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    // {
-    //   scrollPositionRestoration: 'enabled',
-    // }
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

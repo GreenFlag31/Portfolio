@@ -1,6 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter, delay } from 'rxjs';
 import { description, navigation, project } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
@@ -57,31 +55,21 @@ export class EcoActionsComponent implements OnInit, OnDestroy {
   };
   navigation: navigation = {
     previous: {
-      name: 'Food-App',
+      name: 'Previous project: Food-App',
       link: '../food-app-project',
     },
     next: {
-      name: 'MusicSchool',
+      name: 'Next project: MusicSchool',
       link: '../MusicSchool-project',
     },
   };
-  constructor(
-    private router: Router,
-    private scrollToTop: ScrollToTopService
-  ) {}
-  subscription!: Subscription;
+  constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit(): void {
-    this.scrollToTop.unSub();
-    this.subscription = this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        delay(450)
-      )
-      .subscribe(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    // this.scrollToTop.unSubSubWithDelay();
+
+    this.scrollToTop.scrollToTopProjects();
   }
   ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
+    // this.scrollToTop.unSubSubProject();
   }
 }

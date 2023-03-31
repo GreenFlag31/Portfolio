@@ -18,6 +18,8 @@ import { DemandComponent } from './demand/demand.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { GameComponent } from './game/game.component';
 import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.component';
+import { NavigateComponent } from './navigate/navigate.component';
+import { CleanCodeArticleComponent } from './clean-code-article/clean-code-article.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.com
     CalculatorComponent,
     GameComponent,
     GoodDevArticleComponent,
+    NavigateComponent,
+    CleanCodeArticleComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
 

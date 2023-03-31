@@ -34,10 +34,10 @@
 .img-container img {
   display: block;
   width: 100%;
-  box-shadow: 0px 2px 5px 0px rgb(157 157 157 / 81%);
   max-width: 850px;
   max-height: 320px;
   margin: auto;
+  object-fit: cover;
 }
 article.general-content {
   padding: 0.625em;
@@ -120,13 +120,12 @@ span.bullet {
 .content .text-container {
   margin-top: 1em;
 }
-.text-container .limit-warning {
+.content .limit-warning {
   font-size: 0.8em;
-  /* margin: 0.5em 0; */
 }
 .text {
   max-width: 700px;
-  margin: 0 auto 5em;
+  margin: 0 auto 4em;
 }
 .text p {
   text-align: justify;
@@ -136,7 +135,6 @@ span.bullet {
 }
 .step-title {
   display: flex;
-  /* justify-content: space-between; */
   gap: 1em;
   margin: 1em 0;
 }

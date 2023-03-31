@@ -57,31 +57,21 @@ export class MusicSchoolComponent implements OnInit, OnDestroy {
   };
   navigation: navigation = {
     previous: {
-      name: 'EcoActions',
+      name: 'Previous project: EcoActions',
       link: '../EcoActions-project',
     },
     next: {
-      name: 'Demand',
+      name: 'Next project: Demand',
       link: '../Demand-project',
     },
   };
 
-  constructor(
-    private router: Router,
-    private scrollToTop: ScrollToTopService
-  ) {}
+  constructor(private scrollToTop: ScrollToTopService) {}
   subscription!: Subscription;
   ngOnInit(): void {
-    this.scrollToTop.unSub();
+    // this.scrollToTop.unSubSubWithDelay();
 
-    this.subscription = this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        delay(450)
-      )
-      .subscribe(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    this.scrollToTop.scrollToTopProjects();
   }
   ngOnDestroy(): void {
     // this.subscription.unsubscribe();
