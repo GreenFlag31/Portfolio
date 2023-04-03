@@ -1,0 +1,159 @@
+<div class="good-dev-container">
+  <span class="intro-banner"></span>
+  <div class="background-wrapper">
+    <div class="article-container">
+      <section class="article">
+        <div class="img-container">
+          <img src="../../assets/code-maintenance.jpg" alt="Chess game" />
+        </div>
+        <article class="general-content">
+          <div class="article-title">
+            <h2 class="section-title">Code Maintenance</h2>
+            <hr />
+          </div>
+          <div class="content">
+            <div class="content-intro">
+              The first step while facing a bug is to identify the source of the
+              problem. Identify a bug is a key step in problem resolution: we
+              can spend a lot of time identifying a simple problem. In this
+              article, I have selected the main tools available in Chrome
+              (concerning medium and advanced categories) based on my
+              experience. Similar tools can be found on other browsers, only the
+              name might change.
+            </div>
+            <div class="categories">
+              <div class="category">
+                <i class="fa-regular fa-star"></i>
+                <h5 class="category-title">Basic</h5>
+                <div class="category-content">
+                  <p>Console.log( )</p>
+                  <p>Console.table( )</p>
+                  <p>Console.time( )</p>
+                </div>
+              </div>
+              <div class="category">
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <h5 class="category-title">Medium</h5>
+                <div class="category-content">
+                  <p>Debugger</p>
+                </div>
+              </div>
+              <div class="category">
+                <i class="fa-solid fa-star"></i>
+                <h5 class="category-title">Advanced</h5>
+                <div class="category-content">
+                  <p>Watch</p>
+                  <p>Live expression</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <div class="basic">
+                <div class="content-title">
+                  <h3>Basic</h3>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p>
+                  Basic techniques are adapted while facing
+                  <span class="blue">a simple problem.</span>
+                  For exemple, the value of a variable is not what we expected.
+                </p>
+                <p>
+                  <code>Console.log( )</code> will simply print out a value in
+                  the console. This might be put everywhere in the code. Simply
+                  does not mean useless:
+                  <span class="blue">sometimes, this is enough</span> to
+                  identify the source of a problem.
+                </p>
+                <p>
+                  <code>Console.table( )</code> is adapted for multiple values,
+                  formatted in a table form, with rows and columns, like an
+                  Excel spreadsheet.
+                </p>
+                <p>
+                  <code>Console.time( )</code> is useful for performance
+                  computation, showing the time consumed by the code. If you
+                  code is already optimised, you will rarely need it.
+                </p>
+
+                <div class="limits">
+                  <p>
+                    Most used technique in this category will be
+                    <code>Console.log( )</code>. Careful though:
+                    <span class="blue"> this won't be adapted </span> if you use
+                    it to print out the value of arrays or objects, since value
+                    in objects are passed by reference (they share the same
+                    address in memory). In other words, the value of an object
+                    <span class="blue">might be updated after</span> your
+                    <code>Console.log( )</code>, and the console will show the
+                    most recent value. You might end up with an erroneous
+                    identification of the problem. In this case, more advanced
+                    techniques should be prefered.
+                  </p>
+                </div>
+              </div>
+              <div class="medium">
+                <div class="content-title">
+                  <h3>Medium</h3>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>
+                  <code>Debugger</code> is a breakpoint that will stop the
+                  execution of the code. <br />
+                  According to my experience, in a more advanced category,
+                  <code>Debugger</code> is
+                  <span class="blue">the most useful tool.</span> Having the
+                  execution of the code beeing stopped at a certain point allow
+                  you to watch all the expressions you want. This is an adapted
+                  technique to check the value of an object.
+                  <a
+                    href="https://javascript.info/debugging-chrome"
+                    target="_blank"
+                    >This useful source</a
+                  >
+                  presents you the different steps of code execution.
+                </p>
+              </div>
+              <div class="advanced">
+                <div class="content-title">
+                  <h3>Advanced</h3>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Advanced are less used but useful techniques. <br />
+                  <code>Watch</code> is available in the sources tab of the
+                  Chrome console. According to me, this is mainly used in
+                  combination with a debugger breakpoint. It allows you to
+                  create a 'spy' that will print out the value of a selected
+                  variable.
+                </p>
+                <p>
+                  <code>Live Expression</code> is an interesting technique that
+                  tracks in realtime the value of an expression and is available
+                  in the console tab. Just type the variable name you want to
+                  watch, and
+                  <span class="blue"
+                    >the value will be updated automatically</span
+                  >, saving you many console.log( ). Scope of variables are
+                  respected though, so a block-scoped variable will be globally
+                  undefined.
+                </p>
+              </div>
+              <div class="conclusion">
+                <p>
+                  Of course, all these techniques can be combined to produce the
+                  best result.
+                </p>
+              </div>
+            </div>
+            <app-navigate [navigation]="navigation"></app-navigate>
+            <p class="limit-warning"></p>
+          </div>
+        </article>
+
+        <!-- navigation to add -->
+      </section>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CleanCodeArticleComponent } from './clean-code-article/clean-code-article.component';
+import { CodeMaintenanceArticleComponent } from './code-maintenance-article/code-maintenance-article.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 import { DemandComponent } from './demand/demand.component';
 import { EcoActionsComponent } from './eco-actions/eco-actions.component';
@@ -71,6 +72,11 @@ const routes: Routes = [
         path: 'blog/clean-code',
         component: CleanCodeArticleComponent,
         data: { animation: 'CleanCode' },
+      },
+      {
+        path: 'blog/code-maintenance',
+        component: CodeMaintenanceArticleComponent,
+        data: { animation: 'CodeMaintenance' },
       },
     ],
   },

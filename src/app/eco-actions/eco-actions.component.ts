@@ -51,6 +51,7 @@ export class EcoActionsComponent implements OnInit, OnDestroy {
     cons: {
       arg1: 'Cleaner structure of the Javascript code, separating file into modules, increasing maintainability',
       arg2: 'An easier pagination system, analizing existings pagination on the market',
+      arg3: 'Improve accessibility',
     },
   };
   navigation: navigation = {

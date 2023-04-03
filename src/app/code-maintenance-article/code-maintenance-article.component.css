@@ -1,0 +1,143 @@
+.intro-banner {
+  display: block;
+  min-height: 25em;
+  background: linear-gradient(
+    175deg,
+    var(--primary-color-2),
+    var(--primary-color-3)
+  );
+}
+
+.background-wrapper {
+  position: relative;
+  background: aliceblue;
+  width: 100%;
+  min-height: 180em;
+}
+.article-container {
+  position: absolute;
+  top: -5%;
+  width: 100%;
+}
+
+.article {
+  width: 100%;
+  height: 100%;
+  /* min-height: 39.6em; */
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--primary-color-1);
+  box-shadow: 0px 1px 4px 0px rgb(145 145 145 / 81%);
+  /* width: 75%; */
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  max-height: 320px;
+  margin: auto;
+  object-fit: cover;
+}
+article.general-content {
+  padding: 0.625em;
+}
+.section-title {
+  padding-bottom: 0;
+}
+hr {
+  margin: auto;
+  margin-top: 0.2em;
+  background: goldenrod;
+  border: none;
+  height: 2px;
+  font-weight: bold;
+}
+.general-content .content {
+  margin-top: 1em;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, auto));
+  justify-content: center;
+  gap: 2.5em;
+  max-width: 700px;
+  margin: 4em auto;
+}
+.category {
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  justify-items: center;
+  min-height: 195px;
+  gap: 0.5em;
+  padding: 1em;
+  border: 2px solid var(--primary-color-3);
+  border-radius: 0.7em;
+  box-shadow: 0px 2px 5px 0px rgb(190 190 190 / 81%);
+}
+
+.category-content {
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+.category i {
+  font-size: 2.5em;
+  color: var(--primary-color-3);
+}
+.category h5 {
+  font-size: 1.2em;
+}
+.basic,
+.medium,
+.advanced {
+  line-height: 1.6;
+}
+.basic,
+.medium {
+  margin-bottom: 1em;
+}
+.basic p {
+  margin-bottom: 0.3em;
+}
+.content-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.content-title i {
+  margin-bottom: 0.2em;
+}
+code {
+  font-size: 0.85rem;
+  background: #e5e5e5;
+  color: black;
+  padding: 0.2rem;
+}
+span.blue {
+  color: var(--primary-color-3);
+  font-weight: 600;
+}
+.content-title i {
+  font-size: 1.3em;
+  color: var(--primary-color-3);
+}
+.content .limit-warning {
+  font-size: 0.8em;
+}
+.conclusion {
+  margin-top: 2em;
+}
+/* @media (min-width: 380px) {
+
+}
+@media (min-width: 400px) {
+
+}
+@media (min-width: 450px) {
+
+}
+@media (min-width: 470px) {
+
+} */

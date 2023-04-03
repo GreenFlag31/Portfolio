@@ -1,0 +1,38 @@
+<div class="project">
+  <header>
+    <div class="picture">
+      <img [src]="projectsData.img['src']" [alt]="projectsData.img['alt']" />
+      <div class="tech-stack">
+        <div
+          class="img-container"
+          *ngFor="let language of projectsData.coding | keyvalue"
+        >
+          <img
+            [src]="language.value['src']"
+            [title]="language.value['title']"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="description">
+    <p class="title">{{ projectsData.name }}</p>
+    <div class="content">
+      <div class="date"><p [innerHTML]="projectsData.date | safeHTML"></p></div>
+      <p class="text">
+        {{ projectsData.description }}
+      </p>
+      <p class="see-more" [routerLink]="[projectsData.links['general']]">
+        See more
+      </p>
+    </div>
+    <div class="actions">
+      <a [href]="projectsData.links['live']" tabindex="-1" target="_blank">
+        <i class="fa-solid fa-tower-broadcast"></i>Live</a
+      >
+      <a [href]="projectsData.links['github']" tabindex="-1" target="_blank">
+        <i class="fa-brands fa-github"></i>Code</a
+      >
+    </div>
+  </div>
+</div>

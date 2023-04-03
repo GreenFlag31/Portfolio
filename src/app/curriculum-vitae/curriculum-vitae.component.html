@@ -114,116 +114,24 @@
       <i class="fa-solid fa-arrow-left-long"></i>
     </div>
     <div class="projects-container" #projects>
-      <div class="project">
-        <header>
-          <div class="picture">
-            <img
-              src="../../assets/developer.jpg"
-              alt="picture of a personal project"
-            />
-            <div class="tech-stack">
-              <img src="../../assets/Angular.png" alt="Angular" />
-              <img src="../../assets/Typescript.png" alt="Typescript" />
-              <img src="../../assets/HTML5.png" alt="HTML5" />
-              <img src="../../assets/CSS3.png" alt="CSS3" />
-            </div>
-          </div>
-        </header>
-        <div class="description">
-          <p class="title">Food-App</p>
-          <div class="content">
-            <div class="date"><p>March 2023</p></div>
-            <p class="text">
-              This app lets you manage your food products. Never waste food
-              again !
-            </p>
-            <p class="see-more" [routerLink]="['./projects/food-app-project']">
-              See more
-            </p>
-          </div>
-          <div class="actions">
-            <a href="#" tabindex="-1">
-              <i class="fa-solid fa-tower-broadcast"></i>Live</a
-            >
-            <a href="#" tabindex="-1">
-              <i class="fa-brands fa-github"></i>Code</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <header>
-          <div class="picture">
-            <img
-              src="../../assets/developer.jpg"
-              alt="picture of a personal project"
-            />
-            <div class="tech-stack">
-              <img src="../../assets/Angular.png" alt="Angular" />
-              <img src="../../assets/Typescript.png" alt="Typescript" />
-              <img src="../../assets/HTML5.png" alt="HTML5" />
-              <img src="../../assets/CSS3.png" alt="CSS3" />
-            </div>
-          </div>
-        </header>
-        <div class="description">
-          <p class="title">Food-App</p>
-          <div class="content">
-            <div class="date"><p>March 2023</p></div>
-            <p class="text">
-              This app lets you manage your food products. Never waste food
-              again !
-            </p>
-            <p class="see-more">See more</p>
-          </div>
-          <div class="actions">
-            <a href="#" tabindex="-1">
-              <i class="fa-solid fa-tower-broadcast"></i>Live</a
-            >
-            <a href="#" tabindex="-1">
-              <i class="fa-brands fa-github"></i>Code</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <header>
-          <div class="picture">
-            <img
-              src="../../assets/developer.jpg"
-              alt="picture of a personal project"
-            />
-            <div class="tech-stack">
-              <img src="../../assets/Angular.png" alt="Angular" />
-              <img src="../../assets/Typescript.png" alt="Typescript" />
-              <img src="../../assets/HTML5.png" alt="HTML5" />
-              <img src="../../assets/CSS3.png" alt="CSS3" />
-            </div>
-          </div>
-        </header>
-        <div class="description">
-          <p class="title">Food-App</p>
-          <div class="content">
-            <div class="date"><p>March 2023</p></div>
-            <p class="text">
-              This app lets you manage your food products. Never waste food
-              again !
-            </p>
-            <p class="see-more">See more</p>
-          </div>
-          <div class="actions">
-            <a href="#" tabindex="-1">
-              <i class="fa-solid fa-tower-broadcast"></i>Live</a
-            >
-            <a href="#" tabindex="-1">
-              <i class="fa-brands fa-github"></i>Code</a
-            >
-          </div>
-        </div>
+      <div
+        class="project-overview"
+        *ngFor="let project of projectsData; let i = index"
+      >
+        <app-project-overview
+          [projectsData]="projectsData[i]"
+        ></app-project-overview>
       </div>
     </div>
     <div class="next" (click)="onNextProject(projects)">
       <i class="fa-solid fa-arrow-right-long"></i>
+    </div>
+    <div class="bullets-container">
+      <span
+        class="bullet"
+        *ngFor="let bullet of numberBullets"
+        [ngClass]="{ current: bullet === counter }"
+      ></span>
     </div>
   </section>
 </main>

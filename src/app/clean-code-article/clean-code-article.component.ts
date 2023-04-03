@@ -14,8 +14,8 @@ export class CleanCodeArticleComponent implements OnInit {
       link: '../what-makes-a-good-dev',
     },
     next: {
-      name: 'Next article: ',
-      link: '../clean-code',
+      name: 'Next article: Code Maintenance ',
+      link: '../code-maintenance',
     },
   };
 

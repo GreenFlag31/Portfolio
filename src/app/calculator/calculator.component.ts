@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter, delay } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
@@ -9,7 +8,7 @@ import { ScrollToTopService } from '../shared/scroll-to-top.service';
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
 })
-export class CalculatorComponent implements OnInit, OnDestroy {
+export class CalculatorComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Calculator',
@@ -34,7 +33,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
       },
     },
     text: {
-      description: `Calculator is a one page project. This project presents a basic, non scientific calculator, to handle simple computations.`,
+      description: `Calculator is a one page project. This project presents a basic, non scientific calculator, to handle simple computations. Simple does not mean easy: a lot of user input validations had to be done.`,
       goal: `Part of a <a href="https://drive.google.com/drive/folders/1mSGaVybH6HzOb6r9B-cvXlPgrk_9KXtn" target=_blank>Frond-End training</a>, the purpose of this project is to handle multiple exceptions that can occur. Focus is put mainly on Javascript and the structure of the code. This project also offers a correct user experience, supporting mouse and keyboard inputs.`,
     },
     code: {
@@ -66,18 +65,9 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     },
   };
 
-  constructor(
-    private router: Router,
-    private scrollToTop: ScrollToTopService
-  ) {}
+  constructor(private scrollToTop: ScrollToTopService) {}
   subscription!: Subscription;
   ngOnInit(): void {
-    this.scrollToTop.unSubSubWithDelay();
-
     this.scrollToTop.scrollToTopProjects();
-  }
-
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
   }
 }

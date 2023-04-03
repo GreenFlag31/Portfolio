@@ -41,3 +41,23 @@ export interface navigation {
     link: string;
   };
 }
+
+export interface projectData {
+  img: {
+    src: string;
+    alt: string;
+  };
+  coding: {
+    // [language: string]: {
+    //   [src: string]: string,
+    // };
+  };
+  name: string;
+  date: string;
+  description: string;
+  links: {
+    general: string;
+    live: string;
+    github: string;
+  };
+}

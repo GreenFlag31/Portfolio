@@ -1,5 +1,8 @@
 <nav class="navbar">
-  <div class="navbar-container">
+  <div
+    class="navbar-container"
+    [ngClass]="{ 'hamburger-active': isHamburgerOpen }"
+  >
     <div class="left-side">
       <div
         class="home"
@@ -11,13 +14,27 @@
         <p class="job-position">Front-End Dev</p>
       </div>
     </div>
-    <div class="right-side">
+    <div class="right-side" [ngClass]="{ 'hamburger-active': isHamburgerOpen }">
+      <button
+        type="button"
+        class="nav-toggler"
+        (click)="toggleHamburgerIcon()"
+        [ngClass]="{ active: isHamburgerOpen }"
+      >
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+      </button>
       <div
         class="projects"
         clickOutside
         (clickOutside)="clickedOutside()"
         (click)="toggleMenu()"
-        #project
+        [ngClass]="{
+          'hamburger-active': isHamburgerOpen,
+          'menu-open': isMenuOpened
+        }"
+        *ngIf="!isResponsiveMode || isHamburgerOpen"
       >
         <div class="menu-title">
           <p>Projects</p>
@@ -26,40 +43,65 @@
             [ngClass]="{ rotate: isMenuOpened }"
           ></i>
         </div>
-        <div class="menu" *ngIf="isMenuOpened">
+        <div
+          class="menu"
+          [ngClass]="{
+            open: isMenuOpened,
+            'hamburger-active': isHamburgerOpen
+          }"
+        >
           <a
             class="project"
             routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
             routerLink="portfolio/food-app-project"
             >Food-App</a
           >
           <a
             class="project"
             routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
             routerLink="portfolio/EcoActions-project"
             >EcoActions</a
           >
           <a
             class="project"
             routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
             routerLink="portfolio/MusicSchool-project"
             >MusicSchool</a
           >
           <a
             class="project"
             routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
             routerLink="portfolio/Demand-project"
             >Demand</a
           >
           <a
             class="project"
             routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
             routerLink="portfolio/Calculator-project"
             >Calculator</a
           >
+          <a
+            class="project"
+            routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
+            routerLink="portfolio/Game-project"
+            >Game</a
+          >
         </div>
       </div>
-      <div class="blog" routerLink="portfolio/blog" routerLinkActive="active">
+      <div
+        class="blog"
+        routerLink="portfolio/blog"
+        routerLinkActive="active"
+        (click)="unExpandNavigationMenu()"
+        [ngClass]="{ 'hamburger-active': isHamburgerOpen }"
+        *ngIf="!isResponsiveMode || isHamburgerOpen"
+      >
         Blog
       </div>
     </div>

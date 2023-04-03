@@ -414,27 +414,112 @@
               </div>
             </div>
             <div class="summary">
-              <!-- <i class="fa-solid fa-prescription"></i> -->
               <div class="short">
                 <i class="fa-solid fa-pills"></i>
-                <p>Follow conventions - 1 tab per day</p>
+                <p>Follow conventions - 1 tab a day</p>
               </div>
               <div class="short">
                 <i class="fa-solid fa-pills"></i>
-                <p>Good names - 2 tabs per day</p>
+                <p>Good names - 2 tabs a day</p>
               </div>
               <div class="short">
                 <i class="fa-solid fa-pills"></i>
-                <p>KISS principles - 3 tabs per day</p>
+                <p>KISS principle - 3 tabs a day</p>
               </div>
               <div class="short">
                 <i class="fa-solid fa-pills"></i>
-                <p>Scalability - 5 tabs per day</p>
+                <p>Scalability - 4 tabs a day</p>
               </div>
               <div class="short">
                 <i class="fa-solid fa-pills"></i>
-                <p>DRY principles - 6 tabs per day</p>
+                <p>DRY principle - 5 tabs a day</p>
               </div>
+            </div>
+            <div class="text">
+              <div class="advice-container">
+                <div class="advice">
+                  <i class="fa-solid fa-pills"></i>
+                  <h5>Follow conventions</h5>
+                </div>
+                <p>
+                  Conventions are a set of rules that are commonly accepted.
+                  Sharing practices increase readability and maintenability.
+                  Conventions can be numerous, healthy ones can be found
+                  <a href="https://javascript.info/coding-style" target="_blank"
+                    >here.</a
+                  >
+                  This is of course not a dogmatic approach, used ones may vary
+                  in practice from developer team. General view remains true
+                  though.
+                </p>
+              </div>
+              <div class="advice-container">
+                <div class="advice">
+                  <i class="fa-solid fa-pills"></i>
+                  <h5>Good, meaningful names</h5>
+                </div>
+                <p>
+                  Using good, meaningful names is important to improve
+                  readability and understanding of current context. For exemple,
+                  if a user already received a notification, you should prefer
+                  <code class="var">userHasBeenNotified</code> to
+                  <code class="var">notified</code>. Descriptive approach should
+                  be favored. Meaningful names should be applied to everything:
+                  functions, class names, variables, ...
+                </p>
+              </div>
+              <div class="advice-container">
+                <div class="advice">
+                  <i class="fa-solid fa-pills"></i>
+                  <h5>KISS principle</h5>
+                </div>
+                <p>
+                  Keep It Simple, Stupid! (I'm sorry). This principle states
+                  that code should be kept as simple as possible. Complex code
+                  can be error prone, time consumming, and difficult to read.
+                  Code should be written in the most simple and logic way (which
+                  does not mean the shortest), without any unnecessary
+                  complexity.
+                </p>
+              </div>
+              <div class="advice-container">
+                <div class="advice">
+                  <i class="fa-solid fa-pills"></i>
+                  <h5>Scalability</h5>
+                </div>
+                <p>
+                  Scalability is the possiblity to modify, add new things
+                  without having to change existing ones. Same previous exemple,
+                  <code class="var">userHasBeenNotified</code> is a scalable
+                  name. If you want to add an admin category, you would just
+                  replace 'user' with 'admin'. Scalability is applied as well
+                  for variable names as for code logic and can save you valuable
+                  time.
+                </p>
+              </div>
+              <div class="advice-container">
+                <div class="advice">
+                  <i class="fa-solid fa-pills"></i>
+                  <h5>DRY principle</h5>
+                </div>
+                <p>
+                  DRY principle (Don't Repeat Yourself) is a key aspect (if not
+                  the most important one) of clean code. It states that code
+                  duplication should be avoided. Usually, if we repeat a portion
+                  of code, we should externalise it in a function. Doing this
+                  will increase readability and maintenability: if this code has
+                  to be changed, it will be in one place. DRY principle is
+                  applied to everything, HTML and CSS included. Beeing 'DRY'
+                  often increases the abstraction level, so a tradeoff between
+                  abstraction and readability has to be done. You don't want an
+                  ultra-optimised but hard to read code.
+                </p>
+              </div>
+            </div>
+            <div class="signature">
+              <p>Doctor handwritting</p>
+              <hr />
+              <p>Doctor's Signature</p>
             </div>
             <app-navigate [navigation]="navigation"></app-navigate>
             <p class="limit-warning">

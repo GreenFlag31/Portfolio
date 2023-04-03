@@ -164,10 +164,11 @@ export const routesAnimation = trigger('routeAnimations', [
   ]),
 ]);
 
-export const fadeInOut = trigger('fadeInOut', [
+export const projectsListHamburger = trigger('open', [
+  // style({ position: 'initial' }),
   transition(':enter', [
-    style({ opacity: 0 }),
-    animate('500ms', style({ opacity: 1 })),
+    style({ maxHeight: 0 }),
+    animate('300ms', style({ maxHeight: '100vh' })),
   ]),
 ]);
 

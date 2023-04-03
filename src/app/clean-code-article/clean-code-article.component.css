@@ -83,6 +83,7 @@ hr {
 .introduction .age,
 .introduction .date {
   display: flex;
+  align-items: flex-end;
   gap: 0.2em;
   /* min-width: 205px; */
 }
@@ -100,6 +101,14 @@ hr {
 .value {
   padding-left: 0.8em;
 }
+.value,
+.short p,
+.text p,
+.text a {
+  font-family: "Fasthand";
+  color: var(--primary-color-7);
+  font-size: 1.3em;
+}
 .summary {
   display: flex;
   flex-direction: column;
@@ -112,12 +121,66 @@ hr {
   /* flex-wrap: wrap; */
   gap: 0.5em;
 }
-.short i {
-  color: var(--primary-color-3);
+.short i,
+.advice i {
+  font-size: 1.3em;
+  color: black;
 }
-
+.text p {
+  line-height: 1.4;
+  font-size: 1.4em;
+}
 .content .limit-warning {
   font-size: 0.8em;
+}
+.text {
+  color: var(--primary-color-7);
+}
+.advice-container {
+  margin: 1em 0;
+}
+.advice {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.advice h5 {
+  font-family: "FastHand";
+  font-size: 1.5em;
+  color: var(--primary-color-7);
+}
+.text a {
+  font-size: 1em;
+}
+code.var {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  background: #e5e5e5;
+  color: black;
+  padding: 0.2rem;
+}
+.signature {
+  margin: 7em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.signature hr {
+  display: block;
+  min-width: 250px;
+  margin: 0;
+  background: black;
+  height: 0.05rem;
+}
+.signature p:first-child {
+  font-family: "Redacted";
+  font-size: 1.5em;
+  color: var(--primary-color-7);
+}
+.signature p {
+  min-width: 250px;
+  text-align: center;
 }
 /* HERE */
 

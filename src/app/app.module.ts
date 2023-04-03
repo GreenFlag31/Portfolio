@@ -20,6 +20,8 @@ import { GameComponent } from './game/game.component';
 import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.component';
 import { NavigateComponent } from './navigate/navigate.component';
 import { CleanCodeArticleComponent } from './clean-code-article/clean-code-article.component';
+import { CodeMaintenanceArticleComponent } from './code-maintenance-article/code-maintenance-article.component';
+import { ProjectOverviewComponent } from './project-overview/project-overview.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { CleanCodeArticleComponent } from './clean-code-article/clean-code-artic
     GoodDevArticleComponent,
     NavigateComponent,
     CleanCodeArticleComponent,
+    CodeMaintenanceArticleComponent,
+    ProjectOverviewComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
 

@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter, delay } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+
+import { Subscription } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
@@ -9,7 +9,7 @@ import { ScrollToTopService } from '../shared/scroll-to-top.service';
   templateUrl: './music-school.component.html',
   styleUrls: ['./music-school.component.css'],
 })
-export class MusicSchoolComponent implements OnInit, OnDestroy {
+export class MusicSchoolComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Music School',
@@ -69,11 +69,6 @@ export class MusicSchoolComponent implements OnInit, OnDestroy {
   constructor(private scrollToTop: ScrollToTopService) {}
   subscription!: Subscription;
   ngOnInit(): void {
-    // this.scrollToTop.unSubSubWithDelay();
-
     this.scrollToTop.scrollToTopProjects();
-  }
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
   }
 }
