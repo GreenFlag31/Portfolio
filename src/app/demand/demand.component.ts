@@ -1,14 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-demand',
   templateUrl: './demand.component.html',
-  styleUrls: ['./demand.component.css'],
 })
-export class DemandComponent implements OnInit, OnDestroy {
+export class DemandComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Demand',
@@ -19,7 +17,7 @@ export class DemandComponent implements OnInit, OnDestroy {
       date: `<span style='color:black'>Nov. 2022</span>`,
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language3: {
@@ -47,7 +45,7 @@ export class DemandComponent implements OnInit, OnDestroy {
       arg2: 'Drag and drop Javascript API',
       arg3: 'Mobile first approach',
       arg4: 'More attention on user experience / user interface',
-      arg5: 'Better understandinng of Object-oriented programming (OOP)',
+      arg5: 'Better understanding of Object-oriented programming (OOP)',
     },
     cons: {
       arg1: 'Use of Web Cache API (store API results)',
@@ -67,14 +65,7 @@ export class DemandComponent implements OnInit, OnDestroy {
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
-  subscription!: Subscription;
   ngOnInit(): void {
-    // this.scrollToTop.unSubSubWithDelay();
-
     this.scrollToTop.scrollToTopProjects();
-  }
-
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
   }
 }

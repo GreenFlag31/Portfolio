@@ -31,13 +31,4 @@ export class ScrollToTopService {
         this.subscriptionProjects.unsubscribe();
       });
   }
-
-  // unSubSubProjects() {
-  //   this.subscriptionProjects.unsubscribe();
-  // }
-  // unSubSubWithDelay() {
-  //   setTimeout(() => {
-  //     this.subscriptionWithDelay?.unsubscribe();
-  //   }, 500);
-  // }
 }

@@ -1,15 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter, delay } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css'],
 })
-export class GameComponent implements OnInit, OnDestroy {
+export class GameComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Game',
@@ -20,7 +17,7 @@ export class GameComponent implements OnInit, OnDestroy {
       date: `Dec. 2022`,
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -54,23 +51,14 @@ export class GameComponent implements OnInit, OnDestroy {
       name: 'Previous project: Calculator',
       link: '../Calculator-project',
     },
-    // next: {
-    //   name: 'Game',
-    //   link: '../Game-project',
-    // },
+    next: {
+      name: 'This portfolio',
+      link: '../Portfolio-project',
+    },
   };
 
-  constructor(
-    private router: Router,
-    private scrollToTop: ScrollToTopService
-  ) {}
-  subscription!: Subscription;
-  ngOnInit(): void {
-    // this.scrollToTop.unSubSubWithDelay();
-
+  constructor(private scrollToTop: ScrollToTopService) {}
+  ngOnInit() {
     this.scrollToTop.scrollToTopProjects();
-  }
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
   }
 }

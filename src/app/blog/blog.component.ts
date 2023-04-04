@@ -1,5 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
@@ -8,7 +7,7 @@ import { ScrollToTopService } from '../shared/scroll-to-top.service';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css'],
 })
-export class BlogComponent implements OnInit, OnDestroy {
+export class BlogComponent implements OnInit {
   navigation: navigation = {
     previous: {
       name: 'Home',
@@ -20,10 +19,7 @@ export class BlogComponent implements OnInit, OnDestroy {
     // },
   };
   constructor(private scrollToTop: ScrollToTopService) {}
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.scrollToTop.scrollToTopWithDelay();
   }
-
-  ngOnDestroy(): void {}
 }

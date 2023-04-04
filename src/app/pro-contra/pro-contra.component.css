@@ -1,7 +1,6 @@
 .project-container {
-  min-height: 1200px;
+  /* min-height: 1200px; */
   margin-top: 10em;
-  /* height: 100%; */
 }
 .introduction > img {
   display: block;

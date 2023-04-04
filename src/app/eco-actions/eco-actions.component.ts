@@ -1,13 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { description, navigation, project } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-eco-actions',
   templateUrl: './eco-actions.component.html',
-  styleUrls: ['./eco-actions.component.css'],
 })
-export class EcoActionsComponent implements OnInit, OnDestroy {
+export class EcoActionsComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'EcoActions',
@@ -18,7 +17,7 @@ export class EcoActionsComponent implements OnInit, OnDestroy {
       date: `<span style='color:black'>Sept. 2022</span>`,
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language3: {
@@ -65,12 +64,7 @@ export class EcoActionsComponent implements OnInit, OnDestroy {
     },
   };
   constructor(private scrollToTop: ScrollToTopService) {}
-  ngOnInit(): void {
-    // this.scrollToTop.unSubSubWithDelay();
-
+  ngOnInit() {
     this.scrollToTop.scrollToTopProjects();
-  }
-  ngOnDestroy(): void {
-    // this.scrollToTop.unSubSubProject();
   }
 }

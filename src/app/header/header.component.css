@@ -6,6 +6,7 @@
   color: var(--primary-color-1);
   background: #18276ff5;
   box-shadow: 0px 2px 3px 0px rgb(39 32 140 / 81%);
+  box-shadow: 0px 2px 3px 0px rgb(27 23 93 / 81%);
 }
 .navbar-container {
   display: flex;
@@ -31,9 +32,9 @@
 }
 .right-side.hamburger-active {
   flex-direction: column;
-  min-height: 25em;
-  padding-top: 6em;
-  margin-bottom: 1em;
+  min-height: 15em;
+  padding-top: 4em;
+  margin-bottom: 3em;
 }
 .projects,
 .blog {
@@ -55,8 +56,9 @@
 }
 .projects.hamburger-active {
   padding: 0;
+  border-left: 1px solid;
 }
-.projects.menu-open {
+.projects.hamburger-active.menu-open {
   border-bottom: 0;
 }
 
@@ -117,21 +119,25 @@
   transition: 0.3s;
   position: absolute;
   left: 0;
-  top: 102%;
+  top: 106%;
   color: var(--primary-color-1);
   background: #18276fa1;
 }
 .menu.open {
-  max-height: 268px;
+  max-height: 315px;
 }
 .menu.hamburger-active {
   position: initial;
 }
-.menu.hamburger-active a {
-  font-size: 0.85em;
-}
 .menu .project.active {
   border-left: 4px solid goldenrod;
+}
+.menu.hamburger-active .project.active {
+  border: none;
+  border-bottom: 2px solid goldenrod;
+}
+.menu.hamburger-active a {
+  font-size: 0.85em;
 }
 .menu a {
   color: var(--primary-color-1);

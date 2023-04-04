@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { description, navigation, project } from '../shared/data-type';
 
 @Component({
@@ -6,12 +6,8 @@ import { description, navigation, project } from '../shared/data-type';
   templateUrl: './pro-contra.component.html',
   styleUrls: ['./pro-contra.component.css'],
 })
-export class ProContraComponent implements OnInit {
+export class ProContraComponent {
   @Input() description!: description;
   @Input() project!: project;
   @Input() navigation!: navigation;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

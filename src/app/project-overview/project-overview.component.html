@@ -18,16 +18,27 @@
   <div class="description">
     <p class="title">{{ projectsData.name }}</p>
     <div class="content">
-      <div class="date"><p [innerHTML]="projectsData.date | safeHTML"></p></div>
+      <div class="date">
+        <p>{{ projectsData.date }}</p>
+      </div>
       <p class="text">
         {{ projectsData.description }}
       </p>
-      <p class="see-more" [routerLink]="[projectsData.links['general']]">
+      <p
+        class="see-more"
+        [routerLink]="[projectsData.links['general']]"
+        tabindex="-1"
+      >
         See more
       </p>
     </div>
     <div class="actions">
-      <a [href]="projectsData.links['live']" tabindex="-1" target="_blank">
+      <a
+        *ngIf="projectsData.links['live']"
+        [href]="projectsData.links['live']"
+        tabindex="-1"
+        target="_blank"
+      >
         <i class="fa-solid fa-tower-broadcast"></i>Live</a
       >
       <a [href]="projectsData.links['github']" tabindex="-1" target="_blank">

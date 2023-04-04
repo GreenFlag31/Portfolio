@@ -23,10 +23,54 @@
     <section class="about-me">
       <h2 class="section-title">About me</h2>
       <div class="about-me-container">
-        <img src="../../assets/developer.jpg" alt="Desktop of programmer" />
+        <div class="img-container">
+          <img src="../../assets/developer.jpg" alt="Desktop of programmer" />
+          <div class="tech-stack-container">
+            <p>Tech Stack</p>
+            <div class="tech-stack">
+              <img
+                src="../../assets/Angular.png"
+                alt="Angular"
+                width="30px"
+                height="30px"
+              />
+              <img
+                src="../../assets/Typescript.png"
+                alt="Typescript"
+                class="typescript"
+                width="30px"
+                height="30px"
+              />
+              <img
+                src="../../assets/Javascript.png"
+                alt="Javascript"
+                width="30px"
+                height="30px"
+              />
+              <img
+                src="../../assets/HTML5.png"
+                alt="HTML5"
+                width="30px"
+                height="30px"
+              />
+              <img
+                src="../../assets/CSS3.png"
+                alt="CSS3"
+                width="30px"
+                height="30px"
+              />
+              <img
+                src="../../assets/NodeJS.png"
+                alt="NodeJS"
+                width="30px"
+                height="30px"
+              />
+            </div>
+          </div>
+        </div>
         <div class="about-me-text">
           <p>
-            I'm <span class="emphasize blue">Manu Claeys</span>, a passionnated
+            I'm <span class="emphasize blue">Manu Claeys</span>, a passionated
             Front-End Developer from Belgium. I love crafting nice user
             interface, putting the user at the center of the light. I produce a
             clean, optimised code, with the permanent care of improving myself.
@@ -34,7 +78,7 @@
           <p>
             Very driven by optimisation, I've discovered programming in March
             2020 while searching for a way to automate an Excel file. Since
-            then, I'm passionnated about coding.
+            then, I'm passionated about coding.
           </p>
         </div>
       </div>
@@ -110,7 +154,11 @@
 
   <section class="carousel">
     <h2 class="section-title">Projects</h2>
-    <div class="previous" (click)="onPreviousProject(projects)">
+    <div
+      class="previous"
+      (click)="onPreviousProject(projects)"
+      [class.limit]="counter === 0"
+    >
       <i class="fa-solid fa-arrow-left-long"></i>
     </div>
     <div class="projects-container" #projects>
@@ -123,14 +171,18 @@
         ></app-project-overview>
       </div>
     </div>
-    <div class="next" (click)="onNextProject(projects)">
+    <div
+      class="next"
+      (click)="onNextProject(projects)"
+      [class.limit]="counter === totalProjectsSlide - 1"
+    >
       <i class="fa-solid fa-arrow-right-long"></i>
     </div>
     <div class="bullets-container">
       <span
         class="bullet"
         *ngFor="let bullet of numberBullets"
-        [ngClass]="{ current: bullet === counter }"
+        [class.current]="bullet === counter"
       ></span>
     </div>
   </section>

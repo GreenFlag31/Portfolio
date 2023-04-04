@@ -1,18 +1,17 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { description, navigation, project } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-food-app',
   templateUrl: './food-app.component.html',
-  styleUrls: ['./food-app.component.css'],
 })
-export class FoodAppComponent implements OnInit, OnDestroy {
+export class FoodAppComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Food-App',
       img: {
-        src: '../../assets/projects-img/food-app2.png',
+        src: '../../assets/projects-img/food-app.png',
         alt: 'Image of food plate',
       },
       date: 'March 2023',
@@ -71,11 +70,6 @@ export class FoodAppComponent implements OnInit, OnDestroy {
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit(): void {
-    // this.scrollToTop.unSubSubWithDelay();
-
     this.scrollToTop.scrollToTopProjects();
-  }
-  ngOnDestroy(): void {
-    // this.scrollToTop.unSubSubProjects();
   }
 }

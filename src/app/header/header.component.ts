@@ -23,16 +23,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.isResponsiveMode = window.innerWidth < 500;
         this.isHamburgerOpen = false;
-        console.log(this.isResponsiveMode);
+        this.isMenuOpened = false;
       });
+  }
+
+  clickedOutsideMenu() {
+    this.isMenuOpened = false;
+  }
+
+  clickedOutsideHamburger() {
+    this.isHamburgerOpen = false;
   }
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
-  }
-
-  clickedOutside() {
-    this.isMenuOpened = false;
   }
 
   toggleHamburgerIcon() {
@@ -43,7 +47,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.isHamburgerOpen = false;
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.responsiveSub.unsubscribe();
   }
 }

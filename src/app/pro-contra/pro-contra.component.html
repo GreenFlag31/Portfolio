@@ -19,6 +19,8 @@
               [src]="language.value['src']"
               alt="Coding language"
               [title]="language.value['title']"
+              width="20px"
+              height="20px"
             />
           </div>
         </div>
@@ -29,7 +31,12 @@
         </p>
         <p class="goal" [innerHTML]="description.text.goal | safeHTML"></p>
         <div class="code-links">
-          <a href="{{ description.code.live }}" tabindex="-1" target="_blank">
+          <a
+            *ngIf="description.code.live"
+            href="{{ description.code.live }}"
+            tabindex="-1"
+            target="_blank"
+          >
             <i class="fa-solid fa-tower-broadcast"></i>Live</a
           >
           <a href="{{ description.code.github }}" tabindex="-1" target="_blank">
@@ -72,7 +79,8 @@
       <div class="project-rules">
         <p>
           All projects have been realised alone with the help of the official
-          documentation.
+          documentation. Effort is put towards zero or minimal use of external
+          librairies. For two main reasons: i) Learning and ii) Performance.
         </p>
       </div>
     </div>

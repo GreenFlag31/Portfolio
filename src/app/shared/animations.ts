@@ -96,7 +96,26 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
+  transition('Game => Portfolio', [
+    useAnimation(startStyle),
 
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '100%',
+        leavingLeft: '-100%',
+      },
+    }),
+  ]),
+  transition('Portfolio => Game', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '-100%',
+        leavingLeft: '100%',
+      },
+    }),
+  ]),
   transition('Game => Calculator', [
     useAnimation(startStyle),
 

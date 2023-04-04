@@ -17,7 +17,7 @@ export interface description {
     goal: string;
   };
   code: {
-    live: string;
+    live?: string;
     github: string;
   };
 }
@@ -48,16 +48,16 @@ export interface projectData {
     alt: string;
   };
   coding: {
-    // [language: string]: {
-    //   [src: string]: string,
-    // };
+    [language: string]: {
+      [src: string]: string;
+    };
   };
   name: string;
   date: string;
   description: string;
   links: {
     general: string;
-    live: string;
+    live?: string;
     github: string;
   };
 }

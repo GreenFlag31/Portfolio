@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { projectData } from '../shared/data-type';
 
 @Component({
@@ -6,10 +6,6 @@ import { projectData } from '../shared/data-type';
   templateUrl: './project-overview.component.html',
   styleUrls: ['./project-overview.component.css'],
 })
-export class ProjectOverviewComponent implements OnInit {
+export class ProjectOverviewComponent {
   @Input() projectsData!: projectData;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

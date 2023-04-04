@@ -1,26 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Subscription } from 'rxjs';
 import { description, project, navigation } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-music-school',
   templateUrl: './music-school.component.html',
-  styleUrls: ['./music-school.component.css'],
 })
 export class MusicSchoolComponent implements OnInit {
   description: description = {
     introduction: {
       title: 'Music School',
       img: {
-        src: '../../assets/projects-img/MS2.png',
+        src: '../../assets/projects-img/musicSchool.png',
         alt: 'Landing page of a project',
       },
       date: `<span style='color:black'>August 2022</span>`,
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language3: {
@@ -67,8 +64,7 @@ export class MusicSchoolComponent implements OnInit {
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
-  subscription!: Subscription;
-  ngOnInit(): void {
+  ngOnInit() {
     this.scrollToTop.scrollToTopProjects();
   }
 }

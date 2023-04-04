@@ -41,11 +41,44 @@
   max-width: 1000px;
   margin: auto;
 }
-.about-me-container img {
+.img-container {
+  position: relative;
+  max-height: 330px;
+}
+.img-container img {
+  display: block;
   width: 100%;
   height: 100%;
   max-height: 330px;
   object-fit: cover;
+}
+.tech-stack-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-end;
+  padding: 0.3em;
+  color: #fff;
+  right: 0;
+}
+.tech-stack-container p {
+  font-weight: 600;
+}
+.tech-stack {
+  display: flex;
+  gap: 0.2em;
+}
+.tech-stack img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.tech-stack .typescript {
+  margin-right: 0.2em;
 }
 .about-me-text p {
   padding: 0.625em;
@@ -96,11 +129,6 @@
 .professionnal-experience .title {
   font-size: 1.1em;
 }
-
-/* Accordion */
-/* section.accordion {
-  min-height: 250px;
-} */
 .tabs {
   border-radius: 0.5em;
   overflow: hidden;
@@ -180,10 +208,10 @@ input:checked + label::after {
   justify-content: space-around;
   transition: transform 0.3s ease-out;
   transform: translate3d(0, 0, 0);
-  width: 600%;
+  width: 700%;
 }
 .project-overview {
-  width: 14%;
+  width: 12%;
   min-width: 270px;
 }
 .previous,
@@ -193,7 +221,14 @@ input:checked + label::after {
   top: 50%;
   left: 0;
   padding: 0.2em;
+  cursor: pointer;
   z-index: 1;
+  transition: opacity 0.3s;
+}
+.previous.limit,
+.next.limit {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 .next {
   right: 0;
@@ -202,7 +237,7 @@ input:checked + label::after {
 .bullets-container {
   display: flex;
   justify-content: center;
-  gap: 0.8em;
+  gap: 1em;
 }
 .bullet {
   display: block;
@@ -293,18 +328,7 @@ span.gold {
     padding-left: 1em;
     padding-right: 1em;
   }
-  .about-me-container {
-    display: grid;
-    grid-template-columns: 50% auto;
-    gap: 1.5em;
-    padding: 2em;
-  }
-  .about-me-container img {
-    border-radius: 1em;
-  }
-  .about-me-container p {
-    padding: 0;
-  }
+
   .curriculum.accordion {
     padding: 0;
   }
@@ -322,6 +346,20 @@ span.gold {
   .values .value:nth-child(5),
   .values .value:nth-child(6) {
     border-bottom: none;
+  }
+}
+@media (min-width: 720px) {
+  .about-me-container {
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 1.5em;
+    padding: 2em;
+  }
+  .img-container > img {
+    border-radius: 1em;
+  }
+  .about-me-container p {
+    padding: 0;
   }
 }
 @media (min-width: 1000px) {

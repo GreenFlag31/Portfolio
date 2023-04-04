@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" clickOutside (clickOutside)="clickedOutsideHamburger()">
   <div
     class="navbar-container"
     [ngClass]="{ 'hamburger-active': isHamburgerOpen }"
@@ -19,6 +19,7 @@
         type="button"
         class="nav-toggler"
         (click)="toggleHamburgerIcon()"
+        aria-label="Hamburger icon"
         [ngClass]="{ active: isHamburgerOpen }"
       >
         <span class="line l1"></span>
@@ -28,7 +29,7 @@
       <div
         class="projects"
         clickOutside
-        (clickOutside)="clickedOutside()"
+        (clickOutside)="clickedOutsideMenu()"
         (click)="toggleMenu()"
         [ngClass]="{
           'hamburger-active': isHamburgerOpen,
@@ -91,6 +92,13 @@
             (click)="unExpandNavigationMenu()"
             routerLink="portfolio/Game-project"
             >Game</a
+          >
+          <a
+            class="project"
+            routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
+            routerLink="portfolio/Portfolio-project"
+            >This Portfolio</a
           >
         </div>
       </div>

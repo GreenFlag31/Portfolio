@@ -1,28 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogComponent } from './blog/blog.component';
-import { CalculatorComponent } from './calculator/calculator.component';
-import { CleanCodeArticleComponent } from './clean-code-article/clean-code-article.component';
-import { CodeMaintenanceArticleComponent } from './code-maintenance-article/code-maintenance-article.component';
-import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
-import { DemandComponent } from './demand/demand.component';
-import { EcoActionsComponent } from './eco-actions/eco-actions.component';
-import { FoodAppComponent } from './food-app-project/food-app.component';
-import { GameComponent } from './game/game.component';
-import { GoodDevArticleComponent } from './good-dev-article/good-dev-article.component';
-import { MusicSchoolComponent } from './music-school/music-school.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: '/portfolio',
     pathMatch: 'full',
-    data: { animation: 'portfolio' },
   },
   {
     path: 'portfolio',
-    component: CurriculumVitaeComponent,
+    loadChildren: () =>
+      import('./curriculum-vitae/curriculum-vitae.module').then(
+        (m) => m.CurriculumVitaeModule
+      ),
+    pathMatch: 'full',
     data: { animation: 'portfolio' },
   },
   {
@@ -30,57 +21,96 @@ const routes: Routes = [
     children: [
       {
         path: 'food-app-project',
-        component: FoodAppComponent,
+        loadChildren: () =>
+          import('./food-app-project/food-app-project.module').then(
+            (m) => m.FoodAppProjectModule
+          ),
         data: { animation: 'food-app' },
       },
       {
         path: 'EcoActions-project',
-        component: EcoActionsComponent,
+        loadChildren: () =>
+          import('./eco-actions/eco-actions.module').then(
+            (m) => m.EcoActionsModule
+          ),
         data: { animation: 'EcoActions' },
       },
       {
         path: 'MusicSchool-project',
-        component: MusicSchoolComponent,
+        loadChildren: () =>
+          import('./music-school/music-school.module').then(
+            (m) => m.MusicSchoolModule
+          ),
         data: { animation: 'MusicSchool' },
       },
       {
         path: 'Demand-project',
-        component: DemandComponent,
+        loadChildren: () =>
+          import('./demand/demand.module').then((m) => m.DemandModule),
         data: { animation: 'Demand' },
       },
       {
         path: 'Calculator-project',
-        component: CalculatorComponent,
+        loadChildren: () =>
+          import('./calculator/calculator.module').then(
+            (m) => m.CalculatorModule
+          ),
         data: { animation: 'Calculator' },
       },
       {
         path: 'Game-project',
-        component: GameComponent,
+        loadChildren: () =>
+          import('./game/game.module').then((m) => m.GameModule),
         data: { animation: 'Game' },
       },
       {
+        path: 'Portfolio-project',
+        loadChildren: () =>
+          import('./portfolio-project/portfolio-project.module').then(
+            (m) => m.PortfolioProjectModule
+          ),
+        data: { animation: 'Portfolio' },
+      },
+      {
         path: 'blog',
-        component: BlogComponent,
+        loadChildren: () =>
+          import('./blog/blog.module').then((m) => m.BlogModule),
         data: { animation: 'blog' },
       },
       {
         path: 'blog/what-makes-a-good-dev',
-        component: GoodDevArticleComponent,
+        loadChildren: () =>
+          import('./good-dev-article/good-dev-article.module').then(
+            (m) => m.GoodDevArticleModule
+          ),
         data: { animation: 'goodDev' },
       },
       {
         path: 'blog/clean-code',
-        component: CleanCodeArticleComponent,
+        loadChildren: () =>
+          import('./clean-code-article/clean-code-article.module').then(
+            (m) => m.CleanCodeArticleModule
+          ),
         data: { animation: 'CleanCode' },
       },
       {
         path: 'blog/code-maintenance',
-        component: CodeMaintenanceArticleComponent,
+        loadChildren: () =>
+          import(
+            './code-maintenance-article/code-maintenance-article.module'
+          ).then((m) => m.CodeMaintenanceArticleModule),
         data: { animation: 'CodeMaintenance' },
       },
     ],
   },
-  { path: '**', component: PageNotFoundComponent, data: { animation: 'lost' } },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./page-not-found/page-not-found.module').then(
+        (m) => m.PageNotFoundModule
+      ),
+    data: { animation: 'lost' },
+  },
 ];
 
 @NgModule({

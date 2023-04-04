@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
+import { projectData } from '../shared/data-type';
 
 @Component({
   selector: 'app-curriculum-vitae',
@@ -8,10 +9,10 @@ import { ScrollToTopService } from '../shared/scroll-to-top.service';
 })
 export class CurriculumVitaeComponent implements OnInit {
   currentYear = new Date().getFullYear();
-  projectsData = [
+  projectsData: projectData[] = [
     {
       img: {
-        src: '../../assets/projects-img/food-app2.png',
+        src: '../../assets/projects-img/food-app.png',
         alt: 'Image of food plate',
       },
       coding: {
@@ -49,7 +50,7 @@ export class CurriculumVitaeComponent implements OnInit {
       },
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -72,12 +73,12 @@ export class CurriculumVitaeComponent implements OnInit {
     },
     {
       img: {
-        src: '../../assets/projects-img/MS2.png',
+        src: '../../assets/projects-img/musicSchool.png',
         alt: 'Landing page of a project',
       },
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -105,7 +106,7 @@ export class CurriculumVitaeComponent implements OnInit {
       },
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -128,12 +129,12 @@ export class CurriculumVitaeComponent implements OnInit {
     },
     {
       img: {
-        src: '../../assets/projects-img/calculator2.png',
+        src: '../../assets/projects-img/calculator.png',
         alt: 'Image of a calculator',
       },
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -147,7 +148,7 @@ export class CurriculumVitaeComponent implements OnInit {
       },
       name: 'Calculator',
       date: 'Dec. 2022',
-      description: `Calculator is a one page project presenting a non scientific calculator to handle simple computations.`,
+      description: `Calculator is a one page project presenting a non-scientific calculator to handle simple computations.`,
       links: {
         general: './Calculator-project',
         live: 'https://greenflag31.github.io/calculator',
@@ -161,7 +162,7 @@ export class CurriculumVitaeComponent implements OnInit {
       },
       coding: {
         language1: {
-          src: '../../assets/javascript.png',
+          src: '../../assets/Javascript.png',
           title: 'Javascript',
         },
         language2: {
@@ -169,13 +170,44 @@ export class CurriculumVitaeComponent implements OnInit {
           title: 'HTML5',
         },
       },
-      name: 'Calculator',
+      name: 'Game',
       date: 'Dec. 2022',
       description: `Game is a one page project and is meant to be played and started in the console.`,
       links: {
         general: './Game-project',
         live: 'https://greenflag31.github.io/JS-game',
         github: 'https://github.com/GreenFlag31/JS-game',
+      },
+    },
+    {
+      img: {
+        src: '../../assets/projects-img/developer.jpg',
+        alt: 'Picture of a sunny desktop',
+      },
+      coding: {
+        language1: {
+          src: '../../assets/Angular.png',
+          title: 'Angular',
+        },
+        language2: {
+          src: '../../assets/Typescript.png',
+          title: 'Typescript',
+        },
+        language3: {
+          src: '../../assets/HTML5.png',
+          title: 'HTML5',
+        },
+        language4: {
+          src: '../../assets/CSS3.png',
+          title: 'CSS3',
+        },
+      },
+      name: 'This portfolio',
+      date: 'April 2023',
+      description: `Want to know more information about this website ?`,
+      links: {
+        general: './Portfolio-project',
+        github: 'https://github.com/GreenFlag31/Portfolio',
       },
     },
   ];

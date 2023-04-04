@@ -8,6 +8,7 @@
   box-shadow: 1px 3px 4px 0px rgb(160 160 160 / 83%);
 }
 .project img {
+  display: block;
   height: 100%;
   /* max-height: 200px; */
   width: 100%;
@@ -30,6 +31,7 @@
   cursor: pointer;
   text-align: left;
   font-size: 0.9em;
+  display: inline-block;
 }
 .see-more:hover {
   text-decoration: underline;
@@ -84,13 +86,15 @@
 }
 .tech-stack {
   position: absolute;
-  bottom: 3px;
+  bottom: 0;
   right: 0;
   display: flex;
   gap: 0.2em;
+  padding: 0.2em;
   justify-content: flex-end;
 }
 .tech-stack img {
+  display: block;
   width: 20px;
   height: 20px;
 }
