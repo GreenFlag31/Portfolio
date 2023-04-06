@@ -21,7 +21,7 @@ export class CleanCodeArticleComponent implements OnInit {
 
   constructor(private scrollToTop: ScrollToTopService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.scrollToTop.scrollToTopWithDelay();
   }
 }

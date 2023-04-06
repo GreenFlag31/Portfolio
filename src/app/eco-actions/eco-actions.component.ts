@@ -31,7 +31,7 @@ export class EcoActionsComponent implements OnInit {
       },
     },
     text: {
-      description: `EcoActions is a single page project about all little actions we can undertake to fight climate change. If almost everybody is aware of climate change, not everybody know which steps we can undertake to make things change. It should not be necessary difficult. Actions are presented in form of challenges.`,
+      description: `EcoActions is a single page project about all little actions we can undertake to fight climate change. If almost everybody is aware of climate change, not everybody knows which steps we can undertake to make things change. It should not be necessary difficult. Actions are presented in form of challenges.`,
       goal: `The goal of this project was to practice HTML, CSS, and Javascript.`,
     },
     code: {

@@ -1,13 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, debounceTime, fromEvent } from 'rxjs';
-import { projectsListHamburger } from '../shared/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [projectsListHamburger],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isMenuOpened = false;

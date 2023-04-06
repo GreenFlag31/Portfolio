@@ -49,7 +49,7 @@ export class MusicSchoolComponent implements OnInit {
     cons: {
       arg1: 'Use of meaningful HTML semantics',
       arg2: 'Mobile first approach',
-      arg3: 'HTML, CSS, JS',
+      arg3: 'Deeper in HTML, CSS, JS',
     },
   };
   navigation: navigation = {

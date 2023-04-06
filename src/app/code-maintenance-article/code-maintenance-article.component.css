@@ -12,7 +12,7 @@
   position: relative;
   background: aliceblue;
   width: 100%;
-  min-height: 180em;
+  min-height: 227em;
 }
 .article-container {
   position: absolute;
@@ -129,15 +129,39 @@ span.blue {
 .conclusion {
   margin-top: 2em;
 }
-/* @media (min-width: 380px) {
-
+@media (min-width: 350px) {
+  .background-wrapper {
+    min-height: 215em;
+  }
 }
 @media (min-width: 400px) {
-
+  .background-wrapper {
+    min-height: 210em;
+  }
 }
-@media (min-width: 450px) {
-
+@media (min-width: 430px) {
+  .background-wrapper {
+    min-height: 200em;
+  }
 }
 @media (min-width: 470px) {
+  .background-wrapper {
+    min-height: 175em;
+  }
+}
+@media (min-width: 540px) {
+  .background-wrapper {
+    min-height: 163em;
+  }
+}
 
-} */
+@media (min-width: 620px) {
+  .background-wrapper {
+    min-height: 152em;
+  }
+}
+@media (min-width: 715px) {
+  .background-wrapper {
+    min-height: 134em;
+  }
+}

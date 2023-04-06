@@ -36,7 +36,7 @@ export class PortfolioProjectComponent implements OnInit {
     },
     text: {
       description: `This portfolio is a single page application (SPA) build with Angular, animated with route transitions.`,
-      goal: `The goal of this project is to showcase differents projects I made and practice further Angular. Effort has been done towards a smooth user experience.`,
+      goal: `The goal of this website is - obviously :) - to showcase different projects I made and practice further Angular. Attention has been put towards a smooth user experience. Recommended practices by Angular are followed.`,
     },
     code: {
       github: 'https://github.com/GreenFlag31/Portfolio',
@@ -46,7 +46,7 @@ export class PortfolioProjectComponent implements OnInit {
     pros: {
       arg1: 'Further practice of Angular',
       arg2: 'Very DRY structure: reused components, variable data passed through objects like an API response',
-      arg3: 'Picture have been resized and compressed to improve loading performance',
+      arg3: 'Pictures have been resized and compressed to improve loading performance',
       arg4: 'More attention on user experience / user interface',
     },
     cons: {

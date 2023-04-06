@@ -22,7 +22,7 @@ export class ClickOutsideDirective implements AfterViewInit, OnDestroy {
     @Inject(DOCUMENT) private document: Document
   ) {}
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.documentClickSub = fromEvent(this.document, 'click')
       .pipe(
         filter((event) => {
@@ -35,7 +35,7 @@ export class ClickOutsideDirective implements AfterViewInit, OnDestroy {
       .subscribe(() => this.clickOutside.emit());
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.documentClickSub.unsubscribe();
   }
 }

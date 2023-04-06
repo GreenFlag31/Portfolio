@@ -25,7 +25,7 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  box-shadow: 1px 3px 4px 0px rgb(129 125 170 / 83%);
+  box-shadow: 1px 3px 4px 0px rgb(166 166 166 / 83%);
 }
 .introduction p {
   font-size: 1.1em;
@@ -167,11 +167,11 @@
 .tab-content {
   max-height: 0;
   padding: 0 1em;
-  background: var(--primlary-color-1);
+  background: white;
   transition: all 0.3s ease-out;
 }
 input:checked ~ .tab-content {
-  max-height: 540px;
+  max-height: 800px;
   padding: 1em;
 }
 input:checked + label::after {
@@ -220,6 +220,7 @@ input:checked + label::after {
   position: absolute;
   top: 50%;
   left: 0;
+  transform: translateY(-50%);
   padding: 0.2em;
   cursor: pointer;
   z-index: 1;
@@ -238,6 +239,7 @@ input:checked + label::after {
   display: flex;
   justify-content: center;
   gap: 1em;
+  margin-top: 2em;
 }
 .bullet {
   display: block;
@@ -245,7 +247,6 @@ input:checked + label::after {
   height: 0.8rem;
   border-radius: 50%;
   background: #dbdada;
-  margin-top: 2em;
   transition: background-color 0.4s;
 }
 .bullet.current {
@@ -264,6 +265,7 @@ input:checked + label::after {
 .contact .engagement {
   width: 100%;
   max-width: 1000px;
+  text-align: center;
   padding: 0.625em;
   margin: auto;
   background: #0000009c;
@@ -271,7 +273,7 @@ input:checked + label::after {
 }
 .engagement p {
   max-width: 1000px;
-  color: #fff;
+  color: var(--primary-color-1);
   padding: 0.625em;
   font-size: 1.5em;
   font-weight: 600;
@@ -285,14 +287,16 @@ span.gold {
 .contact-me {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8em;
 }
-.contact-me i {
+.contact-me a {
+  color: var(--primary-color-1);
   cursor: pointer;
   transition: color 0.3s;
   font-size: 1.1em;
 }
-.contact-me i:hover {
+.contact-me a:hover {
   color: var(--primary-color-3);
   animation: scalingUp 0.4s forwards;
   will-change: transform;
@@ -307,7 +311,6 @@ span.gold {
 .values .section-title {
   font-size: 1.45em;
 }
-
 .value {
   min-width: 250px;
   padding: 1em;
@@ -323,12 +326,23 @@ span.gold {
   margin-bottom: 0.5em;
 }
 
+@media (min-width: 450px) {
+  .introduction img {
+    width: 105px;
+    height: 105px;
+  }
+  .introduction p {
+    font-size: 1.2em;
+  }
+  .tech-stack-container {
+    justify-content: space-around;
+  }
+}
 @media (min-width: 600px) {
   .me-cv-container {
     padding-left: 1em;
     padding-right: 1em;
   }
-
   .curriculum.accordion {
     padding: 0;
   }
@@ -348,6 +362,22 @@ span.gold {
     border-bottom: none;
   }
 }
+@media (min-width: 650px) {
+  .previous,
+  .next {
+    background: var(--primary-color-3);
+    padding: 0.3em 0.4em;
+    color: white;
+    border-radius: 0.3em;
+    box-shadow: 0px 2px 4px 0px rgb(158 158 158 / 83%);
+  }
+  .previous {
+    margin-left: 1em;
+  }
+  .next {
+    margin-right: 1em;
+  }
+}
 @media (min-width: 720px) {
   .about-me-container {
     display: grid;
@@ -360,6 +390,23 @@ span.gold {
   }
   .about-me-container p {
     padding: 0;
+  }
+  .previous {
+    margin-left: 2em;
+  }
+  .next {
+    margin-right: 2em;
+  }
+}
+@media (min-width: 800px) {
+  .previous {
+    margin-left: 3em;
+  }
+  .next {
+    margin-right: 3em;
+  }
+  .bullets-container {
+    margin-top: 2.5em;
   }
 }
 @media (min-width: 1000px) {
@@ -376,5 +423,11 @@ span.gold {
   .values .value:nth-child(5),
   .values .value:nth-child(6) {
     border-bottom: none;
+  }
+  .introduction {
+    gap: 1.5em;
+  }
+  .introduction p {
+    font-size: 1.3em;
   }
 }

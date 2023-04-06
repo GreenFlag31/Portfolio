@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 import { projectData } from '../shared/data-type';
+import { selfPic, title } from '../shared/animations';
 
 @Component({
   selector: 'app-curriculum-vitae',
   templateUrl: './curriculum-vitae.component.html',
   styleUrls: ['./curriculum-vitae.component.css'],
+  animations: [selfPic, title],
 })
 export class CurriculumVitaeComponent implements OnInit {
   currentYear = new Date().getFullYear();

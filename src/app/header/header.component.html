@@ -8,6 +8,7 @@
         class="home"
         routerLink="portfolio"
         routerLinkActive="active"
+        (click)="unExpandNavigationMenu()"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         <p class="myself">Manu Claeys</p>
@@ -36,6 +37,8 @@
           'menu-open': isMenuOpened
         }"
         *ngIf="!isResponsiveMode || isHamburgerOpen"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
       >
         <div class="menu-title">
           <p>Projects</p>

@@ -16,10 +16,11 @@
   max-width: 1000px;
 }
 .navbar-container.hamburger-active {
-  flex-direction: column;
-  justify-content: initial;
+  display: block;
 }
-.left-side,
+.left-side {
+  max-width: 125.06px;
+}
 .right-side,
 .projects,
 .blog {

@@ -183,14 +183,6 @@ export const routesAnimation = trigger('routeAnimations', [
   ]),
 ]);
 
-export const projectsListHamburger = trigger('open', [
-  // style({ position: 'initial' }),
-  transition(':enter', [
-    style({ maxHeight: 0 }),
-    animate('300ms', style({ maxHeight: '100vh' })),
-  ]),
-]);
-
 export const opacityTransition = trigger('opacityAnimation', [
   state(
     'visible',
@@ -293,16 +285,6 @@ const downGenericAnimation = animation([
     '{{time}} ease-out',
     style({ opacity: 1, transform: 'translateY(0)' })
   ),
-]);
-
-export const downConfirmPassword = trigger('downConfPassword', [
-  transition(':enter', [
-    useAnimation(downGenericAnimation, {
-      params: {
-        time: '0.3s 0.3s',
-      },
-    }),
-  ]),
 ]);
 
 export const selfPic = trigger('down', [

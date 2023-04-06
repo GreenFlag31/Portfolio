@@ -12,7 +12,7 @@
   position: relative;
   background: aliceblue;
   width: 100%;
-  min-height: 180em;
+  min-height: 163em;
 }
 .article-container {
   position: absolute;
@@ -146,15 +146,28 @@ span.bullet {
   font-size: 1.2em;
 }
 
-/* @media (min-width: 380px) {
-
-}
 @media (min-width: 400px) {
-
+  .background-wrapper {
+    min-height: 145em;
+  }
 }
 @media (min-width: 450px) {
-
+  .background-wrapper {
+    min-height: 140em;
+  }
 }
-@media (min-width: 470px) {
-
-} */
+@media (min-width: 530px) {
+  .background-wrapper {
+    min-height: 133em;
+  }
+}
+@media (min-width: 630px) {
+  .background-wrapper {
+    min-height: 125em;
+  }
+}
+@media (min-width: 680px) {
+  .background-wrapper {
+    min-height: 115em;
+  }
+}

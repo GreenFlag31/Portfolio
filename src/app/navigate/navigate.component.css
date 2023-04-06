@@ -31,19 +31,26 @@
 }
 .previous .text-container p {
   transition: transform 0.3s;
-  transform: translateX(5%);
+  /* transform: translateX(5%); */
 }
 .next .text-container p {
   transition: transform 0.3s;
-  transform: translateX(-5%);
+  /* transform: translateX(-5%); */
 }
 .text-container p i {
   color: var(--primary-color-3);
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+  .previous .text-container p {
+    transform: translateX(5%);
+  }
+  .next .text-container p {
+    transform: translateX(-5%);
+  }
+}
+@media (min-width: 800px) {
   .navigate {
     flex-direction: row;
-    /* gap: ; */
   }
   .previous,
   .next {
