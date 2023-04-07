@@ -31,7 +31,7 @@ export class DemandComponent implements OnInit {
       },
     },
     text: {
-      description: `Demand is a two pages application. This project is about a fictive company in the finance sector managing leasing demands. It includes a login page - without credentials - and a main page. This project allow you to search for any company in Europe.`,
+      description: `Demand is a two pages application. This project is about a fictive company in the finance sector managing leasing demands. It includes a login page - without credentials - and a main page. This project allows you to search for any company in Europe.`,
       goal: `The goal of this project is to handle asynchronous data with the use of two web API's and the implementation of a drag and drop system in Javascript.`,
     },
     code: {
@@ -49,23 +49,25 @@ export class DemandComponent implements OnInit {
     },
     cons: {
       arg1: 'Use of Web Cache API (store API results)',
-      arg2: 'Less linear design',
-      arg3: 'Use of em / rem in CSS instead of pixels',
+      arg2: 'User inputs validation (API)',
+      arg3: 'Less linear design',
+      arg4: 'Use of em / rem in CSS instead of pixels',
     },
   };
   navigation: navigation = {
     previous: {
       name: 'Previous project: MusicSchool',
-      link: '../MusicSchool-project',
+      link: '../music-school-project',
     },
     next: {
       name: 'Next project: Calculator',
-      link: '../Calculator-project',
+      link: '../calculator-project',
     },
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit(): void {
-    this.scrollToTop.scrollToTopProjects();
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

@@ -49,16 +49,16 @@ export class GameComponent implements OnInit {
   navigation: navigation = {
     previous: {
       name: 'Previous project: Calculator',
-      link: '../Calculator-project',
+      link: '../calculator-project',
     },
     next: {
       name: 'This portfolio',
-      link: '../Portfolio-project',
+      link: '../this-portfolio',
     },
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

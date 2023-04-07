@@ -47,13 +47,14 @@ body {
 }
 
 /* custom scrollbar */
-/* ::-webkit-scrollbar {
-  width: 15px;
+::-webkit-scrollbar {
+  width: 14px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color-2);
-} */
+  background: rgb(203, 203, 203);
+  border-radius: 10px;
+}
 .section-title {
   padding: 16px;
   text-align: center;

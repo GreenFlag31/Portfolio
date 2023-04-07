@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription, filter, delay } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,20 @@ import { Subscription, filter, delay } from 'rxjs';
 })
 export class ScrollToTopService {
   subscriptionWithDelay!: Subscription;
+  subscriptionWithDelayNoFilter!: Subscription;
   subscriptionProjects!: Subscription;
+  SubNavStart!: Subscription;
+
+  routesID = {
+    'food-app': 1,
+    'eco-actions': 2,
+    'music-school': 3,
+    demand: 4,
+    calculator: 5,
+    game: 6,
+    'this-portfolio': 7,
+    allOtherRoutes: 100,
+  };
 
   constructor(private router: Router) {}
 
@@ -23,12 +36,47 @@ export class ScrollToTopService {
       });
   }
 
-  scrollToTopProjects() {
-    this.subscriptionProjects = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
+  adjacentProjects() {
+    this.subscriptionProjects = this.router.events.subscribe(() => {
+      window.scrollTo(0, 0);
+      this.subscriptionProjects.unsubscribe();
+    });
+  }
+
+  nonAdjacentProjects() {
+    this.subscriptionWithDelayNoFilter = this.router.events
+      .pipe(delay(450))
       .subscribe(() => {
         window.scrollTo(0, 0);
-        this.subscriptionProjects.unsubscribe();
+        this.subscriptionWithDelayNoFilter.unsubscribe();
       });
+  }
+
+  scroll() {
+    this.SubNavStart = this.router.events
+      .pipe(filter((event) => event instanceof NavigationStart))
+      .subscribe((event: any) => {
+        this.defineAnimation(event);
+
+        this.SubNavStart.unsubscribe();
+      });
+  }
+
+  defineAnimation(event: any) {
+    const origin = this.getRouteName(
+      this.router.url
+    ) as keyof typeof this.routesID;
+    let target = this.getRouteName(event.url) as keyof typeof this.routesID;
+
+    if (!(target in this.routesID)) target = 'allOtherRoutes';
+    if (Math.abs(this.routesID[target] - this.routesID[origin]) > 1) {
+      this.nonAdjacentProjects();
+    } else {
+      this.adjacentProjects();
+    }
+  }
+
+  getRouteName(completeRoute: string) {
+    return completeRoute.split('/').at(-1)!.replace('-project', '');
   }
 }

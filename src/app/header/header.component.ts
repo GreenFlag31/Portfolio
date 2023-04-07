@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription, debounceTime, fromEvent } from 'rxjs';
+import { Subject, Subscription, debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isHamburgerOpen = false;
   responsiveSub!: Subscription;
   isResponsiveMode = window.innerWidth < 500;
+
+  routesID = {
+    'Food-App': 1,
+    EcoActions: 2,
+    MusicSchool: 3,
+    Demand: 4,
+    Calculator: 5,
+    Game: 6,
+    Portfolio: 7,
+  };
 
   constructor(public router: Router) {}
 

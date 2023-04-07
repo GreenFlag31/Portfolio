@@ -49,22 +49,23 @@ export class MusicSchoolComponent implements OnInit {
     cons: {
       arg1: 'Use of meaningful HTML semantics',
       arg2: 'Mobile first approach',
-      arg3: 'Deeper in HTML, CSS, JS',
+      arg3: 'HTML, CSS, JS',
     },
   };
   navigation: navigation = {
     previous: {
       name: 'Previous project: EcoActions',
-      link: '../EcoActions-project',
+      link: '../eco-actions-project',
     },
     next: {
       name: 'Next project: Demand',
-      link: '../Demand-project',
+      link: '../demand-project',
     },
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    this.scrollToTop.scrollToTopProjects();
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

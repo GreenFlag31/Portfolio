@@ -1,6 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { description, navigation, project } from '../shared/data-type';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
+import { NavigationStart, Router } from '@angular/router';
+import { Subscription, filter, windowWhen } from 'rxjs';
+
+// interface routesID {
+//   'food-app': any;
+//   'eco-actions': any;
+//   'music-school': any;
+//   demand: any;
+//   calculator: any;
+//   game: any;
+//   portfolio: any;
+// }
 
 @Component({
   selector: 'app-food-app',
@@ -64,12 +76,26 @@ export class FoodAppComponent implements OnInit {
   navigation: navigation = {
     next: {
       name: 'Next project: EcoActions',
-      link: '../EcoActions-project',
+      link: '../eco-actions-project',
     },
   };
 
-  constructor(private scrollToTop: ScrollToTopService) {}
-  ngOnInit(): void {
-    this.scrollToTop.scrollToTopProjects();
+  constructor(
+    private scrollToTop: ScrollToTopService,
+    private router: Router
+  ) {}
+  routesID = {
+    'food-app': 1,
+    'eco-actions': 2,
+    'music-school': 3,
+    demand: 4,
+    calculator: 5,
+    game: 6,
+    portfolio: 7,
+  };
+  SubNavStart!: Subscription;
+  ngOnInit() {
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

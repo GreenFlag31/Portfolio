@@ -28,48 +28,48 @@ const routes: Routes = [
         data: { animation: 'food-app' },
       },
       {
-        path: 'EcoActions-project',
+        path: 'eco-actions-project',
         loadChildren: () =>
           import('./eco-actions/eco-actions.module').then(
             (m) => m.EcoActionsModule
           ),
-        data: { animation: 'EcoActions' },
+        data: { animation: 'eco-actions' },
       },
       {
-        path: 'MusicSchool-project',
+        path: 'music-school-project',
         loadChildren: () =>
           import('./music-school/music-school.module').then(
             (m) => m.MusicSchoolModule
           ),
-        data: { animation: 'MusicSchool' },
+        data: { animation: 'music-school' },
       },
       {
-        path: 'Demand-project',
+        path: 'demand-project',
         loadChildren: () =>
           import('./demand/demand.module').then((m) => m.DemandModule),
-        data: { animation: 'Demand' },
+        data: { animation: 'demand' },
       },
       {
-        path: 'Calculator-project',
+        path: 'calculator-project',
         loadChildren: () =>
           import('./calculator/calculator.module').then(
             (m) => m.CalculatorModule
           ),
-        data: { animation: 'Calculator' },
+        data: { animation: 'calculator' },
       },
       {
-        path: 'Game-project',
+        path: 'game-project',
         loadChildren: () =>
           import('./game/game.module').then((m) => m.GameModule),
-        data: { animation: 'Game' },
+        data: { animation: 'game' },
       },
       {
-        path: 'Portfolio-project',
+        path: 'this-portfolio',
         loadChildren: () =>
           import('./portfolio-project/portfolio-project.module').then(
             (m) => m.PortfolioProjectModule
           ),
-        data: { animation: 'Portfolio' },
+        data: { animation: 'portfolio' },
       },
       {
         path: 'blog',

@@ -55,16 +55,17 @@ export class CalculatorComponent implements OnInit {
   navigation: navigation = {
     previous: {
       name: 'Previous project: Demand',
-      link: '../Demand-project',
+      link: '../demand-project',
     },
     next: {
       name: 'Next project: Game',
-      link: '../Game-project',
+      link: '../game-project',
     },
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    this.scrollToTop.scrollToTopProjects();
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

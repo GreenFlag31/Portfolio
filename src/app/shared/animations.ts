@@ -46,7 +46,7 @@ const animateStartStyle = animation([
 ]);
 
 export const routesAnimation = trigger('routeAnimations', [
-  transition('food-app => EcoActions', [
+  transition('food-app => eco-actions', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -56,7 +56,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('EcoActions => MusicSchool', [
+  transition('eco-actions => music-school', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -66,7 +66,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('MusicSchool => Demand', [
+  transition('music-school => demand', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -76,7 +76,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Demand => Calculator', [
+  transition('demand => calculator', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -86,7 +86,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Calculator => Game', [
+  transition('calculator => game', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -96,7 +96,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Game => Portfolio', [
+  transition('game => portfolio', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -106,7 +106,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Portfolio => Game', [
+  transition('portfolio => game', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -116,7 +116,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Game => Calculator', [
+  transition('game => calculator', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -126,7 +126,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Calculator => Demand', [
+  transition('calculator => demand', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -136,7 +136,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('Demand => MusicSchool', [
+  transition('demand => music-school', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -146,7 +146,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('MusicSchool => EcoActions', [
+  transition('music-school => eco-actions', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -156,7 +156,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('EcoActions => food-app', [
+  transition('eco-actions => food-app', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {

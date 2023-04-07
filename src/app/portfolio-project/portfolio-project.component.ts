@@ -36,7 +36,7 @@ export class PortfolioProjectComponent implements OnInit {
     },
     text: {
       description: `This portfolio is a single page application (SPA) build with Angular, animated with route transitions.`,
-      goal: `The goal of this website is - obviously :) - to showcase different projects I made and practice further Angular. Attention has been put towards a smooth user experience. Recommended practices by Angular are followed.`,
+      goal: `The goal of this website is - obviously :) - to showcase different projects I made and practice further Angular. A relative complex point has been to handle the different route animations with the attached scroll behaviour. Attention has been put towards a smooth user experience. Recommended practices by Angular are followed.`,
     },
     code: {
       github: 'https://github.com/GreenFlag31/Portfolio',
@@ -56,12 +56,13 @@ export class PortfolioProjectComponent implements OnInit {
   navigation: navigation = {
     previous: {
       name: 'Previous project: Game',
-      link: '../Game-project',
+      link: '../game-project',
     },
   };
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    this.scrollToTop.scrollToTopProjects();
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }

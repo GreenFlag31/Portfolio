@@ -60,11 +60,12 @@ export class EcoActionsComponent implements OnInit {
     },
     next: {
       name: 'Next project: MusicSchool',
-      link: '../MusicSchool-project',
+      link: '../music-school-project',
     },
   };
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    this.scrollToTop.scrollToTopProjects();
+    // this.scrollToTop.scrollToTopProjects();
+    this.scrollToTop.scroll();
   }
 }
