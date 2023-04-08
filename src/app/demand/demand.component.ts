@@ -67,7 +67,6 @@ export class DemandComponent implements OnInit {
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit(): void {
-    // this.scrollToTop.scrollToTopProjects();
     this.scrollToTop.scroll();
   }
 }

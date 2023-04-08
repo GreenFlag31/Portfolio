@@ -95,7 +95,6 @@ export class FoodAppComponent implements OnInit {
   };
   SubNavStart!: Subscription;
   ngOnInit() {
-    // this.scrollToTop.scrollToTopProjects();
     this.scrollToTop.scroll();
   }
 }

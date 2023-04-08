@@ -31,11 +31,9 @@
 }
 .previous .text-container p {
   transition: transform 0.3s;
-  /* transform: translateX(5%); */
 }
 .next .text-container p {
   transition: transform 0.3s;
-  /* transform: translateX(-5%); */
 }
 .text-container p i {
   color: var(--primary-color-3);

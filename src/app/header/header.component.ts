@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subject, Subscription, debounceTime, fromEvent } from 'rxjs';
+import { Subscription, debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-header',

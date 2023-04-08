@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -13,7 +13,6 @@ const routes: Routes = [
       import('./curriculum-vitae/curriculum-vitae.module').then(
         (m) => m.CurriculumVitaeModule
       ),
-    pathMatch: 'full',
     data: { animation: 'portfolio' },
   },
   {
@@ -69,7 +68,7 @@ const routes: Routes = [
           import('./portfolio-project/portfolio-project.module').then(
             (m) => m.PortfolioProjectModule
           ),
-        data: { animation: 'portfolio' },
+        data: { animation: 'this-portfolio' },
       },
       {
         path: 'blog',
@@ -114,7 +113,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

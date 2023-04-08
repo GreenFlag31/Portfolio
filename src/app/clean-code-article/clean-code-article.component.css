@@ -60,7 +60,6 @@ hr {
   right: 0px;
   width: 50px;
   height: 100px;
-  /* opacity: 0.7; */
   fill: var(--primary-color-3);
 }
 .title {
@@ -113,7 +112,6 @@ hr {
 .short {
   display: flex;
   align-items: center;
-  /* flex-wrap: wrap; */
   gap: 0.5em;
 }
 .short i,

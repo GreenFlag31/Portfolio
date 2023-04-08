@@ -42,12 +42,6 @@
 .blog {
   height: 100%;
 }
-/* .blog {
-  min-height: 60px;
-}
-.projects {
-  min-height: 44px;
-} */
 .projects.hamburger-active,
 .blog.hamburger-active {
   display: block;

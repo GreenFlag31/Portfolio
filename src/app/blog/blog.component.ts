@@ -13,10 +13,6 @@ export class BlogComponent implements OnInit {
       name: 'Home',
       link: '/portfolio',
     },
-    // next: {
-    //   name: 'Next project: Demand',
-    //   link: '../Demand-project',
-    // },
   };
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {

@@ -68,7 +68,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'Sept. 2022',
       description: `EcoActions is a one page project about all little actions we can undertake to fight climate change.`,
       links: {
-        general: './EcoActions-project',
+        general: './eco-actions-project',
         live: 'https://greenflag31.github.io/EcoActions',
         github: 'https://github.com/GreenFlag31/EcoActions',
       },
@@ -96,7 +96,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'August 2022',
       description: `MusicSchool is a two pages project about a Music School offering lessons.`,
       links: {
-        general: './MusicSchool-project',
+        general: './music-school-project',
         live: 'https://greenflag31.github.io/Music-School',
         github: 'https://github.com/GreenFlag31/Music-School',
       },
@@ -124,7 +124,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'Nov. 2022',
       description: `This project is about a fictive company in the finance sector managing leasing demands.`,
       links: {
-        general: './Demand-project',
+        general: './demand-project',
         live: 'https://greenflag31.github.io/demand',
         github: 'https://github.com/GreenFlag31/demand',
       },
@@ -152,7 +152,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'Dec. 2022',
       description: `Calculator is a one page project presenting a non-scientific calculator to handle simple computations.`,
       links: {
-        general: './Calculator-project',
+        general: './calculator-project',
         live: 'https://greenflag31.github.io/calculator',
         github: 'https://github.com/GreenFlag31/calculator',
       },
@@ -176,7 +176,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'Dec. 2022',
       description: `Game is a one page project and is meant to be played and started in the console.`,
       links: {
-        general: './Game-project',
+        general: './game-project',
         live: 'https://greenflag31.github.io/JS-game',
         github: 'https://github.com/GreenFlag31/JS-game',
       },
@@ -208,7 +208,7 @@ export class CurriculumVitaeComponent implements OnInit {
       date: 'April 2023',
       description: `Want to know more information about this website ?`,
       links: {
-        general: './Portfolio-project',
+        general: './this-portfolio',
         github: 'https://github.com/GreenFlag31/Portfolio',
       },
     },
@@ -219,7 +219,9 @@ export class CurriculumVitaeComponent implements OnInit {
 
   constructor(private scrollToTop: ScrollToTopService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log('test deploy');
+
     this.scrollToTop.scrollToTopWithDelay();
   }
 

@@ -65,7 +65,6 @@ export class CalculatorComponent implements OnInit {
 
   constructor(private scrollToTop: ScrollToTopService) {}
   ngOnInit() {
-    // this.scrollToTop.scrollToTopProjects();
     this.scrollToTop.scroll();
   }
 }
