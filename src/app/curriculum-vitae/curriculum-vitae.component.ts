@@ -220,7 +220,7 @@ export class CurriculumVitaeComponent implements OnInit {
   constructor(private scrollToTop: ScrollToTopService) {}
 
   ngOnInit() {
-    console.log('test deploy');
+    console.log('test deploy 2');
 
     this.scrollToTop.scrollToTopWithDelay();
   }
