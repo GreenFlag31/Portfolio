@@ -54,8 +54,8 @@ export class MusicSchoolComponent implements OnInit {
   };
   navigation: navigation = {
     previous: {
-      name: 'Previous project: EcoActions',
-      link: '../eco-actions-project',
+      name: 'Next project: Coffee API',
+      link: '../coffee-api-project',
     },
     next: {
       name: 'Next project: Demand',

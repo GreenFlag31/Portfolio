@@ -44,8 +44,8 @@ export class EcoActionsComponent implements OnInit {
       arg1: 'A deeper understanding of HTML, CSS, JS',
       arg2: 'Animations with IntersectionObserver API',
       arg3: 'Responsive dynamical pagination',
-      arg4: 'Practice of modern CSS technologies such as Grid or Flexbox',
-      arg5: 'Optimised Javascript code respecting the DRY principle',
+      arg4: 'Practice of modern CSS tools such as Grid or Flexbox',
+      arg5: "Cards present the same structure, so it's the perfect candidate for respecting the DRY principle (a function renders the DOM dynamically)",
     },
     cons: {
       arg1: 'Cleaner structure of the Javascript code, separating file into modules, increasing maintainability',
@@ -59,8 +59,8 @@ export class EcoActionsComponent implements OnInit {
       link: '../food-app-project',
     },
     next: {
-      name: 'Next project: MusicSchool',
-      link: '../music-school-project',
+      name: 'Next project: Coffee API',
+      link: '../coffee-api-project',
     },
   };
   constructor(private scrollToTop: ScrollToTopService) {}

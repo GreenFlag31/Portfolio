@@ -41,6 +41,8 @@
   --primary-color-5: #101924;
   --primary-color-6: #b90202;
   --primary-color-7: #2525b6;
+  --color1: #18276f;
+  --color2: #0c143b;
 }
 body {
   overflow-x: hidden;

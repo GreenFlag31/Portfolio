@@ -1,5 +1,9 @@
+.other-projects .project-container:nth-child(odd) {
+  background: aliceblue;
+}
+
 .project-container {
-  margin-top: 10em;
+  padding-top: 10em;
 }
 .introduction > img {
   display: block;
@@ -10,7 +14,7 @@
   object-fit: cover;
 }
 .general-description-container {
-  margin-bottom: 7em;
+  margin-bottom: 5em;
 }
 .description {
   max-width: 1000px;
@@ -30,7 +34,7 @@
 .introduction {
   position: relative;
 }
-.language-container {
+.coding-languages {
   position: absolute;
   padding: 0.3em;
   bottom: 0;
@@ -38,7 +42,7 @@
   display: flex;
   gap: 0.3em;
 }
-.language-container img {
+.coding-languages img {
   display: block;
   /* width: 20px; */
   height: 20px;
@@ -86,19 +90,76 @@
   font-size: 1.1em;
 }
 
-.wave {
-  display: block;
-  width: 100%;
-  height: 5rem;
-}
-.background-wrapper {
-  background: aliceblue;
-}
-.pro-contra-container {
+.progress.accordion {
   max-width: 1000px;
   margin: auto;
-  padding: 3em 0.625em 0;
+  padding: 0.625em;
 }
+.tabs {
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0px 2px 3px 0px rgb(160 160 160 / 83%);
+}
+.accordion .tab {
+  overflow: hidden;
+}
+.tab input {
+  display: none;
+}
+@property --color1 {
+  syntax: "<color>";
+  initial-value: #18276f;
+  inherits: false;
+}
+
+@property --color2 {
+  syntax: "<color>";
+  initial-value: #090f2d;
+  inherits: false;
+}
+.tab label {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1em;
+  font-weight: 600;
+  color: var(--primary-color-1);
+  cursor: pointer;
+  -moz-background: var(--primary-color-2);
+  background: linear-gradient(127deg, var(--color1) 30%, var(--color2));
+  transition: --color1 0.6s ease-out, --color2 0.6s ease-out;
+}
+.tab label:hover {
+  --color1: #0e1743;
+  --color2: #18276f;
+}
+.label-titel i {
+  font-size: 1.1em;
+  margin-right: 10px;
+}
+.tab label::after {
+  content: "❯";
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  background: white;
+  transition: all 0.3s ease-out;
+}
+input:checked ~ .tab-content {
+  max-height: 800px;
+  padding: 1em;
+}
+input:checked + label::after {
+  transform: rotate(90deg);
+}
+
+/* .pro-contra-container {
+  padding: 3em 0.625em 0;
+} */
 .pro-contra-container i {
   margin-right: 0.5em;
 }
@@ -110,35 +171,23 @@
   color: #bf0000;
 }
 
-.pros .title {
-  background: var(--primary-color-2);
-  border-radius: 0.3em;
-}
 .title h2 {
-  color: var(--primary-color-1);
+  color: var(--primary-color-2);
   font-size: 1.3em;
-  padding: 0.625em;
   font-weight: 600;
 }
+.cons h2 {
+  color: black;
+}
 .pros {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
-.cons {
-  padding-bottom: 4em;
-}
-.project-rules {
-  padding: 0.625em;
-  font-size: 0.8em;
-}
-.cons .title {
-  background: var(--primary-color-5);
-  border-radius: 0.3em;
-}
-.arguments {
-  padding: 0.625em;
-  padding-bottom: 0;
-}
-.arguments p:first-child {
+/* .cons {
+  padding-bottom: 1em;
+} */
+
+.arguments p {
+  padding: 0.625em 0;
   padding-bottom: 0;
 }
 
@@ -160,5 +209,8 @@
 
   .introduction > img {
     border-radius: 0.5em;
+  }
+  .progress.accordion {
+    padding: 2em;
   }
 }

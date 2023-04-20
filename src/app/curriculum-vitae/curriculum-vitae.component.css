@@ -207,10 +207,10 @@ input:checked + label::after {
   justify-content: space-around;
   transition: transform 0.3s ease-out;
   transform: translate3d(0, 0, 0);
-  width: 700%;
+  width: 800%;
 }
 .project-overview {
-  width: 12%;
+  width: 10%;
   min-width: 270px;
 }
 .previous,

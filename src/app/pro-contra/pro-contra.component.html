@@ -19,8 +19,6 @@
               [src]="language.value['src']"
               alt="Coding language"
               [title]="language.value['title']"
-              width="20px"
-              height="20px"
             />
           </div>
         </div>
@@ -36,10 +34,16 @@
             href="{{ description.code.live }}"
             tabindex="-1"
             target="_blank"
+            class="live"
           >
             <i class="fa-solid fa-tower-broadcast"></i>Live</a
           >
-          <a href="{{ description.code.github }}" tabindex="-1" target="_blank">
+          <a
+            href="{{ description.code.github }}"
+            tabindex="-1"
+            target="_blank"
+            class="github"
+          >
             <i class="fa-brands fa-github"></i>Code</a
           >
         </div>

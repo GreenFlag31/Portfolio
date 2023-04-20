@@ -10,7 +10,6 @@ import { selfPic, title } from '../shared/animations';
   animations: [selfPic, title],
 })
 export class CurriculumVitaeComponent implements OnInit {
-  currentYear = new Date().getFullYear();
   projectsData: projectData[] = [
     {
       img: {
@@ -71,6 +70,30 @@ export class CurriculumVitaeComponent implements OnInit {
         general: './eco-actions-project',
         live: 'https://greenflag31.github.io/EcoActions',
         github: 'https://github.com/GreenFlag31/EcoActions',
+      },
+    },
+    {
+      img: {
+        src: '../../assets/projects-img/coffee1.jpg',
+        alt: 'A coffee on a table',
+      },
+      coding: {
+        language1: {
+          src: '../../assets/NodeJSbg.png',
+          title: 'NodeJS',
+        },
+        language2: {
+          src: '../../assets/MongoDB.jpg',
+          title: 'MongoDB',
+        },
+      },
+      name: 'Coffee API',
+      date: 'April 2022',
+      description: `Coffee API is a REST API I have created about different types of coffee.`,
+      links: {
+        general: './coffee-api-project',
+        live: 'https://coffeeapi-doc.com',
+        github: 'https://github.com/GreenFlag31/coffeeAPI',
       },
     },
     {

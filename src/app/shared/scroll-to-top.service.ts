@@ -14,11 +14,12 @@ export class ScrollToTopService {
   routesID = {
     'food-app': 1,
     'eco-actions': 2,
-    'music-school': 3,
-    demand: 4,
-    calculator: 5,
-    game: 6,
-    'this-portfolio': 7,
+    'coffee-api': 3,
+    'music-school': 4,
+    demand: 5,
+    calculator: 6,
+    game: 7,
+    'this-portfolio': 8,
     allOtherRoutes: 100,
   };
 

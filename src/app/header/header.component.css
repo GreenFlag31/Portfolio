@@ -120,7 +120,7 @@
   background: #18276fa1;
 }
 .menu.open {
-  max-height: 315px;
+  max-height: 400px;
 }
 .menu.hamburger-active {
   position: initial;

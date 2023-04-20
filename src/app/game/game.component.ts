@@ -28,7 +28,7 @@ export class GameComponent implements OnInit {
     },
     text: {
       description: `Game is a one page project and is meant to be played and started in the console. This project is a classical paper-scissors-rock game with a touch of RPG fantasy.`,
-      goal: `Part of a <a href="https://drive.google.com/drive/folders/1mSGaVybH6HzOb6r9B-cvXlPgrk_9KXtn" target=_blank>Frond-End training</a>, the purpose of this project is to focus solely on Javascript. Enrichted with questions about Javascript, this game proposes a ranking system, storing the data in the sessionStorage.`,
+      goal: `Part of a <a href="https://drive.google.com/file/d/1yWuUFO9IWDAU3CtgaZkmigJOJR-izTMF/view" target=_blank>Front-End training</a>, the purpose of this project is to focus solely on Javascript. Enrichted with questions about Javascript, this game proposes a ranking system, storing the data in the sessionStorage.`,
     },
     code: {
       live: 'https://greenflag31.github.io/JS-game',

@@ -53,7 +53,17 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('eco-actions => music-school', [
+  transition('eco-actions => coffee-api', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '100%',
+        leavingLeft: '-100%',
+      },
+    }),
+  ]),
+  transition('coffee-api => music-school', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -143,7 +153,17 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('music-school => eco-actions', [
+  transition('music-school => coffee-api', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '-100%',
+        leavingLeft: '100%',
+      },
+    }),
+  ]),
+  transition('coffee-api => eco-actions', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {

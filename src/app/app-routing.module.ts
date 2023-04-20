@@ -35,6 +35,14 @@ const routes: Routes = [
         data: { animation: 'eco-actions' },
       },
       {
+        path: 'coffee-api-project',
+        loadChildren: () =>
+          import('./coffee-api/coffee-api.module').then(
+            (m) => m.CoffeeApiModule
+          ),
+        data: { animation: 'coffee-api' },
+      },
+      {
         path: 'music-school-project',
         loadChildren: () =>
           import('./music-school/music-school.module').then(
@@ -61,6 +69,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('./game/game.module').then((m) => m.GameModule),
         data: { animation: 'game' },
+      },
+      {
+        path: 'other-projects',
+        loadChildren: () =>
+          import('./other-projects/other-projects.module').then(
+            (m) => m.OtherProjectsModule
+          ),
+        data: { animation: 'others' },
       },
       {
         path: 'this-portfolio',

@@ -32,7 +32,7 @@ export class CalculatorComponent implements OnInit {
     },
     text: {
       description: `Calculator is a one page project. This project presents a basic, non scientific calculator, to handle simple computations. Simple does not mean easy: a lot of user input validations had to be done.`,
-      goal: `Part of a <a href="https://drive.google.com/drive/folders/1mSGaVybH6HzOb6r9B-cvXlPgrk_9KXtn" target=_blank>Frond-End training</a>, the purpose of this project is to handle multiple exceptions that can occur. Focus is put mainly on Javascript and the structure of the code. This project also offers a correct user experience, supporting mouse and keyboard inputs.`,
+      goal: `Part of a <a href="https://drive.google.com/file/d/1yWuUFO9IWDAU3CtgaZkmigJOJR-izTMF/view" target=_blank>Front-End training</a>, the purpose of this project is to handle multiple exceptions that can occur. Focus is put mainly on Javascript and the structure of the code. This project also offers a correct user experience, supporting mouse and keyboard inputs.`,
     },
     code: {
       live: 'https://greenflag31.github.io/calculator',
