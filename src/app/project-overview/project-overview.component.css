@@ -102,7 +102,7 @@
 }
 .tech-stack img {
   display: block;
-  /* width: 20px; */
+  width: auto;
   height: 20px;
   border-radius: 0.2em;
 }
