@@ -1,6 +1,13 @@
 <div class="other-projects">
   <div class="main-title">
-    <h1>Other projects</h1>
+    <div class="title-container">
+      <h1>Other projects</h1>
+      <div class="projects-shortcut">
+        <p (click)="scrollToTarget(game)">Game</p>
+        <span class="bullet"></span>
+        <p (click)="scrollToTarget(portfolio)">This Portfolio</p>
+      </div>
+    </div>
     <hr />
   </div>
   <div class="general-projects-container">
@@ -131,7 +138,7 @@
         </div>
       </section>
     </div>
-    <div class="project-container game">
+    <div class="project-container game" #game>
       <div class="general-description-container">
         <h2 class="section-title">Game</h2>
         <div class="description">
@@ -242,7 +249,7 @@
         </div>
       </section>
     </div>
-    <div class="project-container this-portfolio">
+    <div class="project-container this-portfolio" #portfolio>
       <div class="general-description-container">
         <h2 class="section-title">This portfolio</h2>
         <div class="description">

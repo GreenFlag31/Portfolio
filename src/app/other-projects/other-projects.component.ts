@@ -18,4 +18,10 @@ export class OtherProjectsComponent implements OnInit {
   ngOnInit() {
     this.scrollToTop.scroll();
   }
+
+  scrollToTarget(target: HTMLDivElement) {
+    target.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
 }
