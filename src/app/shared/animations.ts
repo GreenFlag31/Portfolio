@@ -83,7 +83,7 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('demand => calculator', [
+  transition('demand => others', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {
@@ -93,47 +93,8 @@ export const routesAnimation = trigger('routeAnimations', [
       },
     }),
   ]),
-  transition('calculator => game', [
-    useAnimation(startStyle),
 
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '100%',
-        leavingLeft: '-100%',
-      },
-    }),
-  ]),
-  transition('game => this-portfolio', [
-    useAnimation(startStyle),
-
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '100%',
-        leavingLeft: '-100%',
-      },
-    }),
-  ]),
-  transition('this-portfolio => game', [
-    useAnimation(startStyle),
-
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '-100%',
-        leavingLeft: '100%',
-      },
-    }),
-  ]),
-  transition('game => calculator', [
-    useAnimation(startStyle),
-
-    useAnimation(animateStartStyle, {
-      params: {
-        startingLeft: '-100%',
-        leavingLeft: '100%',
-      },
-    }),
-  ]),
-  transition('calculator => demand', [
+  transition('others => demand', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {

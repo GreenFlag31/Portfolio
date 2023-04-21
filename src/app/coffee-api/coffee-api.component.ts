@@ -40,8 +40,7 @@ export class CoffeeAPIComponent implements OnInit {
       arg1: 'NodeJS',
       arg2: 'MongoDB',
       arg3: 'Deeper knowledge of the API REST principles',
-      arg4: 'Cached responses to increase response time',
-      arg5: 'Building an API documentation',
+      arg4: 'Building an API documentation',
     },
     cons: {
       arg1: "Building more API's with other HTTP verbs. Practice makes perfect !",

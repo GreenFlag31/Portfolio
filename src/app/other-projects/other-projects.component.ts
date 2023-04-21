@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { navigation } from '../shared/data-type';
+import { ScrollToTopService } from '../shared/scroll-to-top.service';
 
 @Component({
   selector: 'app-other-projects',
@@ -7,8 +8,14 @@ import { navigation } from '../shared/data-type';
   styleUrls: ['./other-projects.component.css'],
 })
 export class OtherProjectsComponent implements OnInit {
-  @Input() navigation!: navigation;
-  constructor() {}
-
-  ngOnInit() {}
+  navigation: navigation = {
+    previous: {
+      name: 'Previous project: Demand',
+      link: '../demand-project',
+    },
+  };
+  constructor(private scrollToTop: ScrollToTopService) {}
+  ngOnInit() {
+    this.scrollToTop.scroll();
+  }
 }

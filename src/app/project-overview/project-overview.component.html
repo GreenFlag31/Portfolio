@@ -24,13 +24,16 @@
       <p class="text">
         {{ projectsData.description }}
       </p>
-      <p
-        class="see-more"
-        [routerLink]="[projectsData.links['general']]"
-        tabindex="-1"
-      >
-        See more
-      </p>
+      <div class="see-more-container">
+        <p
+          class="see-more"
+          [routerLink]="[projectsData.links['general']]"
+          tabindex="-1"
+        >
+          See more
+        </p>
+        <p>{{ projectsData.category }}</p>
+      </div>
     </div>
     <div class="actions">
       <a

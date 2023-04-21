@@ -88,7 +88,7 @@ export class CurriculumVitaeComponent implements OnInit {
         },
       },
       name: 'Coffee API',
-      date: 'April 2022',
+      date: 'April 2023',
       description: `Coffee API is a REST API I have created about different types of coffee.`,
       links: {
         general: './coffee-api-project',
@@ -174,8 +174,9 @@ export class CurriculumVitaeComponent implements OnInit {
       name: 'Calculator',
       date: 'Dec. 2022',
       description: `Calculator is a one page project presenting a non-scientific calculator to handle simple computations.`,
+      category: '#other-projects',
       links: {
-        general: './calculator-project',
+        general: './other-projects',
         live: 'https://greenflag31.github.io/calculator',
         github: 'https://github.com/GreenFlag31/calculator',
       },
@@ -198,8 +199,9 @@ export class CurriculumVitaeComponent implements OnInit {
       name: 'Game',
       date: 'Dec. 2022',
       description: `Game is a one page project and is meant to be played and started in the console.`,
+      category: '#other-projects',
       links: {
-        general: './game-project',
+        general: './other-projects',
         live: 'https://greenflag31.github.io/JS-game',
         github: 'https://github.com/GreenFlag31/JS-game',
       },
@@ -230,8 +232,9 @@ export class CurriculumVitaeComponent implements OnInit {
       name: 'This portfolio',
       date: 'April 2023',
       description: `Want to know more information about this website ?`,
+      category: '#other-projects',
       links: {
-        general: './this-portfolio',
+        general: './other-projects',
         github: 'https://github.com/GreenFlag31/Portfolio',
       },
     },

@@ -17,9 +17,7 @@ export class ScrollToTopService {
     'coffee-api': 3,
     'music-school': 4,
     demand: 5,
-    calculator: 6,
-    game: 7,
-    'this-portfolio': 8,
+    others: 6,
     allOtherRoutes: 100,
   };
 

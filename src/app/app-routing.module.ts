@@ -56,20 +56,7 @@ const routes: Routes = [
           import('./demand/demand.module').then((m) => m.DemandModule),
         data: { animation: 'demand' },
       },
-      {
-        path: 'calculator-project',
-        loadChildren: () =>
-          import('./calculator/calculator.module').then(
-            (m) => m.CalculatorModule
-          ),
-        data: { animation: 'calculator' },
-      },
-      {
-        path: 'game-project',
-        loadChildren: () =>
-          import('./game/game.module').then((m) => m.GameModule),
-        data: { animation: 'game' },
-      },
+
       {
         path: 'other-projects',
         loadChildren: () =>
@@ -78,14 +65,7 @@ const routes: Routes = [
           ),
         data: { animation: 'others' },
       },
-      {
-        path: 'this-portfolio',
-        loadChildren: () =>
-          import('./portfolio-project/portfolio-project.module').then(
-            (m) => m.PortfolioProjectModule
-          ),
-        data: { animation: 'this-portfolio' },
-      },
+
       {
         path: 'blog',
         loadChildren: () =>

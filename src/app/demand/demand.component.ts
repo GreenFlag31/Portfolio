@@ -60,8 +60,8 @@ export class DemandComponent implements OnInit {
       link: '../music-school-project',
     },
     next: {
-      name: 'Next project: Calculator',
-      link: '../calculator-project',
+      name: 'Next project: other projects',
+      link: '../other-projects',
     },
   };
 

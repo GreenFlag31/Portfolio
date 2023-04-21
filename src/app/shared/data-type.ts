@@ -55,6 +55,7 @@ export interface projectData {
   name: string;
   date: string;
   description: string;
+  category?: string;
   links: {
     general: string;
     live?: string;

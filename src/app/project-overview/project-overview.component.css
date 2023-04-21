@@ -25,11 +25,20 @@
   font-weight: 600;
   font-size: 1.1em;
 }
-.see-more {
+.see-more-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.see-more-container p {
   cursor: pointer;
-  text-align: left;
   font-size: 0.9em;
-  display: inline-block;
+}
+.see-more-container p:last-child {
+  cursor: initial;
+  color: var(--primary-color-2);
+  font-weight: 600;
+  font-size: 0.8em;
 }
 .see-more:hover {
   text-decoration: underline;

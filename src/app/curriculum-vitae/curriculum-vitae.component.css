@@ -150,10 +150,6 @@
   background: var(--primary-color-2);
   transition: all 0.3s ease-out;
 }
-.label-titel i {
-  font-size: 1.1em;
-  margin-right: 10px;
-}
 .tab label::after {
   content: "❯";
   display: block;
