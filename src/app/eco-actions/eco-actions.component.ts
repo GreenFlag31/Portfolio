@@ -55,8 +55,8 @@ export class EcoActionsComponent implements OnInit {
   };
   navigation: navigation = {
     previous: {
-      name: 'Previous project: Food-App',
-      link: '../food-app-project',
+      name: 'Previous project: Roadster API',
+      link: '../roadster-api-project',
     },
     next: {
       name: 'Next project: Coffee API',

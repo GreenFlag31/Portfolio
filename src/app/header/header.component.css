@@ -37,6 +37,7 @@
   min-height: 15em;
   padding-top: 4em;
   margin-bottom: 3em;
+  margin-right: 0;
 }
 .projects,
 .blog {

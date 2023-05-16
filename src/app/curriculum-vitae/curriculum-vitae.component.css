@@ -40,6 +40,9 @@
   max-width: 1000px;
   margin: auto;
 }
+.curriculum {
+  max-width: 950px;
+}
 .img-container {
   position: relative;
   max-height: 330px;
@@ -166,7 +169,7 @@
   transition: all 0.3s ease-out;
 }
 input:checked ~ .tab-content {
-  max-height: 800px;
+  max-height: 810px;
   padding: 1em;
 }
 input:checked + label::after {
@@ -203,7 +206,7 @@ input:checked + label::after {
   justify-content: space-around;
   transition: transform 0.3s ease-out;
   transform: translate3d(0, 0, 0);
-  width: 800%;
+  width: 700%;
 }
 .project-overview {
   width: 10%;

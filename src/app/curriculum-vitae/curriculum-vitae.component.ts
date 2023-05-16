@@ -13,7 +13,7 @@ export class CurriculumVitaeComponent implements OnInit {
   projectsData: projectData[] = [
     {
       img: {
-        src: '../../assets/projects-img/food-app.png',
+        src: '../../assets/projects-img/food-app.jpg',
         alt: 'Image of food plate',
       },
       coding: {
@@ -42,6 +42,30 @@ export class CurriculumVitaeComponent implements OnInit {
         general: './food-app-project',
         live: 'https://my-list-a7fb0.web.app/getting-started',
         github: 'https://github.com/GreenFlag31/food-manager',
+      },
+    },
+    {
+      img: {
+        src: '../../assets/projects-img/car.jpg',
+        alt: 'Red 911 Porsche',
+      },
+      coding: {
+        language1: {
+          src: '../../assets/NodeJSbg.png',
+          title: 'NodeJS',
+        },
+        language2: {
+          src: '../../assets/MongoDB.jpg',
+          title: 'MongoDB',
+        },
+      },
+      name: 'Roadster API',
+      date: 'May 2023',
+      description: `Roadster API is a REST API with authentification I have created about historical cars.`,
+      links: {
+        general: './roadster-api-project',
+        live: 'https://historicalcars-api.com',
+        github: 'https://github.com/GreenFlag31/car-api',
       },
     },
     {
@@ -154,60 +178,6 @@ export class CurriculumVitaeComponent implements OnInit {
     },
     {
       img: {
-        src: '../../assets/projects-img/calculator.png',
-        alt: 'Image of a calculator',
-      },
-      coding: {
-        language1: {
-          src: '../../assets/Javascript.png',
-          title: 'Javascript',
-        },
-        language2: {
-          src: '../../assets/HTML5.png',
-          title: 'HTML5',
-        },
-        language3: {
-          src: '../../assets/CSS3.png',
-          title: 'CSS3',
-        },
-      },
-      name: 'Calculator',
-      date: 'Dec. 2022',
-      description: `Calculator is a one page project presenting a non-scientific calculator to handle simple computations.`,
-      category: '#other-projects',
-      links: {
-        general: './other-projects',
-        live: 'https://greenflag31.github.io/calculator',
-        github: 'https://github.com/GreenFlag31/calculator',
-      },
-    },
-    {
-      img: {
-        src: '../../assets/projects-img/game.png',
-        alt: 'Image of a the Chrome console',
-      },
-      coding: {
-        language1: {
-          src: '../../assets/Javascript.png',
-          title: 'Javascript',
-        },
-        language2: {
-          src: '../../assets/HTML5.png',
-          title: 'HTML5',
-        },
-      },
-      name: 'Game',
-      date: 'Dec. 2022',
-      description: `Game is a one page project and is meant to be played and started in the console.`,
-      category: '#other-projects',
-      links: {
-        general: './other-projects',
-        live: 'https://greenflag31.github.io/JS-game',
-        github: 'https://github.com/GreenFlag31/JS-game',
-      },
-    },
-    {
-      img: {
         src: '../../assets/projects-img/developer.jpg',
         alt: 'Picture of a sunny desktop',
       },
@@ -229,13 +199,12 @@ export class CurriculumVitaeComponent implements OnInit {
           title: 'CSS3',
         },
       },
-      name: 'This portfolio',
-      date: 'April 2023',
-      description: `Want to know more information about this website ?`,
+      name: 'Other projects',
+      date: 'Dec. 2022 -> April 2023',
+      description: `Other projects regroups on a single page two projects from a training and more info about this portfolio.`,
       category: '#other-projects',
       links: {
         general: './other-projects',
-        github: 'https://github.com/GreenFlag31/Portfolio',
       },
     },
   ];

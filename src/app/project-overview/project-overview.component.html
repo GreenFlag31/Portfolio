@@ -44,7 +44,12 @@
       >
         <i class="fa-solid fa-tower-broadcast"></i>Live</a
       >
-      <a [href]="projectsData.links['github']" tabindex="-1" target="_blank">
+      <a
+        *ngIf="projectsData.links['github']"
+        [href]="projectsData.links['github']"
+        tabindex="-1"
+        target="_blank"
+      >
         <i class="fa-brands fa-github"></i>Code</a
       >
     </div>

@@ -27,6 +27,12 @@ const routes: Routes = [
         data: { animation: 'food-app' },
       },
       {
+        path: 'roadster-api-project',
+        loadChildren: () =>
+          import('./car-api/car-api.module').then((m) => m.CarApiModule),
+        data: { animation: 'roadster-api' },
+      },
+      {
         path: 'eco-actions-project',
         loadChildren: () =>
           import('./eco-actions/eco-actions.module').then(

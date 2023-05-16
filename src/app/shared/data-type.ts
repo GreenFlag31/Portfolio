@@ -59,6 +59,6 @@ export interface projectData {
   links: {
     general: string;
     live?: string;
-    github: string;
+    github?: string;
   };
 }

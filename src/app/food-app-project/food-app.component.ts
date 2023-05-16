@@ -11,7 +11,7 @@ export class FoodAppComponent implements OnInit {
     introduction: {
       title: 'Food-App',
       img: {
-        src: '../../assets/projects-img/food-app.png',
+        src: '../../assets/projects-img/food-app.jpg',
         alt: 'Image of food plate',
       },
       date: 'March 2023',
@@ -63,8 +63,8 @@ export class FoodAppComponent implements OnInit {
   };
   navigation: navigation = {
     next: {
-      name: 'Next project: EcoActions',
-      link: '../eco-actions-project',
+      name: 'Next project: Roadster API',
+      link: '../roadster-api-project',
     },
   };
 
