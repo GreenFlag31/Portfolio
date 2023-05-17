@@ -28,7 +28,7 @@ export class CarApiComponent implements OnInit {
     },
     text: {
       description: `Roadster API is the second API I've created in NodeJS and MongoDB. This API lets you discover more about historical cars from 1950 to 2010.`,
-      goal: `The goal of this project was to make another API. The added value of this project is the authentification, implementing the necessary security measures. A website over documentation has been created aswell, implementing core features in Angular. Visit the documentation and create an account by clicking on the Live button!`,
+      goal: `The goal of this project was to make another API. The added value of this project is the authentication, implementing the necessary security measures. A website over documentation has been created aswell, implementing core features in Angular. Visit the documentation and create an account by clicking on the Live button!`,
     },
     code: {
       live: 'https://historicalcars-api.com',
@@ -38,8 +38,8 @@ export class CarApiComponent implements OnInit {
   project: project = {
     pros: {
       arg1: 'Improved Database queries in MongoDB',
-      arg2: 'Increased complexity with authentification measures and security',
-      arg3: 'Practice of core Angular features in the documentation website: authentification, protected routes, ...',
+      arg2: 'Increased complexity with authentication measures and security',
+      arg3: 'Practice of core Angular features in the documentation website: authentication, protected routes, ...',
       arg4: 'Improved documentation, following best practices',
     },
     cons: {

@@ -61,7 +61,7 @@ export class CurriculumVitaeComponent implements OnInit {
       },
       name: 'Roadster API',
       date: 'May 2023',
-      description: `Roadster API is a REST API with authentification I have created about historical cars.`,
+      description: `Roadster API is a REST API with authentication I have created about historical cars.`,
       links: {
         general: './roadster-api-project',
         live: 'https://historicalcars-api.com',
