@@ -1,0 +1,105 @@
+<div class="carousel">
+  <h2 class="section-title">Projects</h2>
+
+  <button
+    class="previous"
+    (click)="onPreviousProject()"
+    [class.limit]="currentSlide === 0"
+    [disabled]="currentSlide === 0"
+  >
+    <i class="fa-solid fa-arrow-left-long"></i>
+  </button>
+  <div
+    class="projects-container"
+    #projects
+    (mousedown)="onDragStart($event)"
+    (touchstart)="onDragStart($event)"
+    (mousemove)="onDragMove($event)"
+    (touchmove)="onDragMove($event)"
+    (touchend)="onDragStop()"
+  >
+    <div
+      class="project"
+      #card
+      *ngFor="let project of projectsData"
+      [class.dragging]="dragging"
+    >
+      <header>
+        <div class="picture">
+          <img
+            [src]="project.img['src']"
+            [alt]="project.img['alt']"
+            draggable="false"
+          />
+          <div class="tech-stack">
+            <div
+              class="img-container"
+              *ngFor="let language of project.coding | keyvalue"
+            >
+              <img
+                [src]="language.value['src']"
+                [title]="language.value['title']"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="description">
+        <p class="title">{{ project.name }}</p>
+        <div class="content">
+          <div class="date">
+            <p>{{ project.date }}</p>
+          </div>
+          <p class="text">
+            {{ project.description }}
+          </p>
+          <div class="see-more-container">
+            <p
+              class="see-more"
+              [routerLink]="[project.links['general']]"
+              tabindex="-1"
+            >
+              See more
+            </p>
+            <p>{{ project.category }}</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a
+            *ngIf="project.links['live']"
+            [href]="project.links['live']"
+            tabindex="-1"
+            target="_blank"
+          >
+            <i class="fa-solid fa-tower-broadcast"></i>Live</a
+          >
+          <a
+            *ngIf="project.links['github']"
+            [href]="project.links['github']"
+            tabindex="-1"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>Code</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="next"
+    (click)="onNextProject()"
+    [class.limit]="currentSlide === totalProjectsSlide - 1"
+    [disabled]="currentSlide === totalProjectsSlide - 1"
+  >
+    <i class="fa-solid fa-arrow-right-long"></i>
+  </button>
+  <div class="bullets-container">
+    <span
+      class="bullet"
+      *ngFor="let bullet of numberBullets"
+      [class.current]="bullet === currentSlide"
+      (click)="goTo(bullet)"
+    ></span>
+  </div>
+</div>

@@ -1,27 +1,21 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, debounceTime, fromEvent } from 'rxjs';
+import { opacityTransition } from '../shared/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  animations: [opacityTransition],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isMenuOpened = false;
   isHamburgerOpen = false;
   responsiveSub!: Subscription;
+  scrollSub!: Subscription;
   isResponsiveMode = window.innerWidth < 500;
-
-  routesID = {
-    'Food-App': 1,
-    EcoActions: 2,
-    MusicSchool: 3,
-    Demand: 4,
-    Calculator: 5,
-    Game: 6,
-    Portfolio: 7,
-  };
+  scrollingTopEnabled = window.scrollY > 300;
 
   constructor(public router: Router) {}
 
@@ -33,6 +27,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isHamburgerOpen = false;
         this.isMenuOpened = false;
       });
+
+    this.scrollSub = fromEvent(window, 'scroll').subscribe(() => {
+      if (window.scrollY > 300) {
+        this.scrollingTopEnabled = true;
+      } else {
+        this.scrollingTopEnabled = false;
+      }
+    });
   }
 
   clickedOutsideMenu() {
@@ -55,7 +57,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.isHamburgerOpen = false;
   }
 
+  scrollTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
   ngOnDestroy() {
     this.responsiveSub.unsubscribe();
+    this.scrollSub.unsubscribe();
   }
 }

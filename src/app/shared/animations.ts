@@ -8,6 +8,7 @@ import {
   query,
   animation,
   useAnimation,
+  state,
 } from '@angular/animations';
 
 const startStyle = animation([
@@ -207,4 +208,20 @@ export const title = trigger('right', [
       style({ opacity: 1, transform: 'translateX(0)' })
     ),
   ]),
+]);
+
+export const opacityTransition = trigger('opacityAnimation', [
+  state(
+    'visible',
+    style({
+      opacity: 1,
+    })
+  ),
+  state(
+    'invisible',
+    style({
+      opacity: 0,
+    })
+  ),
+  transition('invisible => visible', [animate('0.3s ease-out')]),
 ]);

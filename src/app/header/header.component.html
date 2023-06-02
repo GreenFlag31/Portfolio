@@ -118,3 +118,11 @@
     </div>
   </div>
 </nav>
+<button
+  class="scroll-to-top"
+  [@opacityAnimation]="scrollingTopEnabled ? 'visible' : 'invisible'"
+  [class.enabled]="scrollingTopEnabled"
+  (click)="scrollTop()"
+>
+  <i class="fa-solid fa-arrow-up-long"></i>
+</button>

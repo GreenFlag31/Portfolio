@@ -1,25 +1,26 @@
 .presentation {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 350px;
+  height: 350px;
   background: var(--primary-color-5);
   color: #fff;
-  padding: 0.625em;
+  overflow: hidden;
+}
+svg {
+  min-width: 100vw;
 }
 .introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
   font-weight: 600;
-}
-.wave {
-  display: block;
-  height: 5em;
   width: 100%;
 }
+
 .introduction img {
   width: 90px;
   height: 90px;
@@ -29,19 +30,10 @@
 .introduction p {
   font-size: 1.1em;
 }
-.presentation svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .about-me,
 .curriculum {
   max-width: 1000px;
   margin: auto;
-}
-.curriculum {
-  max-width: 950px;
 }
 .img-container {
   position: relative;
@@ -99,7 +91,6 @@
   background: aliceblue;
 }
 .about-me-container {
-  /* max-width: 800px; */
   margin: auto;
 }
 .curriculum {
@@ -193,62 +184,6 @@ input:checked + label::after {
 }
 .download a i {
   margin-right: 0.3em;
-}
-.carousel {
-  position: relative;
-  max-width: 800px;
-  overflow: hidden;
-  padding: 1em 0;
-  margin: 7em auto 10em;
-}
-.projects-container {
-  display: flex;
-  justify-content: space-around;
-  transition: transform 0.3s ease-out;
-  transform: translate3d(0, 0, 0);
-  width: 700%;
-}
-.project-overview {
-  width: 10%;
-  min-width: 270px;
-}
-.previous,
-.next {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  padding: 0.25em;
-  cursor: pointer;
-  z-index: 1;
-  transition: opacity 0.3s;
-}
-.previous.limit,
-.next.limit {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-.next {
-  right: 0;
-  left: auto;
-}
-.bullets-container {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 2em;
-}
-.bullet {
-  display: block;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  background: #dbdada;
-  transition: background-color 0.4s;
-}
-.bullet.current {
-  background: var(--primary-color-3);
 }
 .contact {
   background-image: url("../../assets/cristal.jpg");
@@ -345,9 +280,6 @@ span.gold {
     padding-left: 1em;
     padding-right: 1em;
   }
-  .curriculum.accordion {
-    padding: 0;
-  }
   .values .values-container {
     display: flex;
     justify-content: center;
@@ -364,22 +296,7 @@ span.gold {
     border-bottom: none;
   }
 }
-@media (min-width: 650px) {
-  .previous,
-  .next {
-    background: var(--primary-color-3);
-    padding: 0.3em 0.4em;
-    color: white;
-    border-radius: 0.3em;
-    box-shadow: 0px 2px 4px 0px rgb(158 158 158 / 83%);
-  }
-  .previous {
-    margin-left: 1em;
-  }
-  .next {
-    margin-right: 1em;
-  }
-}
+
 @media (min-width: 720px) {
   .about-me-container {
     display: grid;
@@ -388,30 +305,17 @@ span.gold {
     padding: 2em;
     padding-top: 0;
   }
+  .curriculum.accordion {
+    padding: 0 2em;
+  }
   .img-container > img {
     border-radius: 1em;
   }
   .about-me-container p {
     padding: 0;
   }
-  .previous {
-    margin-left: 2em;
-  }
-  .next {
-    margin-right: 2em;
-  }
 }
-@media (min-width: 800px) {
-  .previous {
-    margin-left: 3em;
-  }
-  .next {
-    margin-right: 3em;
-  }
-  .bullets-container {
-    margin-top: 2.5em;
-  }
-}
+
 @media (min-width: 1000px) {
   .values .value {
     flex-basis: calc(33%);

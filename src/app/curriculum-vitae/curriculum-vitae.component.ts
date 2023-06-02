@@ -208,29 +208,10 @@ export class CurriculumVitaeComponent implements OnInit {
       },
     },
   ];
-  counter = 0;
-  totalProjectsSlide = this.projectsData.length;
-  numberBullets = [...Array(this.totalProjectsSlide).keys()];
 
   constructor(private scrollToTop: ScrollToTopService) {}
 
   ngOnInit() {
     this.scrollToTop.scrollToTopWithDelay();
-  }
-
-  onPreviousProject(projects: HTMLDivElement) {
-    if (this.counter <= 0) return;
-
-    this.counter -= 1;
-    const currentSlide = (this.counter / this.totalProjectsSlide) * 100;
-    projects.style.transform = `translate3d(-${currentSlide}%, 0px, 0px)`;
-  }
-
-  onNextProject(projects: HTMLDivElement) {
-    if (this.counter >= this.totalProjectsSlide - 1) return;
-
-    this.counter += 1;
-    const currentSlide = (this.counter / this.totalProjectsSlide) * 100;
-    projects.style.transform = `translate3d(-${currentSlide}%, 0px, 0px)`;
   }
 }
