@@ -28,6 +28,8 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
   numberBullets!: number[];
   dragging = false;
   startX = 0;
+  startStrechingX!: number | undefined;
+  translationAfterLimit!: number | undefined;
   positionChange = 0;
   transformation = 0;
   elementTransformationPercent = 0;
@@ -76,8 +78,6 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
         ? event.screenX
         : event.changedTouches[0].screenX;
     this.positionChange = XCoordinate - this.startX;
-    const translateX =
-      (this.positionChange / this.card.nativeElement.offsetWidth) * 100;
 
     const previousTranslation =
       this.projects.nativeElement.clientWidth *
@@ -91,18 +91,42 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
       (this.positionChange < -this.strechingLimit &&
         this.currentSlide === this.totalProjectsSlide - 1)
     ) {
+      this.applyStreching(XCoordinate, previousTranslation);
       return;
     }
 
-    this.projects.nativeElement.style.transform = `translate3d(${currentTranslation}px, 0, 0)`;
+    this.applyTransformation(currentTranslation, 'px');
+    this.translationAfterLimit = this.startStrechingX = undefined;
 
+    const translateX =
+      (this.positionChange / this.card.nativeElement.offsetWidth) * 100;
     this.draggingTranslation = true;
+
     if (translateX < -this.slidingLimit) {
       // Going right, next slide
       this.changeSlide(++this.currentSlide);
     } else if (translateX > this.slidingLimit) {
       this.changeSlide(--this.currentSlide);
     }
+  }
+
+  applyStreching(coordinate: number, previousTranslation: number) {
+    this.startStrechingX = this.startStrechingX || coordinate;
+    const mvmtAfterLimit = coordinate - this.startStrechingX;
+    this.translationAfterLimit =
+      this.translationAfterLimit || mvmtAfterLimit - previousTranslation;
+
+    this.currentSlide === 0
+      ? this.applyTransformation(
+          this.strechingLimit + mvmtAfterLimit / 10,
+          'px'
+        )
+      : this.applyTransformation(
+          this.translationAfterLimit -
+            this.strechingLimit +
+            mvmtAfterLimit / 10,
+          'px'
+        );
   }
 
   onDragStop() {
@@ -134,11 +158,10 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     this.projects.nativeElement.style.transition = `transform 0.3s ease-out`;
 
     this.transformation = (slide / this.totalProjectsSlide) * 100;
-    this.projects.nativeElement.style.transform = `translate3d(${-this
-      .transformation}%, 0, 0)`;
+    this.applyTransformation(-this.transformation, '%');
 
-    this.dragging = false;
-    this.draggingTranslation = false;
+    this.dragging = this.draggingTranslation = false;
+    this.translationAfterLimit = this.startStrechingX = undefined;
   }
 
   goTo(bullet: number) {
@@ -146,7 +169,11 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     this.changeSlide(bullet);
   }
 
-  ngOnDestroy(): void {
+  applyTransformation(transformation: number, unit: string) {
+    this.projects.nativeElement.style.transform = `translate3d(${transformation}${unit}, 0, 0)`;
+  }
+
+  ngOnDestroy() {
     this.mouseupSubscription.unsubscribe();
     this.VChangeSubscription.unsubscribe();
   }
