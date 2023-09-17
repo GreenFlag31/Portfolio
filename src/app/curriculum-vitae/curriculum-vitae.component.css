@@ -118,60 +118,16 @@ svg {
 .curriculum .content p {
   margin-bottom: 1em;
 }
-
 .professionnal-experience .title {
   font-size: 1.1em;
 }
-.tabs {
-  border-radius: 0.5em;
-  overflow: hidden;
-  box-shadow: 0px 2px 3px 0px rgb(160 160 160 / 83%);
-}
-.accordion .tab {
-  overflow: hidden;
-}
-.tab input {
-  display: none;
-}
-.tab label {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 1em;
-  font-weight: 600;
-  color: var(--primary-color-1);
-  cursor: pointer;
-  background: var(--primary-color-2);
-  transition: all 0.3s ease-out;
-}
-.tab label::after {
-  content: "❯";
-  display: block;
-  text-align: center;
-  transition: all 0.3s ease-out;
-}
-.tab label:hover {
-  background: rgb(30 43 155);
-}
-.tab-content {
-  max-height: 0;
-  padding: 0 1em;
-  background: white;
-  transition: all 0.3s ease-out;
-}
-input:checked ~ .tab-content {
-  max-height: 810px;
-  padding: 1em;
-}
-input:checked + label::after {
-  transform: rotate(90deg);
-}
+
 .download {
   font-size: 0.9em;
   margin-top: 1.5em;
 }
 .professionnal-experience .download {
-  margin: 1em 0;
+  margin-top: 1em;
 }
 .download a {
   display: inline-block;
@@ -181,6 +137,9 @@ input:checked + label::after {
   padding: 0.525em 0.8em;
   border: 2px solid var(--primary-color-3);
   border-radius: 1.5em;
+}
+.education {
+  padding-top: 1em;
 }
 .download a i {
   margin-right: 0.3em;

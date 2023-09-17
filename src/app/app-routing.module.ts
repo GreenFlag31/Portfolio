@@ -14,6 +14,7 @@ const routes: Routes = [
         (m) => m.CurriculumVitaeModule
       ),
     data: { animation: 'portfolio' },
+    title: 'Manu Claeys | Portfolio',
   },
   {
     path: 'portfolio',
@@ -21,86 +22,103 @@ const routes: Routes = [
       {
         path: 'food-app-project',
         loadChildren: () =>
-          import('./food-app-project/food-app-project.module').then(
+          import('./projects/food-app-project/food-app-project.module').then(
             (m) => m.FoodAppProjectModule
           ),
         data: { animation: 'food-app' },
+        title: 'Manu Claeys | Projects',
       },
       {
         path: 'roadster-api-project',
         loadChildren: () =>
-          import('./car-api/car-api.module').then((m) => m.CarApiModule),
+          import('./projects/car-api/car-api.module').then(
+            (m) => m.CarApiModule
+          ),
         data: { animation: 'roadster-api' },
+        title: 'Manu Claeys | Projects',
       },
       {
         path: 'eco-actions-project',
         loadChildren: () =>
-          import('./eco-actions/eco-actions.module').then(
+          import('./projects/eco-actions/eco-actions.module').then(
             (m) => m.EcoActionsModule
           ),
         data: { animation: 'eco-actions' },
+        title: 'Manu Claeys | Projects',
       },
       {
         path: 'coffee-api-project',
         loadChildren: () =>
-          import('./coffee-api/coffee-api.module').then(
+          import('./projects/coffee-api/coffee-api.module').then(
             (m) => m.CoffeeApiModule
           ),
         data: { animation: 'coffee-api' },
+        title: 'Manu Claeys | Projects',
       },
       {
         path: 'music-school-project',
         loadChildren: () =>
-          import('./music-school/music-school.module').then(
+          import('./projects/music-school/music-school.module').then(
             (m) => m.MusicSchoolModule
           ),
         data: { animation: 'music-school' },
+        title: 'Manu Claeys | Projects',
       },
       {
         path: 'demand-project',
         loadChildren: () =>
-          import('./demand/demand.module').then((m) => m.DemandModule),
+          import('./projects/demand/demand.module').then((m) => m.DemandModule),
         data: { animation: 'demand' },
+        title: 'Manu Claeys | Projects',
       },
 
       {
         path: 'other-projects',
         loadChildren: () =>
-          import('./other-projects/other-projects.module').then(
+          import('./projects/other-projects/other-projects.module').then(
             (m) => m.OtherProjectsModule
           ),
         data: { animation: 'others' },
+        title: 'Manu Claeys | Projects',
       },
-
       {
         path: 'blog',
         loadChildren: () =>
           import('./blog/blog.module').then((m) => m.BlogModule),
         data: { animation: 'blog' },
+        title: 'Manu Claeys | Blog',
       },
       {
-        path: 'blog/what-makes-a-good-dev',
-        loadChildren: () =>
-          import('./good-dev-article/good-dev-article.module').then(
-            (m) => m.GoodDevArticleModule
-          ),
-        data: { animation: 'goodDev' },
-      },
-      {
-        path: 'blog/clean-code',
-        loadChildren: () =>
-          import('./clean-code-article/clean-code-article.module').then(
-            (m) => m.CleanCodeArticleModule
-          ),
-        data: { animation: 'CleanCode' },
-      },
-      {
-        path: 'blog/code-maintenance',
-        loadChildren: () =>
-          import(
-            './code-maintenance-article/code-maintenance-article.module'
-          ).then((m) => m.CodeMaintenanceArticleModule),
-        data: { animation: 'CodeMaintenance' },
+        path: 'blog',
+        children: [
+          {
+            path: 'what-makes-a-good-dev',
+            loadChildren: () =>
+              import(
+                './blog/articles/good-dev-article/good-dev-article.module'
+              ).then((m) => m.GoodDevArticleModule),
+            data: { animation: 'goodDev' },
+            title: 'Manu Claeys | Blog',
+          },
+          {
+            path: 'clean-code',
+            loadChildren: () =>
+              import(
+                './blog/articles/clean-code-article/clean-code-article.module'
+              ).then((m) => m.CleanCodeArticleModule),
+            data: { animation: 'CleanCode' },
+            title: 'Manu Claeys | Blog',
+          },
+          {
+            path: 'code-maintenance',
+            loadChildren: () =>
+              import(
+                './blog/articles/code-maintenance-article/code-maintenance-article.module'
+              ).then((m) => m.CodeMaintenanceArticleModule),
+            data: { animation: 'CodeMaintenance' },
+            title: 'Manu Claeys | Blog',
+          },
+        ],
       },
     ],
   },

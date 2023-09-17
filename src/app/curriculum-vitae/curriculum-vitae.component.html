@@ -1500,15 +1500,22 @@
       </div>
     </section>
     <section class="curriculum accordion">
-      <div class="tabs">
+      <div ngTab>
         <div class="tab">
-          <input type="checkbox" name="" id="item-1" />
-          <label for="item-1">
-            <div class="label-titel">Curriculum-Vitae</div>
+          <label ngTabLabel>
+            <div>Curriculum-Vitae</div>
           </label>
-          <div class="tab-content">
+          <div ngTabContent>
             <div class="professionnal-experience container">
               <p class="title">Professionnal experience</p>
+              <div class="date">2023 - Now</div>
+              <div class="content">
+                <p>
+                  Web developer at Chaps Development, working on a management
+                  software. Mainly Angular developer, I also handle the backend
+                  in NestJS (NodeJS), as well as work with MySQL.
+                </p>
+              </div>
               <div class="date">2019 - 2023</div>
               <div class="content">
                 <p>
@@ -1528,7 +1535,6 @@
                 >
               </div>
             </div>
-
             <div class="education">
               <p class="title">Education</p>
               <div class="date">2017 - 2019</div>

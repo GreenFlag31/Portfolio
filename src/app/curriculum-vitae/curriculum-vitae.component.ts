@@ -211,6 +211,10 @@ export class CurriculumVitaeComponent implements OnInit {
 
   constructor(private scrollToTop: ScrollToTopService) {}
 
+  log() {
+    console.log('click');
+  }
+
   ngOnInit() {
     this.scrollToTop.scrollToTopWithDelay();
   }
