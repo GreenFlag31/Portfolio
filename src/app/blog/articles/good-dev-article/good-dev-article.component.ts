@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { navigation } from '../../../shared/data-type';
 import { ScrollToTopService } from '../../../shared/scroll-to-top.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-good-dev-article',
@@ -14,9 +15,14 @@ export class GoodDevArticleComponent implements OnInit {
       link: '../clean-code',
     },
   };
-  constructor(private scrollToTop: ScrollToTopService) {}
+  constructor(private scrollToTop: ScrollToTopService, private meta: Meta) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Front-End Web Developer - Manu Claeys - Portfolio - Blog Good Developer article',
+    });
     this.scrollToTop.scrollToTopWithDelay();
   }
 }

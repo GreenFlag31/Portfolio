@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { description, navigation, project } from '../../shared/data-type';
 import { ScrollToTopService } from '../../shared/scroll-to-top.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-food-app',
@@ -68,9 +69,14 @@ export class FoodAppComponent implements OnInit {
     },
   };
 
-  constructor(private scrollToTop: ScrollToTopService) {}
+  constructor(private scrollToTop: ScrollToTopService, private meta: Meta) {}
 
   ngOnInit() {
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Front-End Web Developer - Manu Claeys - Portfolio - Project Food-App',
+    });
     this.scrollToTop.scroll();
   }
 }

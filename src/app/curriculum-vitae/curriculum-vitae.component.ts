@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollToTopService } from '../shared/scroll-to-top.service';
 import { projectData } from '../shared/data-type';
 import { selfPic, title } from '../shared/animations';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-curriculum-vitae',
@@ -209,13 +210,13 @@ export class CurriculumVitaeComponent implements OnInit {
     },
   ];
 
-  constructor(private scrollToTop: ScrollToTopService) {}
-
-  log() {
-    console.log('click');
-  }
+  constructor(private scrollToTop: ScrollToTopService, private meta: Meta) {}
 
   ngOnInit() {
     this.scrollToTop.scrollToTopWithDelay();
+    this.meta.addTag({
+      name: 'description',
+      content: 'Front-End Web Developer - Manu Claeys - Portfolio',
+    });
   }
 }

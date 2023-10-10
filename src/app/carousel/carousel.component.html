@@ -6,6 +6,7 @@
     (click)="onPreviousProject()"
     [class.limit]="currentSlide === 0"
     [disabled]="currentSlide === 0"
+    aria-label="previous slide"
   >
     <i class="fa-solid fa-arrow-left-long"></i>
   </button>
@@ -91,6 +92,7 @@
     (click)="onNextProject()"
     [class.limit]="currentSlide === totalProjectsSlide - 1"
     [disabled]="currentSlide === totalProjectsSlide - 1"
+    aria-label="next slide"
   >
     <i class="fa-solid fa-arrow-right-long"></i>
   </button>

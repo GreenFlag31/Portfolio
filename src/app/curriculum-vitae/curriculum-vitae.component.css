@@ -25,6 +25,7 @@ svg {
   width: 90px;
   height: 90px;
   border-radius: 50%;
+  object-fit: cover;
   box-shadow: 1px 3px 4px 0px rgb(166 166 166 / 83%);
 }
 .introduction p {

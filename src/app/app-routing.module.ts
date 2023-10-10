@@ -98,7 +98,6 @@ const routes: Routes = [
                 './blog/articles/good-dev-article/good-dev-article.module'
               ).then((m) => m.GoodDevArticleModule),
             data: { animation: 'goodDev' },
-            title: 'Manu Claeys | Blog',
           },
           {
             path: 'clean-code',
@@ -107,7 +106,6 @@ const routes: Routes = [
                 './blog/articles/clean-code-article/clean-code-article.module'
               ).then((m) => m.CleanCodeArticleModule),
             data: { animation: 'CleanCode' },
-            title: 'Manu Claeys | Blog',
           },
           {
             path: 'code-maintenance',
@@ -116,7 +114,6 @@ const routes: Routes = [
                 './blog/articles/code-maintenance-article/code-maintenance-article.module'
               ).then((m) => m.CodeMaintenanceArticleModule),
             data: { animation: 'CodeMaintenance' },
-            title: 'Manu Claeys | Blog',
           },
         ],
       },
