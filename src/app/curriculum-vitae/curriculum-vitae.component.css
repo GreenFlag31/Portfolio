@@ -171,10 +171,14 @@ svg {
   font-weight: 600;
 }
 .engagement p:first-child {
-  font-size: 1.8em;
+  font-family: "Allura";
+  font-size: 2.9rem;
+  font-weight: 400;
 }
 span.gold {
   color: gold;
+  font-family: "Allura";
+  font-size: 2.9rem;
 }
 .contact-me {
   display: flex;

@@ -39,6 +39,7 @@
             <i class="fa-solid fa-tower-broadcast"></i>Live</a
           >
           <a
+            *ngIf="description.code.github"
             href="{{ description.code.github }}"
             tabindex="-1"
             target="_blank"

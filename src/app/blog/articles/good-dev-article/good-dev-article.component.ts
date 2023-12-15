@@ -21,7 +21,7 @@ export class GoodDevArticleComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Blog Good Developer article',
+        'Web Developer - Manu Claeys - Portfolio - Blog Good Developer article',
     });
     this.scrollToTop.scrollToTopWithDelay();
   }

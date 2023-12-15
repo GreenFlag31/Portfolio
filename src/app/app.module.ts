@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { SharedModule } from './shared/shared-module.module';
+import { JSinPractice } from './projects/js-in-practice/js-in-practice.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ClickOutsideDirective],
@@ -14,6 +15,7 @@ import { SharedModule } from './shared/shared-module.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    JSinPractice,
   ],
 
   providers: [],

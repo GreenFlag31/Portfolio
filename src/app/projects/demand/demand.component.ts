@@ -71,8 +71,7 @@ export class DemandComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Demand',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Demand',
     });
     this.scrollToTop.scroll();
   }

@@ -12,13 +12,14 @@ export class ScrollToTopService {
   SubNavStart!: Subscription;
 
   routesID = {
-    'food-app': 1,
-    'roadster-api': 2,
-    'eco-actions': 3,
-    'coffee-api': 4,
-    'music-school': 5,
-    demand: 6,
-    others: 7,
+    'js-in-practice': 1,
+    'food-app': 2,
+    'roadster-api': 3,
+    'eco-actions': 4,
+    'coffee-api': 5,
+    'music-school': 6,
+    demand: 7,
+    others: 8,
     allOtherRoutes: 100,
   };
 

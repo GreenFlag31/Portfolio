@@ -62,8 +62,7 @@ export class CarApiComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Car API',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Car API',
     });
     this.scrollToTop.scroll();
   }

@@ -63,6 +63,10 @@ export class FoodAppComponent implements OnInit {
     },
   };
   navigation: navigation = {
+    previous: {
+      name: 'Previous project: JS-in-practice',
+      link: '../js-in-practice',
+    },
     next: {
       name: 'Next project: Roadster API',
       link: '../roadster-api-project',
@@ -74,8 +78,7 @@ export class FoodAppComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Food-App',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Food-App',
     });
     this.scrollToTop.scroll();
   }

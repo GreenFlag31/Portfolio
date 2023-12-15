@@ -63,8 +63,7 @@ export class CoffeeAPIComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Coffee API',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Coffee API',
     });
     this.scrollToTop.scroll();
   }

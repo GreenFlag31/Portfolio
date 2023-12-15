@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-around;
   transform: translate3d(0, 0, 0);
-  width: 700%;
+  width: 800%;
 }
 .project {
   display: grid;
@@ -115,6 +115,8 @@
   gap: 0.2em;
   padding: 0.2em;
   justify-content: flex-end;
+  background: #000000de;
+  border-radius: 0.2rem;
 }
 .tech-stack img {
   display: block;

@@ -26,7 +26,7 @@ export class CleanCodeArticleComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Blog Clean Code article',
+        'Web Developer - Manu Claeys - Portfolio - Blog Clean Code article',
     });
     this.scrollToTop.scrollToTopWithDelay();
   }

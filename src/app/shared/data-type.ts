@@ -18,7 +18,7 @@ export interface description {
   };
   code: {
     live?: string;
-    github: string;
+    github?: string;
   };
 }
 

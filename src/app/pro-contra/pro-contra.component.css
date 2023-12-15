@@ -36,12 +36,15 @@
   bottom: 0;
   right: 0;
   display: flex;
-  gap: 0.3em;
+  gap: 1em;
+  background: #000000de;
+  width: 100%;
+  justify-content: center;
 }
 .language-container img {
   display: block;
   /* width: 20px; */
-  height: 20px;
+  height: 30px;
   border-radius: 0.2em;
 }
 .text {

@@ -69,8 +69,7 @@ export class EcoActionsComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Eco-actions',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Eco-actions',
     });
     this.scrollToTop.scroll();
   }

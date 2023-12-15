@@ -14,6 +14,42 @@ export class CurriculumVitaeComponent implements OnInit {
   projectsData: projectData[] = [
     {
       img: {
+        src: '../../assets/projects-img/js-in-practice.webp',
+        alt: 'Image of a login screen',
+      },
+      coding: {
+        language1: {
+          src: '../../assets/Angular.png',
+          title: 'Angular',
+        },
+        language2: {
+          src: '../../assets/NestJS.png',
+          title: 'NestJS',
+        },
+        language3: {
+          src: '../../assets/Mysql.png',
+          title: 'Mysql',
+        },
+        language4: {
+          src: '../../assets/HTML5.png',
+          title: 'HTML5',
+        },
+        language5: {
+          src: '../../assets/CSS3.png',
+          title: 'CSS3',
+        },
+      },
+      name: 'JS-in-practice',
+      date: 'Dec. 2023',
+      description: `Learn and practice Javascript with interactive exercises and questions. Build your evaluation, customise your editor, and more!`,
+      links: {
+        general: './js-in-practice',
+        live: 'https://js-in-practice.com',
+        // github: 'https://github.com/GreenFlag31/food-manager',
+      },
+    },
+    {
+      img: {
         src: '../../assets/projects-img/food-app.jpg',
         alt: 'Image of food plate',
       },
@@ -216,7 +252,7 @@ export class CurriculumVitaeComponent implements OnInit {
     this.scrollToTop.scrollToTopWithDelay();
     this.meta.addTag({
       name: 'description',
-      content: 'Front-End Web Developer - Manu Claeys - Portfolio',
+      content: 'Web Developer - Manu Claeys - Portfolio',
     });
   }
 }

@@ -29,6 +29,15 @@ const routes: Routes = [
         title: 'Manu Claeys | Projects',
       },
       {
+        path: 'js-in-practice',
+        loadComponent: () =>
+          import('./projects/js-in-practice/js-in-practice.component').then(
+            (m) => m.JSinPractice
+          ),
+        data: { animation: 'js-in-practice' },
+        title: 'Manu Claeys | Projects',
+      },
+      {
         path: 'roadster-api-project',
         loadChildren: () =>
           import('./projects/car-api/car-api.module').then(

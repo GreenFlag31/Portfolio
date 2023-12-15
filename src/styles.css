@@ -28,6 +28,10 @@
   font-family: "Redacted";
   src: url("./assets/Redacted/RedactedScript-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Allura";
+  src: url("./assets/Allura/Allura-Regular.ttf") format("truetype");
+}
 
 * {
   margin: 0;

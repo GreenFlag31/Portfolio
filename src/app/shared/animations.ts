@@ -44,6 +44,16 @@ const animateStartStyle = animation([
 ]);
 
 export const routesAnimation = trigger('routeAnimations', [
+  transition('js-in-practice => food-app', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '100%',
+        leavingLeft: '-100%',
+      },
+    }),
+  ]),
   transition('food-app => roadster-api', [
     useAnimation(startStyle),
 
@@ -156,6 +166,16 @@ export const routesAnimation = trigger('routeAnimations', [
     }),
   ]),
   transition('roadster-api => food-app', [
+    useAnimation(startStyle),
+
+    useAnimation(animateStartStyle, {
+      params: {
+        startingLeft: '-100%',
+        leavingLeft: '100%',
+      },
+    }),
+  ]),
+  transition('food-app => js-in-practice', [
     useAnimation(startStyle),
 
     useAnimation(animateStartStyle, {

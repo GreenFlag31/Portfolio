@@ -12,7 +12,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
       >
         <p class="myself">Manu Claeys</p>
-        <p class="job-position">Front-End Dev</p>
+        <p class="job-position">Web Dev</p>
       </div>
     </div>
     <div class="right-side" [ngClass]="{ 'hamburger-active': isHamburgerOpen }">
@@ -54,6 +54,13 @@
             'hamburger-active': isHamburgerOpen
           }"
         >
+          <a
+            class="project"
+            routerLinkActive="active"
+            (click)="unExpandNavigationMenu()"
+            routerLink="portfolio/js-in-practice"
+            >JS in practice</a
+          >
           <a
             class="project"
             routerLinkActive="active"

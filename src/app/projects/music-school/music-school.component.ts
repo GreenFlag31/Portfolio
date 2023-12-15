@@ -69,8 +69,7 @@ export class MusicSchoolComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Music School',
+      content: 'Web Developer - Manu Claeys - Portfolio - Project Music School',
     });
     this.scrollToTop.scroll();
   }

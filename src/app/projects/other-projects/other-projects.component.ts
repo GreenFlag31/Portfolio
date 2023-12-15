@@ -21,7 +21,7 @@ export class OtherProjectsComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Project Other projects - Part of online formation',
+        'Web Developer - Manu Claeys - Portfolio - Project Other projects - Part of online formation',
     });
     this.scrollToTop.scroll();
   }

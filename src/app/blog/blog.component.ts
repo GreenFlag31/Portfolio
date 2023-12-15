@@ -20,8 +20,7 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     this.meta.addTag({
       name: 'description',
-      content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Blog articles',
+      content: 'Web Developer - Manu Claeys - Portfolio - Blog articles',
     });
     this.scrollToTop.scrollToTopWithDelay();
   }

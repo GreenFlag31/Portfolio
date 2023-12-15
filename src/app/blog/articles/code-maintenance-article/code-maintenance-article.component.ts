@@ -22,7 +22,7 @@ export class CodeMaintenanceArticleComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Front-End Web Developer - Manu Claeys - Portfolio - Blog Code Maintenance article',
+        'Web Developer - Manu Claeys - Portfolio - Blog Code Maintenance article',
     });
     this.scrollToTop.scrollToTopWithDelay();
   }
