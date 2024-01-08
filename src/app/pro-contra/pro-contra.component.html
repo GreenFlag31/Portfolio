@@ -10,6 +10,12 @@
         <div class="date">
           <p [innerHTML]="description.introduction.date | safeHTML"></p>
         </div>
+      </div>
+      <div class="text">
+        <p>
+          {{ description.text.description }}
+        </p>
+        <p class="goal" [innerHTML]="description.text.goal | safeHTML"></p>
         <div class="language-container">
           <div
             class="coding-languages"
@@ -22,12 +28,6 @@
             />
           </div>
         </div>
-      </div>
-      <div class="text">
-        <p>
-          {{ description.text.description }}
-        </p>
-        <p class="goal" [innerHTML]="description.text.goal | safeHTML"></p>
         <div class="code-links">
           <a
             *ngIf="description.code.live"

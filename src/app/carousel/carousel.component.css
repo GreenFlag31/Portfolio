@@ -112,16 +112,16 @@
   bottom: 0;
   right: 0;
   display: flex;
+  justify-content: flex-end;
   gap: 0.2em;
   padding: 0.2em;
-  justify-content: flex-end;
-  background: #000000de;
+  background: #000827de;
   border-radius: 0.2rem;
 }
 .tech-stack img {
   display: block;
   width: auto;
-  height: 20px;
+  height: 25px;
   border-radius: 0.2em;
 }
 .previous,

@@ -43,8 +43,8 @@ export class JSinPractice implements OnInit {
       },
     },
     text: {
-      description: `JS in practice is an online SPA application to learn Javascript with interactive exercises and questions. This application offers the possibility to customise the online code editor, create evaluations, identify and follow your progress with statistics!`,
-      goal: `One of the most challenging project so far, I've build this project from scratch with Angular, NestJS and MySQL. A own testing library has been created to validate user's code.`,
+      description: `JS in practice is an online SPA application to learn Javascript with interactive exercises and questions. This application offers the possibility to customise the online code editor, create evaluations, identify and follow your progress with statistics.`,
+      goal: `One of the most challenging project so far, I've build this project from scratch with Angular, NestJS and MySQL. A own testing library has been created to validate user's code. Click on the live button to practice and improve your Javascript skills!`,
     },
     code: {
       live: 'https://js-in-practice.com',
