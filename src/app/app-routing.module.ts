@@ -20,6 +20,14 @@ const routes: Routes = [
     path: 'portfolio',
     children: [
       {
+        path: 'carousel-test',
+        loadComponent: () =>
+          import('./carousel-test/carousel-test.component').then(
+            (m) => m.CarouselTestComponent
+          ),
+        title: 'Manu Claeys | carousel-test',
+      },
+      {
         path: 'food-app-project',
         loadChildren: () =>
           import('./projects/food-app-project/food-app-project.module').then(
